@@ -1,2 +1,2 @@
 # Project_Test
-This repo is just to practice the github push, pull, pull requests, commits and other stuffs
+This is the official Repository for developing the Boat safari trip managemnet system 
