@@ -1,0 +1,105 @@
+html,body{
+    padding: 0;
+    margin: 1px;
+}
+footer{
+    width: 100%;
+    background-color: #b3b3b3;
+    color: #fff;  
+}
+
+.footer_container{
+    width: 100%;
+    display: flex;
+}
+.wrap_heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+footer > .footer_container >.quick_wrap{
+    margin-left: 30px;
+    margin-right: auto;
+}
+
+
+footer > .footer_container > .contact_wrap{
+    margin-right: auto;
+}
+
+footer > .footer_container > .follow_wrap{
+    margin-right: auto;
+}
+
+footer > .footer_container > .logo_wrap{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+footer > .footer_container > .logo_wrap > img{
+    height: 60px;
+    width: 55px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+footer > .footer_container > .logo_wrap > p{
+    margin: 0;
+}
+/* footer > .footer_container > .follow_wrap > .footer_links > .fb{
+    height: 5px;
+    width: 5px;
+    list-style: url("/images/facebook.png");
+    list-style-position: outside;
+} */
+footer > p{
+    padding: 10px;
+    text-align: center;
+}
+.footer_links{
+    list-style: none;
+    padding-left: 28px;
+}
+
+
+.footer_links > li > a{
+    margin: 0;
+    display: flex;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.5s;
+    
+}
+.footer_links> li > a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+
+footer > .footer_container > .logo_wrap > form > #email{
+    width: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 20px;
+    border: solid 1px #000000;
+    border-radius: 5px;
+}
+
+footer > .footer_container > .logo_wrap > form > #sbtBtn{
+    width: auto;
+    height: 25px;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+
+footer > .footer_container > .logo_wrap > form > #sbtBtn:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
