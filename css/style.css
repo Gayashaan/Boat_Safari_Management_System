@@ -12,26 +12,32 @@ footer{
     margin-left: 25px;
 }
 footer > .footer_container >.link_wrap{
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
-footer > .footer_container > .link_wrap > a{
+footer > .footer_container > .link_wrap > ul > li > a{
     display: flex;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
+    transition: 0.5s;
     
+}
+footer > .footer_container > .link_wrap > ul > li > a:hover{
+    color: #000000;
+    text-decoration: none;
 }
 
 footer > .footer_container > .contact_wrap{
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 footer > .footer_container > .follow_wrap{
     margin-right: 50px;
 }
 
+footer > .footer_container > .logo_wrap{
+    margin-left: auto;
+}
 footer > .footer_container > .logo_wrap > img{
     height: 60px;
     width: 55px;
