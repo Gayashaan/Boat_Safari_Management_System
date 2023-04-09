@@ -3,11 +3,13 @@ html,body{
     margin: 1px;
 }
 footer{
+    width: 100%;
     background-color: #b3b3b3;
     color: #fff;  
 }
 
 .footer_container{
+    width: 100%;
     display: flex;
 }
 .wrap_heading{
@@ -33,7 +35,7 @@ footer > .footer_container > .follow_wrap{
 
 footer > .footer_container > .logo_wrap{
     margin-right: 30px;
-    margin-left: auto;
+    margin-left: 30px;
 }
 footer > .footer_container > .logo_wrap > img{
     height: 60px;
