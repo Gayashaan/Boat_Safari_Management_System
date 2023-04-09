@@ -3,12 +3,10 @@ html,body{
     margin: 1px;
 }
 footer{
-    
     background-color: #b3b3b3;
-    color: #fff;
-    padding: 5px;
-    
+    color: #fff;  
 }
+
 .footer_container{
     display: flex;
 }
@@ -56,6 +54,7 @@ footer > .footer_container > .logo_wrap > p{
     list-style-position: outside;
 } */
 footer > p{
+    padding: 10px;
     text-align: center;
 }
 .footer_links{
@@ -75,4 +74,30 @@ footer > p{
 .footer_links> li > a:hover{
     color: #000000;
     text-decoration: none;
+}
+
+footer > .footer_container > .logo_wrap > form > #email{
+    width: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 20px;
+    border: solid 1px #000000;
+    border-radius: 5px;
+}
+
+footer > .footer_container > .logo_wrap > form > #sbtBtn{
+    width: auto;
+    height: 25px;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+
+footer > .footer_container > .logo_wrap > form > #sbtBtn:hover{
+    background-color: #000000;
+    color: #ffffff;
 }
