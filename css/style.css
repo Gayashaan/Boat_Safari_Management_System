@@ -56,14 +56,9 @@ html,body{
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
 }
-.intro p {
-  font-size: 27px;
-  color: #d1d1d1;
-  text-transform: uppercase;
-  margin: 20px 0;
-  color:#383739
+
   
-}
+
 .intro button {
   background-color: #5edaf0;
   color: #000;
@@ -77,4 +72,39 @@ html,body{
 }
 .intro button:hover {
   background-color: rgb(255, 0, 230);
+}
+
+.upcoming-tours h1{
+  
+
+  font-size: 100px;
+  padding-bottom: 300px;
+}
+
+.yearly-events {
+  align-items: center; 
+  float: left;
+}
+.image{
+    float: left;
+  padding: 5px;
+}
+
+.yearly-events center{
+
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-family: fantasy;
+}
+img{
+  margin-left: 10px ;
+  margin-right: 10px;
+}
+
+.yearly-events img{
+  display: grid;
+  grid-template-columns:20% 20% 20%;
+  align-items: center;
 }
