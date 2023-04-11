@@ -1,50 +1,92 @@
 html,body{
     margin: 0;
     padding: 0;
-    height: 100%;
+
 }
 
 .container{
-    height: 100%;
-    background: #c9bebe;
     display: flex;
     flex-direction: row;
     
 }
 
 .left_panel{
+    height: 100vh;
     width: 15%;
-    height: 100%;
-    background: #fff;
+    background: #ad148c;
     border-right: 1px solid #ccc;
 }
 
 .right_panel{
-    background-color: aqua;
-    width: 100%;
+    margin-left: auto;
+    width: 85%;
 }
 
-.upper_panel{
+.right_panel > .upper_panel{
     padding: 10px;
-    height: 10%;
-    background: #fff;
-    border-bottom: 1px solid #ccc;
+    background-color: greenyellow;
     display: flex;
     justify-content: space-between;
 }
 
 .upper_panel_right{
+    margin: 5px;
     display: flex;
     align-items: center;
 }
 
-.middle_panel{
+.upper_panel_left{
+    margin: 5px;
+}
 
-    width: 100%;
+.middle_panel{
+    height: inherit;
+    /* background-color: orange; */
+}
+
+.middle_panel > .upper_box{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.middle_panel > .upper_box > .box{
+    background-color: rebeccapurple;
+    width: 80px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-left: 60px;
+    margin-right: auto;
+}
+
+.middle_panel > .lower_boxes{
     height: 100%;
-    background: #c72121;
-    margin-top: auto;
+    display: flex;
+    flex-direction: row;
     
-    float: left;
-    
+}
+
+.middle_panel > .lower_boxes > .left_box{
+    background-color: red;
+    width: 600px;
+    height: 400px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+
+}
+
+.middle_panel > .lower_boxes > .right_box{
+    background-color: red;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px
 }
