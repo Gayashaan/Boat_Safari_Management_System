@@ -2,13 +2,19 @@ html,body{
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;/*This is hid the scroll button of the full page*/
 
 }
 
+#logout{
+    
+    margin-top: 195px;
+}
 .container{
     display: flex;
     flex-direction: row;
     background-color: #eeebeb;
+    height: 100vh;
     
 }
 
@@ -35,7 +41,6 @@ html,body{
 }
 .menu > ul > li{
     display: flex;
-    
     justify-content: left;
     text-align: left;
     margin-bottom: 10px;
@@ -55,6 +60,7 @@ html,body{
 .right_panel{
     margin-left: auto;
     width: 85%;
+    height: inherit;
 }
 
 .right_panel > .upper_panel{
@@ -63,6 +69,16 @@ html,body{
     display: flex;
     justify-content: space-between;
     
+}
+
+.right_panel > .upper_panel > .upper_panel_left > h6{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
 }
 
 .right_panel > .upper_panel > .upper_panel_right{
@@ -120,24 +136,38 @@ html,body{
         
     
 }
+.middle_panel > .upper_box > .box > h6{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+}
+
 
 .middle_panel > .lower_boxes{
-    height: 100%;
+    /* background-color: yellow; */
     display: flex;
     flex-direction: row;
+    height: auto;
+    padding: 50px;
+    
     
 }
 
 .middle_panel > .lower_boxes > .left_box{
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-    width: 600px;
+    width: 700px;
     height: 400px;
     border-radius: 10px;
     padding: 5px;
     margin: 10px;
-    margin-left: 30px;
-    margin-right: 70px;
+    margin-left: 10px;
+    margin-right: 40px;
 
 }
 
@@ -153,12 +183,12 @@ html,body{
     overflow: auto;
 
 }
-.middle_panel > .lower_boxes > .right_box > h6{
+.middle_panel > .lower_boxes > .left_box > h6 , .middle_panel > .lower_boxes > .right_box > h6{
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
     margin-top: 10px;
-    margin-left: 16px;
+    margin-left: 20px;
     font-size: 20px;
     font-weight: 500;
     color: #000000;
@@ -166,7 +196,7 @@ html,body{
 
 .middle_panel > .lower_boxes > .right_box > .feedBox{
     background-color: #1074d3;
-    width: 300px;
+    width: 260px;
     height: 95px;
     border-radius: 15px;
     margin-left: auto;
