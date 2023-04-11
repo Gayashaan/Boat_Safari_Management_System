@@ -3,18 +3,20 @@ html,body{
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;/*This is hid the scroll button of the full page*/
+    scroll-behavior: smooth;
+    
 
 }
 
 #logout{
-    
-    margin-top: 195px;
+    margin-top: 194px;
 }
 .container{
     display: flex;
     flex-direction: row;
     background-color: #eeebeb;
     height: 100vh;
+    transition: 0.75s, visibility 0.75s;
     
 }
 
@@ -130,12 +132,12 @@ html,body{
 .middle_panel > .upper_box > .box:hover{
     cursor: pointer;
     box-shadow: 0 0 10px 0 rgba(12, 12, 12, 0.2);
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1)
-        
-    
+    -ms-transform: scale(1.1); 
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1);
+         
 }
+
 .middle_panel > .upper_box > .box > h6{
     margin: 0;
     padding: 0;
@@ -183,6 +185,7 @@ html,body{
     overflow: auto;
 
 }
+
 .middle_panel > .lower_boxes > .left_box > h6 , .middle_panel > .lower_boxes > .right_box > h6{
     margin: 0;
     padding: 0;
@@ -193,6 +196,9 @@ html,body{
     font-weight: 500;
     color: #000000;
 }
+
+
+
 
 .middle_panel > .lower_boxes > .right_box > .feedBox{
     background-color: #1074d3;
@@ -205,4 +211,13 @@ html,body{
     flex-direction: column;
     margin-top: 10px;
     padding: 10px;
+    transition: 0.4s;
+}
+
+.feedBox:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(12, 12, 12, 0.2);
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1)
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/admin/css/admin_panel.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Bookings Management</title>
 </head>
 <body>
@@ -22,8 +23,8 @@
                     <li><a href="/admin/manageUsers.html">Manage Users</a></li>
                     <li><a href="/admin/manageBooking.html">Manage Booking</a></li>
                     <li><a href="/admin/manageEnquiry.html">Manage Enquiries</a></li>
-                    <li><a href="/admin/addSafari.html">Manage Safari</a></li>
-                    <li><a href="/admin/addBoat.html">Manage Boats</a></li>
+                    <li><a href="/admin/manageSafari.html">Manage Safari</a></li>
+                    <li><a href="/admin/manageBoat.html">Manage Boats</a></li>
                     <li id="logout"><a href="#">Log Out</a></li>
                 </ul>
             </div>
@@ -56,6 +57,21 @@
         </div>
         
     </div>
+
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+        });
+
+
+        ScrollReveal().reveal('.menu', {delay: 200, origin: 'bottom'});
+
+
+        
+    </script>
    
 </body>
 </html>
