@@ -3,19 +3,18 @@ html,body{
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* overflow: hidden;This is hid the scroll button of the full page */
-    scroll-behavior: smooth;
     
 
 }
 
 #logout{
-    margin-top: 194px;
+   /* created this one to put the log out button at the end of the right panel */
+
 }
 .container{
     display: flex;
     flex-direction: row;
     background-color: #eeebeb;
-    transition: 0.75s, visibility 0.75s;
     
 }
 
