@@ -173,6 +173,10 @@ html,body{
     margin-right: 40px;
 
 }
+.middle_panel > .lower_boxes > .left_box > .grid{
+    overflow: auto;
+    height: 340px;
+}
 
 .middle_panel > .lower_boxes > .right_box{
     background-color: rgb(255, 255, 255);
@@ -191,7 +195,7 @@ html,body{
  .middle_panel > .lower_boxes > .left_box > h6 , .middle_panel > .lower_boxes > .right_box > h6{
     margin: 0;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 20px;
     font-size: 20px;
