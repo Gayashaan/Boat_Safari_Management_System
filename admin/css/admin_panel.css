@@ -107,6 +107,7 @@ html,body{
 .middle_panel > .upper_box{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 10px;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -124,6 +125,7 @@ html,body{
     padding: 5px;
     margin-left: 30px;
     margin-right: auto;
+    margin-bottom: 10px;
     transition: 0.5s;
 }
 
@@ -181,6 +183,7 @@ html,body{
     padding: 5px;
     margin-top: 10px;
     margin-right: 50px;
+    margin-left: 10px;
     
 
 }
