@@ -54,15 +54,22 @@ html,body{
     margin-top: 20px;
     color: #fff;
     text-decoration: none;
+    transition: 0.5s;
+    
 } 
 
 .menu > ul > li > a >i{
+    display: flex;
+    font-size: 25px;
+    color: white;
     margin-right: 8px;
+    transition: 0.5s;
 }
 
 .menu > ul > li:hover{
     background: #0e5ba3;
 }
+
 
 .right_panel{
     margin-left: auto;
