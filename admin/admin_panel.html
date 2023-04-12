@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/admin/css/admin_panel.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Admin</title>
 </head>
 <body>
@@ -13,18 +14,19 @@
         <div class="left_panel">
 
             <div class="logo">
-                <img src="images/logo.png" alt="logo">
+                <img src="/images/logo.png" alt="logo">
+                
             </div>
 
             <div class="menu">
                 <ul>
-                    <li><a href="#">Dash Board</a></li>
-                    <li><a href="#">Manage Users</a></li>
-                    <li><a href="#">Manage booking</a></li>
-                    <li><a href="#">Manage Enquiries</a></li>
-                    <li><a href="#">Add safari</a></li>
-                    <li><a href="#">Add Boat</a></li>
-                    <li><a href="#">Log Out</a></li>
+                    <li><a href="/admin/admin_panel.html">Dash Board</a></li>
+                    <li><a href="/admin/manageUsers.html">Manage Users</a></li>
+                    <li><a href="/admin/manageBooking.html">Manage Booking</a></li>
+                    <li><a href="/admin/manageEnquiry.html">Manage Enquiries</a></li>
+                    <li><a href="/admin/manageSafari.html">Manage Safari</a></li>
+                    <li><a href="/admin/manageBoat.html">Manage Boats</a></li>
+                    <li id="logout"><a href="#">Log Out</a></li>
                 </ul>
             </div>
             
@@ -35,12 +37,12 @@
             <div class="upper_panel">
 
                 <div class="upper_panel_left">
-                    <p>Dash Board</p>
+                    <h6>Dash Board</h6>
                 </div>
     
                 <div class="upper_panel_right">
                     <div class="user">
-                        <img src="images/user.png" alt="user">
+                        <img src="/images/profile logo.png" alt="user">
                     </div>
                     <div class="user_name">
                         <p>Admin</p>
@@ -52,7 +54,7 @@
 
             <div class="middle_panel">
                 <div class="upper_box">
-                    <div class="box">
+                    <div class="box" id="box1">
                         <h6>Total Trips</h6>
                     </div>
                     <div class="box">
@@ -67,12 +69,51 @@
                 </div>
 
                 <div class="lower_boxes">
+                    
                     <div class="left_box">
                         <h6>Recent Bookings</h6>                        
                     </div>
+
                     <div class="right_box">
-                        <h6>Customer Feedback</h6>                        
+                        <h6>Customer Feedback</h6>   
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div>       
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div> 
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div> 
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div>  
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div>  
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div>  
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div>  
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div>  
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div>  
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div>  
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div>  
+                        <div class="feedBox">
+                            <p>Feedback 1</p>
+                        </div>               
                     </div>
+
 
                 </div>
                 
@@ -81,5 +122,21 @@
         
     </div>
    
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+        });
+
+        ScrollReveal().reveal('.left_box', {delay: 200, origin: 'left'});
+        ScrollReveal().reveal('.right_box', {delay: 200, origin: 'right'});
+        ScrollReveal().reveal('.upper_box', {delay: 200, origin: 'top'});
+        ScrollReveal().reveal('.menu', {delay: 200, origin: 'bottom'});
+
+
+        
+    </script>
 </body>
 </html>
