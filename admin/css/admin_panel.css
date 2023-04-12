@@ -7,10 +7,11 @@ html,body{
 
 }
 
-#logout{
-   /* created this one to put the log out button at the end of the right panel */
+/* #logout{
+   created this one to put the log out button at the end of the right panel 
 
-}
+
+} */
 .container{
     display: flex;
     flex-direction: row;
