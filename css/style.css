@@ -11,11 +11,10 @@ html,body{
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 520px;
-  background: linear-gradient( rgba(40, 40, 50, 0.47) 0%, rgba(46, 46, 59, 0.414) 10%), url("https://gloogs.com/wp-content/uploads/2022/05/Ruta-Guiada3-02.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 750px;
+  background-image: linear-gradient( rgba(125, 125, 134, 0.47) 0%, rgba(48, 48, 58, 0.414) 10%);
+  
+
 } 
 
 /* .intro {
@@ -25,12 +24,13 @@ html,body{
   align-items: center;
   width: 100%;
   height: 520px;
+  background: linear-gradient( rgba(40, 40, 50, 0.47) 0%, rgba(46, 46, 59, 0.414) 10%), url("https://gloogs.com/wp-content/uploads/2022/05/Ruta-Guiada3-02.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 } */
 .intro > img{
-
+  background-image: rgba(18, 141, 135, 0.2);
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -66,10 +66,12 @@ html,body{
 .intro button:hover {
   background-color: rgb(255, 0, 230);
 }
-
-.upcoming-tours h1{
+/* .upcoming-tours{
+  background-color: #5edaf0;
   
-
+} */
+.upcoming-tours h1{
+  margin: 0;
   font-size: 100px;
   padding-bottom: 300px;
 }
