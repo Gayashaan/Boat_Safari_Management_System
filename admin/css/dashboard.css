@@ -42,10 +42,27 @@
 .middle_panel > .upper_box > .box > h6{
     margin: 0;
     padding: 0;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #000000;
+}
+
+.middle_panel > .upper_box > .box > .val {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #000000;
+}
+
+.middle_panel > .upper_box > .box > .date{
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    font-size: 0.7em;
     font-weight: 500;
     color: #000000;
 }
