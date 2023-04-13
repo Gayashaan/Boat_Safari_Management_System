@@ -1,3 +1,14 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+
+
+
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -28,18 +39,12 @@
     padding: 35px 20px;
   }
   
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
 .about-us{
-  height: 100vh;
   width: 100%;
   padding: 90px 0;
-  background-position: 100%;
   background-image: url('https://w0.peakpx.com/wallpaper/981/946/HD-wallpaper-green-lake-background-landscapes-creeks-bright-paisage-quiet-tranquil-beautiful-seasons-leaves-roots-parks-green-scenery-lakescape-lakes-paisagem-day-nature-reflected-branches.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .pic{
   height: auto;

@@ -75,7 +75,7 @@ footer > p{
     text-decoration: none;
 }
 
-footer > .footer_container > .logo_wrap > form > #email{
+footer > .footer_container > .logo_wrap > #email{
     width: auto;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -84,7 +84,7 @@ footer > .footer_container > .logo_wrap > form > #email{
     border-radius: 5px;
 }
 
-footer > .footer_container > .logo_wrap > form > #sbtBtn{
+footer > .footer_container > .logo_wrap > #sbtBtn{
     width: auto;
     height: 25px;
     border: solid 1px #000000;
@@ -95,7 +95,7 @@ footer > .footer_container > .logo_wrap > form > #sbtBtn{
     transition: 0.5s;
 }
 
-footer > .footer_container > .logo_wrap > form > #sbtBtn:hover{
+footer > .footer_container > .logo_wrap > #sbtBtn:hover{
     background-color: #000000;
     color: #ffffff;
 }
