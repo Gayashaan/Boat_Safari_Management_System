@@ -5,11 +5,11 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    
+   
     font-family: 'Sriracha', 'cursive';
     
 
-    /* background-color: rgba(18, 141, 135, 0.2); */
+    /* background-color: rgba(72, 109, 107, 0.1); */
 }
   
 .header .logo {
