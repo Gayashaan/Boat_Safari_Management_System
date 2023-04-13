@@ -5,8 +5,9 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-   
+    height: 100px;
     font-family: 'Sriracha', 'cursive';
+    /* background-color: aqua; */
     
 
     /* background-color: rgba(72, 109, 107, 0.1); */
