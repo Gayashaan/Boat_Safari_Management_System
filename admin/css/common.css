@@ -25,14 +25,11 @@ html,body{
     display: flex;
     flex-direction: column;
     margin: 0;
-    width: auto;
+    width: 15%;
     background: #1074d3;
    
 }
 
-.left_panel.active{
-    width: 5%;
-}
 
 .left_panel > .logo{
     padding: 0px;
@@ -90,7 +87,7 @@ html,body{
 
 .right_panel{
 
-    width: 100%;
+    width: 86%;
 }
 
 .right_panel > .upper_panel{
