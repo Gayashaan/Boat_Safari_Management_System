@@ -42,10 +42,27 @@
 .middle_panel > .upper_box > .box > h6{
     margin: 0;
     padding: 0;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #000000;
+}
+
+.middle_panel > .upper_box > .box > .val {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #000000;
+}
+
+.middle_panel > .upper_box > .box > .date{
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    font-size: 0.7em;
     font-weight: 500;
     color: #000000;
 }
@@ -74,8 +91,31 @@
 
 }
 .middle_panel > .lower_boxes > .left_box > .grid{
+    padding-right: 12px;
+    /* background-color: #8fc9ff; */
+    display: flex;
     overflow: auto;
     height: 340px;
+}
+
+.middle_panel > .lower_boxes > .left_box > .grid > .details{
+    list-style-type: none;
+    /* background-color: aqua; */
+    margin-left: 10px;
+    margin-right: auto;
+    padding: 5px;
+}   
+
+.middle_panel > .lower_boxes > .left_box > .grid > .details > .topic{
+    /* background-color: #1074d3; */
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.middle_panel > .lower_boxes > .left_box > .grid > .details > li{
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .middle_panel > .lower_boxes > .right_box{
