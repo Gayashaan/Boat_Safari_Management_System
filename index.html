@@ -29,8 +29,9 @@
     </header>
     
     <main>
-        <div class="intro">
-            <img src="https://gloogs.com/wp-content/uploads/2022/05/Ruta-Guiada3-02.jpg" alt="">
+        <div class="intro" onclick="playPause()">
+            <!-- <img src="https://gloogs.com/wp-content/uploads/2022/05/Ruta-Guiada3-02.jpg" alt=""> -->
+            <video autoplay muted loop src="./videos/video home.mp4"></video>
             <h1>LET YOUR DREAMS SET SAIL</h1>
             <button>Gallery</button>
         </div>
@@ -116,5 +117,22 @@
         <hr>
         <p>Createrd By Umbata Mokatada [All Right Reserved 2023]</p>
     </footer>
+
+
+
+
+    <script>
+        var video = document.querySelector('video');
+        video.playbackRate = 0.8;
+
+        /*This function will play pause the video when we click the video area*/
+        function playPause() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+    </script>
 </body>
 </html>
