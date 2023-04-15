@@ -29,11 +29,14 @@
     </header>
     
     <main>
-        <div class="intro" onclick="playPause()">
+        <div class="intro">
             <!-- <img src="https://gloogs.com/wp-content/uploads/2022/05/Ruta-Guiada3-02.jpg" alt=""> -->
             <video autoplay muted loop src="./videos/video home.mp4"></video>
             <h1>LET YOUR DREAMS SET SAIL</h1>
             <button>Gallery</button>
+            <div class="playPause_btn" onclick="playPause()">
+                <img id="playpause" src="/images/icons/pause.png" alt="play_pause">
+            </div>
         </div>
 
         <div class ="upcoming-tours">
@@ -128,8 +131,10 @@
         /*This function will play pause the video when we click the video area*/
         function playPause() {
             if (video.paused) {
+                document.getElementById("playpause").src = "/images/icons/pause.png";
                 video.play();
             } else {
+                document.getElementById("playpause").src = "/images/icons/play.png";
                 video.pause();
             }
         }
