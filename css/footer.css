@@ -1,7 +1,8 @@
 
 footer{
     /* position: relative;
-    bottom: 0; */
+    bottom: 0;
+    left: 0; */
     width: 100%;
     background-color: #3997c0;
     color: #fff;  
@@ -102,3 +103,13 @@ footer > .footer_container > .logo_wrap > #sbtBtn:hover{
     background-color: #000000;
     color: #ffffff;
 }
+
+.nav-items{
+
+    text-decoration: underline;
+    
+  }
+  .nav-items {
+    color: royalblue;
+  
+  }
