@@ -1,0 +1,46 @@
+.container{
+    background-color: blueviolet;
+    position: relative;
+    top: 100px;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 50px;
+    
+}
+
+.box_wrap{
+    background-color: #fff;
+    width: auto;
+    height: 250px;
+    width: 500px;
+    
+    position: relative;
+    top: 100px;
+    left: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    display: flex;
+    
+    
+}
+
+.box_wrap  .admin_wrap{
+    background-color: aqua;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.box_wrap  .user_wrap{
+    padding: 10px;
+    background-color: aqua;
+    margin: 5px;
+    border-radius: 15px;
+    
+
+}
