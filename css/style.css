@@ -84,6 +84,30 @@ html,body{
   background-color: #5edaf0;
   
 } */
+
+
+.intro .playPause_btn{
+  position: absolute;
+  top: 700px;
+  left: 10px;
+  border-radius: 10px;
+  background-color: rgba(12, 12, 14, 0.414);
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+}
+
+.intro .playPause_btn:hover{
+  background-color: #8d8585;
+  cursor: pointer;
+}
+
+.intro .playPause_btn img{
+  height: 30px;
+  width: 30px;
+  
+}
+
 .upcoming-tours h1{
   margin: 0;
   font-size: 100px;
