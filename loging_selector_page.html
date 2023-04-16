@@ -14,7 +14,7 @@
 
 
 <body>
-    <!-- <header class = "header">
+    <header class = "header">
     
         <img  src="/images/favpng_ferry-ship-boat-tour.png" class ="logo"  height="100px" width="250px"/>
     
@@ -28,7 +28,7 @@
             <a href="/loging_selector_page.html">Login</a>
             <a href="#">Sign Up</a>
             </nav>
-    </header> -->
+    </header>
     
 
 
@@ -42,21 +42,30 @@
 
     
     <div class="container">
-        <div class="btn_wrap">
-            <button class="btn" id="admin">Admin</button>
-            <button class="btn" id="user">User</button>
-        </div>
-        <div class="box_wrap">
-            <div class="admin_wrap">
-                <h1>Admin Box</h1>
-                <img src="/images/icons/admin.png" alt="">
-                <button><img src="/images/icons/arrow.png" alt=""></button>
+        <img src="/images/loging back2.jpg" alt="">
+        <div class="wrap">
+            <div class="btn_wrap">
+                <button class="btn" id="admin" onclick="display('admin')">Admin</button>
+                <button class="btn" id="user" onclick="display('user')">User</button>
             </div>
-            <div class="user_wrap">
-                <h1>User Box</h1>
-                <img src="/images/icons/user.png" alt="">
+            <div class="box_wrap">
+                <img class="closebtn" src="/images/icons/close.png" alt="close btn" onclick="closebox()">
+
+                <a class="admin_wrap" href="/admin/adminloging.html">
+                    <h1>Admin Box</h1>
+                    <img src="/images/icons/admin3.png" alt="admin logo">
+                </a>
+                    
+                
+                <a class="user_wrap" href="/login.html">
+                    <h1>User Box</h1>
+                    <img src="/images/icons/user2.png" alt="">
+                </a>
+                    
+                
             </div>
         </div>
+       
     </div>
 
 
@@ -86,7 +95,7 @@
 
 
 
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="footer_container">
             <div class="quick_wrap">
                 <h5 class="wrap_heading">Quick Links</h5>
@@ -130,6 +139,39 @@
 
         <hr>
         <p>Createrd By Umbata Mokatada [All Right Reserved 2023]</p>
-    </footer> -->
+    </footer>
+
+
+
+    <script>
+        var adminBtn = document.querySelector('#admin');
+        var userBtn = document.querySelector('#user');
+        var boxWrap = document.querySelector('.box_wrap');
+        var adminWrap = document.querySelector('.admin_wrap');
+        var userWrap = document.querySelector('.user_wrap');
+        var closebtn = document.querySelector('.closebtn');
+        var btnWrap = document.querySelector('.btn_wrap');
+
+        function display(x){
+            if(x == "admin"){
+                boxWrap.classList.add("active");
+                btnWrap.classList.add("active");
+                adminWrap.classList.add("active");
+                
+            }else if(x == "user"){
+                boxWrap.classList.add("active");
+                btnWrap.classList.add("active");
+                userWrap.classList.add("active");
+            }
+             
+        }
+
+        function closebox(){
+            boxWrap.classList.remove("active");
+            btnWrap.classList.remove("active");
+            adminWrap.classList.remove("active");
+            userWrap.classList.remove("active");
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,73 @@
+html,body{
+    padding: 0;
+    margin: 0px;
+    height: 100%;
+}
+.container{
+    background-color: blueviolet;
+    position: relative;
+    height: 100%;
+    /* background-image: url('/images/loging\ back2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+    /* background-image: linear-gradient( rgba(133, 133, 165, 0.47) 0%, rgba(12, 12, 14, 0.414) 10%, ); */
+    
+}
+.container > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    
+    
+}
+
+.wrap{
+    position: relative;
+    top: 20%;
+    /* background-color: blanchedalmond; */
+    height: 500px;
+    
+}
+
+.wrap > .formwrap{
+    position: absolute;
+    top: 10%;
+    left: 27%;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    width: 650px;
+    height: 400px;
+    border-radius:15px;
+    padding: 10px;
+}
+
+.wrap > .formwrap > form{
+    background-color: rgb(115, 115, 219);
+    padding: 10px;
+    border-radius: 15px 0px 0px 15px;
+    
+}
+.wrap > .formwrap > form > h2{
+    background-color: aliceblue;
+}
+.wrap > .formwrap > form > .inputs{
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.wrap > .formwrap > .imgwrap{
+    background-color: rgb(236, 138, 138);
+    width: 50%;
+    padding: 10px;
+    border-radius: 0px 15px 15px 0px;
+   
+}
