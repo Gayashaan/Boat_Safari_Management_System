@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/main/css/style.css">
-    <link rel="stylesheet" href="/main/css/footer.css">
-    <link rel="stylesheet" href="/main/css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
     <title>Home</title>
 </head>
 
@@ -14,15 +14,15 @@
 
     <header class = "header">
     
-        <img  src="/main/images/favpng_ferry-ship-boat-tour.png" class ="logo"  height="100px" width="250px"/>
+        <img  src="images/favpng_ferry-ship-boat-tour.png" class ="logo"  height="100px" width="250px"/>
     
         <nav class="nav-items">
-            <a href="/main/index.html" >Home</a>
-            <a href="/main/AboutUs.html">About Us </a>
-            <a href="/main/Contact_us.html">Contact</a>
+            <a href="index.html" >Home</a>
+            <a href="AboutUs.html">About Us </a>
+            <a href="Contact_us.html">Contact</a>
             <a href="#">Gallery</a>
             <a href="#">Tours</a>
-            <a href="/main/loging_selector_page.html">Login</a>
+            <a href="loging_selector_page.html">Login</a>
             <a href="#">Sign Up</a>
         </nav>
 
@@ -31,11 +31,11 @@
     <main>
         <div class="intro">
             <!-- <img src="https://gloogs.com/wp-content/uploads/2022/05/Ruta-Guiada3-02.jpg" alt=""> -->
-            <video autoplay muted loop src="/main/videos/pexels-twicce-switzerland-6560037-3840x2160-30fps.mp4"></video>
+            <video autoplay muted loop src="videos/pexels-twicce-switzerland-6560037-3840x2160-30fps.mp4"></video>
             <h1>LET YOUR DREAMS SET SAIL</h1>
             <button>Gallery</button>
             <div class="playPause_btn" onclick="playPause()">
-                <img id="playpause" src="/main/images/icons/pause.png" alt="play_pause">
+                <img id="playpause" src="images/icons/pause.png" alt="play_pause">
             </div>
         </div>
 
@@ -176,10 +176,10 @@
         /*This function will play pause the video when we click the video area*/
         function playPause() {
             if (video.paused) {
-                document.getElementById("playpause").src = "/main/images/icons/pause.png";
+                document.getElementById("playpause").src = "images/icons/pause.png";
                 video.play();
             } else {
-                document.getElementById("playpause").src = "/main/images/icons/play.png";
+                document.getElementById("playpause").src = "images/icons/play.png";
                 video.pause();
             }
         }
