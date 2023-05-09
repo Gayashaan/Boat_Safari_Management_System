@@ -111,7 +111,7 @@ html,body{
     width: 50%;
     padding: 10px;
     border-radius: 30px 0px 0px 30px;
-    background-image: url('admin_panel_pick.png');
+    background-image: url('/admin/images/admin_panel_pick.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 25%;
