@@ -14,7 +14,9 @@
 
     /* background-color: rgba(72, 109, 107, 0.1); */
 }
-  
+
+
+
 .header .logo {
   margin-left: 30px;
   margin-bottom: 0;
@@ -23,12 +25,14 @@
 .nav-items {
   /* background-color: aqua; */
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-right: auto;
-  margin-right: 20px;
-  text-decoration: underline;
-  color: royalblue;
+  margin-left: auto;
+
+  
+  
+  
   
 }
   
@@ -37,7 +41,27 @@
   font-size: 18px;
   text-decoration: none;
   color: aliceblue;
-  /* color: #000; */
-  padding: 35px 20px;
+  position: relative;
+  padding: 38px 20px;
+  letter-spacing: 0.5px;
+ 
     
+}
+
+.nav-items > a::after{
+  content: '';
+  background-color: rgb(243, 243, 243);
+  position: absolute;
+  height: 3px;
+  left: 9px;
+  width: 0;
+  bottom: 32px;
+  transition: 0.5s;
+  border-radius: 50px;
+ 
+}
+
+.nav-items > a:hover:after{
+  width: 80%;
+  
 }
