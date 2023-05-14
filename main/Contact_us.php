@@ -19,12 +19,12 @@
         <img  src="images/favpng_ferry-ship-boat-tour.png" class ="logo"  height="100px" width="250px"/>
     
         <nav class="nav-items">
-            <a href="index.html" >Home</a>
-            <a href="AboutUs.html">About Us </a>
-            <a href="Contact_us.html">Contact</a>
+			<a href="index.html" >Home</a>
+            <a href="AboutUs.php">About Us </a>
+            <a href="Contact_us.php">Contact</a>
             <a href="#">Gallery</a>
             <a href="#">Tours</a>
-            <a href="loging_selector_page.html">Login</a>
+            <a href="loging_selector_page.php">Login</a>
             <a href="#">Sign Up</a>
         </nav>
 
@@ -103,9 +103,9 @@
 			<h5 class="wrap_heading">Quick Links</h5>
 			<ul class="footer_links">
 				<li><a href="index.html"> Home</a></li>
-				<li><a href="contact_us.html">Contact Us</a></li>
-				<li><a href="index.html">About Us</a></li>
-				<li><a href="index.html">Logging</a></li>
+                <li><a href="Contact_us.php">Contact Us</a></li>
+                <li><a href="AboutUs.php">About Us</a></li>
+                <li><a href="loging_selector_page.php">Logging</a></li>
 			</ul>
 		</div>
 

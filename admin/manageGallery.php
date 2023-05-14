@@ -30,13 +30,13 @@
 
             
             <ul>
-                <li><a href="dashboard.html"> <i class="material-icons" style="font-size:25px; color:white">dashboard</i>Dash Board</a></li>
-                <li><a href="manageUsers.html"> <i class="fa fa-user" style="font-size:25px; color:white"></i>Manage Users</a></li>
-                <li><a href="manageBooking.html"> <i class="material-icons" style="font-size:25px;color:white">library_books</i>Manage Booking</a></li>
-                <li><a href="manageEnquiry.html"> <i class="material-icons" style="font-size:25px;color:white">question_answer</i>Manage Enquiries</a></li>
-                <li><a href="manageSafari.html"> <i class="fa fa-safari" style="font-size:25px;color:white"></i>Manage Safari</a></li>
-                <li><a href="manageBoat.html"> <i class="material-icons" style="font-size:25px;color:white">directions_boat</i>Manage Boats</a></li>
-                <li><a href="manageGallery.html"> <i class="material-icons" style="font-size:25px;color:white">directions_boat</i>Manage Gallery</a></li>
+                <li><a href="dashboard.php"> <i class="material-icons" style="font-size:25px; color:white">dashboard</i>Dash Board</a></li>
+                <li><a href="manageUsers.php"> <i class="fa fa-user" style="font-size:25px; color:white"></i>Manage Users</a></li>
+                <li><a href="manageBooking.php"> <i class="material-icons" style="font-size:25px;color:white">library_books</i>Manage Booking</a></li>
+                <li><a href="manageEnquiry.php"> <i class="material-icons" style="font-size:25px;color:white">question_answer</i>Manage Enquiries</a></li>
+                <li><a href="manageSafari.php"> <i class="fa fa-safari" style="font-size:25px;color:white"></i>Manage Safari</a></li>
+                <li><a href="manageBoat.php"> <i class="material-icons" style="font-size:25px;color:white">directions_boat</i>Manage Boats</a></li>
+                <li><a href="manageGallery.php"> <i class="material-icons" style="font-size:25px;color:white">directions_boat</i>Manage Gallery</a></li>
                 <li id="logout"><a href="#"> <i class="fa fa-sign-out" style="font-size:25px;color:white"></i>Log Out</a></li>
             </ul>
             
@@ -48,7 +48,7 @@
             <div class="upper_panel">
 
                 <div class="upper_panel_left">
-                    <h6>Boat Management</h6>
+                    <h6>Gallery Management</h6>
                 </div>
     
                 <div class="upper_panel_right">

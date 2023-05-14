@@ -20,11 +20,11 @@
     
         <nav class="nav-items">
             <a href="index.html" >Home</a>
-            <a href="AboutUs.html">About Us </a>
-            <a href="Contact_us.html">Contact</a>
+            <a href="AboutUs.php">About Us </a>
+            <a href="Contact_us.php">Contact</a>
             <a href="#">Gallery</a>
             <a href="#">Tours</a>
-            <a href="loging_selector_page.html">Login</a>
+            <a href="loging_selector_page.php">Login</a>
             <a href="#">Sign Up</a>
         </nav>
 
@@ -53,14 +53,14 @@
 
 
 
-                <a class="admin_wrap" href="../admin/adminloging.html">
+                <a class="admin_wrap" href="../admin/adminloging.php">
 
                     <h1>Admin</h1>
                     <img src="images/icons/admin3.png" alt="admin logo">
                 </a>
                     
                 
-                <a class="user_wrap" href="login.html">
+                <a class="user_wrap" href="login.php">
                     <h1>User</h1>
                     <img src="images/icons/user2.png" alt="">
                 </a>
@@ -104,9 +104,9 @@
                 <h5 class="wrap_heading">Quick Links</h5>
                 <ul class="footer_links">
                     <li><a href="index.html"> Home</a></li>
-                    <li><a href="Contact_us.html">Contact Us</a></li>
-                    <li><a href="AboutUs.html">About Us</a></li>
-                    <li><a href="loging_selector_page.html">Logging</a></li>
+                    <li><a href="Contact_us.php">Contact Us</a></li>
+                    <li><a href="AboutUs.php">About Us</a></li>
+                    <li><a href="loging_selector_page.php">Logging</a></li>
                 </ul>
             </div>
 
