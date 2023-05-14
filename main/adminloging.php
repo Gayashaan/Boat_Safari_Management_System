@@ -9,21 +9,7 @@
     <title>Admin Loging</title>
 </head>
 <body>
-    <header class = "header">
-    
-        <img  src="../main/images/favpng_ferry-ship-boat-tour.png" class ="logo"  height="100px" width="250px"/>
-    
-        <nav class="nav-items">
-            <a href="../main/index.html" >Home</a>
-            <a href="../main/AboutUs.php">About Us </a>
-            <a href="../main/Contact_us.php">Contact</a>
-            <a href="#">Gallery</a>
-            <a href="#">Tours</a>
-            <a href="../main/loging_selector_page.php">Login</a>
-            <a href="#">Sign Up</a>
-        </nav>
-
-    </header>
+    <?php include("header.php"); ?>
 
 
 
@@ -48,7 +34,7 @@
         
                         <div class="inputs">
                             <input type="submit" value="Log In">
-                            <a href="dashboard.php">Forget password?(click here to see admin dashboard)</a>
+                            <a href="../admin/dashboard.php">Forget password?(click here to see admin dashboard)</a>
                         </div>
                     </div>
                     

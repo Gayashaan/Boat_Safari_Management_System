@@ -6,39 +6,67 @@ footer{
     width: 100%;
     background-color: #3997c0;
     color: #fff;  
+    height: fit-content;
+    
+}
+/* .footer_container{
+    background-color: aquamarine;
+} */
+
+.footer_container > hr{
+    margin-left: auto;
+    margin-right: auto;
+    height: 2px;
+    width: 1180px;
+    background-color: #000000;
+    position: relative;
+    top: 15px;
+
+}
+hr{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    border: 0;
+    height: 2px;
+    width: 1180px;
+    background-color: #000000;
     
 }
 
-.footer_container{
+.wrap{
     width: 100%;
     display: flex;
 }
 .wrap_heading{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Raleway',Helvetica,Arial,Lucida,sans-serif;
     color: black;
     font-size: 20px;
     margin-left: 25px;
     margin-bottom: 5px;
 }
-footer > .footer_container >.quick_wrap{
-    margin-left: 30px;
+footer > .footer_container >.wrap >.quick_wrap{
+    
     margin-right: auto;
+    
 }
 
 
-footer > .footer_container > .contact_wrap{
+footer > .footer_container >.wrap > .contact_wrap{
     margin-right: auto;
+    
 }
 
-footer > .footer_container > .follow_wrap{
+footer > .footer_container >.wrap > .follow_wrap{
     margin-right: auto;
+    
 }
 
-footer > .footer_container > .logo_wrap{
-    margin-right: 30px;
-    margin-left: 30px;
+footer > .footer_container >.wrap > .logo_wrap{
+    margin-right: 70px;
+    margin-left: 90px;
 }
-footer > .footer_container > .logo_wrap > img{
+footer > .footer_container >.wrap > .logo_wrap > img{
     height: 90px;
     width: 240px;
     display: block;
@@ -47,8 +75,14 @@ footer > .footer_container > .logo_wrap > img{
     margin-top: 20px;
     margin-bottom: 0;
 }
-footer > .footer_container > .logo_wrap > p{
-    margin: 0;
+footer > .footer_container >.wrap > .logo_wrap > p{
+    margin-top: 0;
+    font-family: 'Raleway',Helvetica,Arial,Lucida,sans-serif;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 25px;
+
 }
 /* footer > .footer_container > .follow_wrap > .footer_links > .fb{
     height: 5px;
@@ -63,11 +97,12 @@ footer > p{
 .footer_links{
     list-style: none;
     padding-left: 28px;
+    margin-top: 10px;
 }
 
 
 .footer_links > li > a{
-    margin: 0;
+    margin-top: 9px;
     display: flex;
     color: #ffffff;
     text-decoration: none;
@@ -79,7 +114,7 @@ footer > p{
     text-decoration: none;
 }
 
-footer > .footer_container > .logo_wrap > #email{
+footer > .footer_container >.wrap > .logo_wrap > #email{
     width: auto;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -88,7 +123,7 @@ footer > .footer_container > .logo_wrap > #email{
     border-radius: 5px;
 }
 
-footer > .footer_container > .logo_wrap > #sbtBtn{
+footer > .footer_container >.wrap > .logo_wrap > #sbtBtn{
     width: auto;
     height: 25px;
     border: solid 1px #000000;
@@ -99,7 +134,7 @@ footer > .footer_container > .logo_wrap > #sbtBtn{
     transition: 0.5s;
 }
 
-footer > .footer_container > .logo_wrap > #sbtBtn:hover{
+footer > .footer_container >.wrap > .logo_wrap > #sbtBtn:hover{
     background-color: #000000;
     color: #ffffff;
 }
