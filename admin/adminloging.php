@@ -15,11 +15,11 @@
     
         <nav class="nav-items">
             <a href="../main/index.html" >Home</a>
-            <a href="../main/AboutUs.html">About Us </a>
-            <a href="../main/Contact_us.html">Contact</a>
+            <a href="../main/AboutUs.php">About Us </a>
+            <a href="../main/Contact_us.php">Contact</a>
             <a href="#">Gallery</a>
             <a href="#">Tours</a>
-            <a href="../main/loging_selector_page.html">Login</a>
+            <a href="../main/loging_selector_page.php">Login</a>
             <a href="#">Sign Up</a>
         </nav>
 
@@ -48,7 +48,7 @@
         
                         <div class="inputs">
                             <input type="submit" value="Log In">
-                            <a href="dashboard.html">Forget password?(click here to see admin dashboard)</a>
+                            <a href="dashboard.php">Forget password?(click here to see admin dashboard)</a>
                         </div>
                     </div>
                     
