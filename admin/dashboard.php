@@ -167,42 +167,15 @@
                         <h6>Customer Feedback</h6>  
                         
                          <div class="feedBox">
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div>       
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div> 
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div> 
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div>  
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div>  
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div>  
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div>  
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div>  
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div>  
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div>  
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div>  
-                            <div class="feed">
-                                <p>Feedback 1</p>
-                            </div>
+                            <?php
+                                for($i=0;$i<10;$i++){
+                                    echo "<div class='feed'>
+                                            <p>Feedback 1</p>
+                                        </div>";
+                                }
+                            
+                            ?>
+                            
                          </div>
                                        
                     </div>
