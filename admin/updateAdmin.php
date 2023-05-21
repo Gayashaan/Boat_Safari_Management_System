@@ -1,7 +1,30 @@
 <?php
-include_once("config.php");
+    include_once("config.php");
+    
+    if(isset($_POST['submit'])){
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $email = $_POST['email'];
+        $cnumber = $_POST['cNo'];
+        $pwd = $_POST['pwd'];
+        $cpwd = $_POST['cpwd'];
+        
+        $id = $_GET['updateid'];
 
+        $sql = "UPDATE admin SET adminID='$id', fname='$fname', lname='$lname', email='$email', pwd='$pwd', cnumber='$cnumber' WHERE adminID=$id";
+        $result = $conn->query($sql);
+
+
+        if($result){
+            echo "<script> alert('Update Successfully');</script>";
+            
+        }else{
+            die(mysqli_error($conn));
+        }
+    }
+    
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,66 +96,22 @@ include_once("config.php");
             </div>
 
             <div class="middle_panel">
-            <div class="left_box">
-                        <h6>All Employees</h6>
-                        <div class="grid">
-                            <table>
-                                <tr>
-                                    <th>AdminID</th>
-                                    <th>First Name</th>
-                                    <th>Email</th>
-                                    <th>Contact Number</th>
-                                    <th>Operation</th>
-                                </tr>
-                                <?php
-                        
-                                    $sql = "SELECT * FROM admin";
-                            
-                                    $result = $conn->query($sql);
-                        
-                        
-                                    if($result->num_rows>0){
-                                        while($row = $result->fetch_assoc()){
-                                            $aID = $row["adminID"];
-                                            $fname = $row["fname"];
-                                            $lname = $row["lname"];
-                                            $email = $row["email"];
-                                            $cnumber = $row["cnumber"];
-                                    
-                                            echo '
-                                            
-                                                    <tr>
-                                                        <td>' . $aID . '</td>
-                                                        <td>' . $fname. '</td>
-                                                        <td>' . $email. '</td>
-                                                        <td>' . $cnumber. '</td>
-                                                        <td> 
-                                                            <div class="opBtns">
-                                                                <button id="vwBtn"><a href="updateAdmin.php?updateid='.$aID.'">View</a></button>
-                                                                <button id="dlBtn"><a href="deleteAdmin.php?deleteid='.$aID.'">Delete</a></button>
-                                                            </div>
-                                                        </td>
-                                                    </tr>';
-                                                
-                                        }
-                                    }else{
-                                        echo "Empty rows!!";
-                                    }
-
-                                ?>
-
-                            </table>
-
-                        </div>
-                        
-                       
-                        
-                                                    
-                    </div>
+                <div class="left_box">
+                    <?php
+                        $id = $_GET['updateid'];
+                        $sql = "SELECT fname FROM admin WHERE adminID = '$id'";
+                        $result = $conn->query($sql);
+                        $row = $result->fetch_assoc();
+                        $userName = $row['fname'];
+                        echo "<h6>".$userName."'s profile </h6>";
+                    ?>
+                     
+                </div>
 
                 <div class="right_box" action="createAdmin.php">
-                    <p>Create Admin Account</p>
-                    <form method="POST" action="createAdmin.php">
+                
+                    <p>Update <?php echo $userName."'s"; ?> Account</p>
+                    <form method="POST">
                         <div class="namewrap">
                             <div class="fwrap">
                                 <label for="fname">First name</label><br>
@@ -153,7 +132,7 @@ include_once("config.php");
                             <label for="cpwd">Confirm Password</label><br>
                             <input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password"><br>
                                 
-                            <input type="submit" value="Create" id="sbt" name="submit"><br>
+                            <input type="submit" value="Update" id="sbt" name="submit"><br>
 
                         </div>
                                   

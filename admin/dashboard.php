@@ -101,58 +101,40 @@
                         <div class="grid">
                             <ul class="details">
                                 <li class = "topic">Date</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
+                                <?php
+                                    $date = 1;
+                                    for($i=0; $i<10; $i++){
+                                        echo "<li> $date jan 2021</li>";
+                                        $date++;
+                                    }
+                                ?>
                             </ul>
 
                             <ul class="details">
                                 <li class = "topic">Customer</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
+                                <?php
+                                    for($i=0; $i<10; $i++){
+                                        echo "<li class>Joahn Doe</li>";
+                                    }
+                                ?>
                             </ul>
 
                             <ul class="details">
                                 <li class = "topic">Trip</li>
-                                <li class>Pending</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
+                                <?php
+                                    for($i=0; $i<10; $i++){
+                                        echo "<li>Pending</li>";
+                                    }
+                                ?>
                             </ul>
 
                             <ul class="details">
                                 <li class = "topic">Total</li>
-                                <li class>$5000</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
-                                <li class>02 jan 2021</li>
+                                <?php
+                                    for($i=0; $i<10; $i++){
+                                        echo "<li>$5000</li>";
+                                    }
+                                ?>
                             </ul>
 
                             
