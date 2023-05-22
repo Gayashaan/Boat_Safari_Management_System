@@ -1,3 +1,33 @@
+<?php
+     include_once("../admin/config.php");
+     session_start();
+
+        if(isset($_POST['submit'])){
+            $email = $_POST['email'];
+            $pwd = $_POST['password'];
+            
+            $Sql = "SELECT * FROM admin WHERE email = '$email' and pwd = '$pwd'"; 
+            $result = $conn->query($Sql);
+            $row = mysqli_fetch_assoc($result);
+    
+            if(mysqli_num_rows($result) > 0){
+                
+                echo "<script> alert('You have succesfully logged In');</script>";
+                header("Refresh: 0; URL = ../admin/dashboard.php");
+                $_SESSION['adminID'] = $row['adminID'];
+                $_SESSION['fname'] = $row['fname'];
+                $_SESSION['lname'] = $row['lname'];
+
+            }else{
+                
+                echo "<script> alert('No such records');</script>";
+                header("Refresh: 1; URL = adminloging.php");
+            }
+                    
+        }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,12 +58,13 @@
                         </div>
         
                         <div class="inputs">
-                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" placeholder="Password" required>
+                            <!-- <input type="password" name="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required> -->
                         </div>
         
                         <div class="inputs">
-                            <input type="submit" value="Log In">
+                            <input type="submit" name="submit" value="Log In">
                             <a href="../admin/dashboard.php">Forget password?(click here to see admin dashboard)</a>
                         </div>
                     </div>
