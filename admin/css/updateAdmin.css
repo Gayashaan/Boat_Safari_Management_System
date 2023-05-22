@@ -1,0 +1,61 @@
+.middle_panel > .right_box{
+    width: 30%;
+    height: 120%;
+    background-color: rgb(148, 141, 141);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-right: 50px;
+    
+}
+input{
+    width: 150px;
+    height: 18px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    
+}
+#email{
+    width: 240px;
+}
+#sbt{
+    width: 150px;
+    height: 30px;
+    margin-left: 20%;
+    transition: 0.5s;
+    background-color: rgb(47, 255, 57);
+}
+#sbt:hover{
+    background-color: #00ff62;
+    color: white;
+    cursor: pointer;
+}
+
+.namewrap{
+    display: flex;
+    justify-content: space-around;
+}
+#fname, #lname{
+    width: 100px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.otherwrap{
+    margin-left: 8%;
+}
+.right_box > p{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
