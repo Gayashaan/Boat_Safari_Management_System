@@ -1,5 +1,27 @@
+
+.upper_panel{
+    margin-bottom: 50px;
+}
+.middle_panel{
+    display: flex;
+   
+}
+
+.middle_panel > .left_box{
+    width: 75%;
+    height: 455px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 50px;
+    
+
+    
+}
+
 .middle_panel > .right_box{
-    width: 30%;
+    width: 45%;
     height: 120%;
     background-color: rgb(148, 141, 141);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
@@ -50,12 +72,27 @@ input{
     margin-bottom: 10px;
 }
 .otherwrap{
-    margin-left: 8%;
+    margin-left: 10%;
 }
 .right_box > p{
     margin-left: 20px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: rgb(0, 0, 0);
-    font-size: 25px;
+    font-size: 23px;
 }
+
+
+
+
+
+.middle_panel > .left_box > h6{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+} 

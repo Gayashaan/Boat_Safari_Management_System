@@ -1,6 +1,18 @@
 <?php
-include_once("config.php");
-
+    include_once("config.php");
+    session_start();
+    if($_SESSION['adminID'] == ""){
+        header("Refresh: 0;URL = ../main/adminloging.php");
+        echo "<script> alert('Please Login');</script>";
+        // header("location: ../main/adminloging.php");
+        die();
+        
+    }else{
+        $adminID = $_SESSION['adminID'];
+        $ufname = $_SESSION['fname'];
+        $ulname = $_SESSION['lname'];
+        $userName = $ufname . " " . $ulname;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +58,7 @@ include_once("config.php");
                 <li><a href="manageSafari.php"> <i class="fa fa-safari" style="font-size:25px;color:white"></i>Manage Safari</a></li>
                 <li><a href="manageBoat.php"> <i class="material-icons" style="font-size:25px;color:white">directions_boat</i>Manage Boats</a></li>
                 <li><a href="manageGallery.php"> <i class="material-icons" style="font-size:25px;color:white">directions_boat</i>Manage Gallery</a></li>
-                <li id="logout"><a href="#"> <i class="fa fa-sign-out" style="font-size:25px;color:white"></i>Log Out</a></li>
+                <li id="logout"><a href="logout.php"> <i class="fa fa-sign-out" style="font-size:25px;color:white"></i>Log Out</a></li>
             </ul>
             
             
@@ -65,7 +77,7 @@ include_once("config.php");
                         <img src="images/profile logo.png" alt="user">
                     </div>
                     <div class="user_name">
-                        <p>Admin</p>
+                    <p><?php echo $userName ?></p>
                     </div>
     
                 </div>
@@ -75,13 +87,14 @@ include_once("config.php");
             <div class="middle_panel">
             <div class="left_box">
                         <h6>All Employees</h6>
+                                    
                         <div class="grid">
                             <table>
                                 <tr>
                                     <!-- <th>AdminID</th> -->
                                     <th>First Name</th>
-                                    <th>Email</th>
-                                    <th>Contact Number</th>
+                                    <th>Last Name</th>
+                                    <th>Contact No</th>
                                     <th>Operation</th>
                                 </tr>
                                 <?php
@@ -104,7 +117,7 @@ include_once("config.php");
                                                     <tr>
                                                         
                                                         <td>' . $fname. '</td>
-                                                        <td>' . $email. '</td>
+                                                        <td>' . $lname. '</td>
                                                         <td>' . $cnumber. '</td>
                                                         <td> 
                                                             <div class="opBtns">
@@ -130,7 +143,7 @@ include_once("config.php");
                                                     
                     </div>
 
-                <div class="right_box" action="createAdmin.php">
+                <div class="right_box">
                     <p>Create Admin Account</p>
                     <form method="POST" action="createAdmin.php">
                         <div class="namewrap">

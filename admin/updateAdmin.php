@@ -1,5 +1,20 @@
 <?php
+
     include_once("config.php");
+    session_start();
+    if($_SESSION['adminID'] == ""){
+        header("Refresh: 0;URL = ../main/adminloging.php");
+        echo "<script> alert('Please Login');</script>";
+        // header("location: ../main/adminloging.php");
+        die();
+        
+    }else{
+        $adminID = $_SESSION['adminID'];
+        $ufname = $_SESSION['fname'];
+        $ulname = $_SESSION['lname'];
+        $userName = $ufname . " " . $ulname;
+    }
+
     
     if(isset($_POST['submit'])){
         $fname = $_POST['fname'];
@@ -24,14 +39,13 @@
     }
     
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="manageUsers.css">
+    <!-- <link rel="stylesheet" href="manageUsers.css"> -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/updateAdmin.css">
     
@@ -71,7 +85,7 @@
                 <li><a href="manageSafari.php"> <i class="fa fa-safari" style="font-size:25px;color:white"></i>Manage Safari</a></li>
                 <li><a href="manageBoat.php"> <i class="material-icons" style="font-size:25px;color:white">directions_boat</i>Manage Boats</a></li>
                 <li><a href="manageGallery.php"> <i class="material-icons" style="font-size:25px;color:white">directions_boat</i>Manage Gallery</a></li>
-                <li id="logout"><a href="#"> <i class="fa fa-sign-out" style="font-size:25px;color:white"></i>Log Out</a></li>
+                <li id="logout"><a href="logout.php"> <i class="fa fa-sign-out" style="font-size:25px;color:white"></i>Log Out</a></li>
             </ul>
             
             
@@ -90,7 +104,7 @@
                         <img src="images/profile logo.png" alt="user">
                     </div>
                     <div class="user_name">
-                        <p>Admin</p>
+                    <p><?php echo $userName ?></p>
                     </div>
     
                 </div>
@@ -110,7 +124,7 @@
                      
                 </div>
 
-                <div class="right_box" action="createAdmin.php">
+                <div class="right_box">
                 
                     <p>Update <?php echo $userName."'s"; ?> Account</p>
                     <form method="POST">
