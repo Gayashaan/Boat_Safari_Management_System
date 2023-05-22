@@ -78,7 +78,7 @@ include_once("config.php");
                         <div class="grid">
                             <table>
                                 <tr>
-                                    <th>AdminID</th>
+                                    <!-- <th>AdminID</th> -->
                                     <th>First Name</th>
                                     <th>Email</th>
                                     <th>Contact Number</th>
@@ -102,7 +102,7 @@ include_once("config.php");
                                             echo '
                                             
                                                     <tr>
-                                                        <td>' . $aID . '</td>
+                                                        
                                                         <td>' . $fname. '</td>
                                                         <td>' . $email. '</td>
                                                         <td>' . $cnumber. '</td>
