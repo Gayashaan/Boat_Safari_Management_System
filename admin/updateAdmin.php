@@ -181,7 +181,7 @@
                             <label for="cpwd">Confirm Password</label><br>
                             <input type="password" name="cpwd" id="cpwd" value="<?php echo $row['pwd']?>"><br>
                                 
-                            <input type="submit" value="Update" id="sbt" name="submit"><br>
+                            <input type="submit" value="Update" id="sbt" name="submit" onclick="return confirmUpdate('<?php echo $row['fname']?>')"><br>
 
                         </div>
                                   
@@ -197,6 +197,6 @@
     </div>
 
     
-   
+   <script src="adminindex.js"></script>
 </body>
 </html>
