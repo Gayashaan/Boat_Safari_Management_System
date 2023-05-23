@@ -111,6 +111,7 @@
                                             $lname = $row["lname"];
                                             $email = $row["email"];
                                             $cnumber = $row["cnumber"];
+                                            
                                     
                                             echo '
                                             
@@ -122,7 +123,7 @@
                                                         <td> 
                                                             <div class="opBtns">
                                                                 <button id="vwBtn"><a href="updateAdmin.php?updateid='.$aID.'">View</a></button>
-                                                                <button id="dlBtn"><a href="deleteAdmin.php?deleteid='.$aID.'">Delete</a></button>
+                                                                <button id="dlBtn" onclick="return confirmDelete()"><a href="deleteAdmin.php?deleteid='.$aID.'">Delete</a></button>
                                                             </div>
                                                         </td>
                                                     </tr>';
@@ -182,6 +183,6 @@
     </div>
 
     
-   
+    <script src="adminindex.js"></script>
 </body>
 </html>
