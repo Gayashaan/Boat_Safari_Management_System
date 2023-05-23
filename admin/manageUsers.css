@@ -4,6 +4,7 @@
 }
 .middle_panel{
     display: flex;
+    height: 100vh;
    
 }
 
@@ -22,7 +23,7 @@
 
 .middle_panel > .right_box{
     width: 45%;
-    height: 120%;
+    height: 455px;
     background-color: rgb(148, 141, 141);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
     padding: 10px;

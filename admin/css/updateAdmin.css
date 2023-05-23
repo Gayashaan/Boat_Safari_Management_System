@@ -4,6 +4,7 @@
 }
 .middle_panel{
     display: flex;
+    height: 100vh;
    
 }
 
@@ -22,7 +23,7 @@
 
 .middle_panel > .right_box{
     width: 45%;
-    height: 120%;
+    height: 455px;
     background-color: rgb(148, 141, 141);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
     padding: 10px;
@@ -72,7 +73,7 @@ input{
     margin-bottom: 10px;
 }
 .otherwrap{
-    margin-left: 10%;
+    margin-left: 11%;
 }
 .right_box > p{
     margin-left: 20px;
@@ -96,3 +97,54 @@ input{
     font-weight: 500;
     color: #000000;
 } 
+
+.profile{
+    display: flex;
+    height: 400px;
+    /* background-color: aqua; */
+}
+
+
+.middle_panel > .left_box > .profile > .pImg{
+    /* background-color: #00ff62; */
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    border-radius: 10%;
+}
+
+.middle_panel > .left_box > .profile >  .pImg > img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    margin: 4%;
+}
+.middle_panel > .left_box > .profile > .details{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    width: 360px;
+    height: 350px;
+    /* background-color: #c02828; */
+    
+    
+}
+.middle_panel .left_box p{
+    margin: 5px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+#detBox{
+    
+    
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11%;
+    border: 2px solid #000000;
+    
+}
