@@ -115,7 +115,7 @@
                 <div class="left_box">
                     <?php
                         $id = $_GET['updateid'];
-                        $sql = "SELECT fname FROM admin WHERE adminID = '$id'";
+                        $sql = "SELECT * FROM admin WHERE adminID = '$id'";
                         $result = $conn->query($sql);
                         $row = $result->fetch_assoc();
                         $userName = $row['fname'];
@@ -131,22 +131,22 @@
                         <div class="namewrap">
                             <div class="fwrap">
                                 <label for="fname">First name</label><br>
-                                <input type="text" name="fname" id="fname" placeholder="First Name"><br>
+                                <input type="text" name="fname" id="fname" value="<?php echo $row['fname']?>" ><br>
                             </div>
                             <div class="lwrap">
                                 <label for="lname">Last name</label><br>
-                                <input type="text" name="lname" id="lname" placeholder="Last Name">
+                                <input type="text" name="lname" id="lname" value="<?php echo $row['lname']?>">
                             </div>
                         </div>
                         <div class="otherwrap">
                             <label for="email">Email</label><br>
-                            <input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email"><br>
+                            <input type="text" name="email" id="email" value="<?php echo $row['email']?>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
                             <label for="cNo">Contact No</label><br>
-                            <input type="number" name="cNo" id="cNo" placeholder="Contact Number"><br>
+                            <input type="number" name="cNo" id="cNo" value="<?php echo $row['cnumber']?>"><br>
                             <label for="pwd">Password</label><br>
-                            <input type="password" name="pwd" id="pwd" placeholder="Password"><br>
+                            <input type="password" name="pwd" id="pwd" value="<?php echo $row['pwd']?>"><br>
                             <label for="cpwd">Confirm Password</label><br>
-                            <input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password"><br>
+                            <input type="password" name="cpwd" id="cpwd" value="<?php echo $row['pwd']?>"><br>
                                 
                             <input type="submit" value="Update" id="sbt" name="submit"><br>
 
