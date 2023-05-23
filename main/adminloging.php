@@ -1,5 +1,7 @@
 <?php
-     include_once("../admin/config.php");
+    include_once("../admin/database.php");
+    include_once("../admin/config.php");
+     
      session_start();
 
         if(isset($_POST['submit'])){
