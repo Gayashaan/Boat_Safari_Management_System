@@ -26,15 +26,17 @@
         
         $id = $_GET['updateid'];
 
-        $sql = "UPDATE admin SET adminID='$id', fname='$fname', lname='$lname', email='$email', pwd='$pwd', cnumber='$cnumber' WHERE adminID=$id";
-        $result = $conn->query($sql);
 
-
-        if($result){
+        if($pwd == $cpwd){
+            $sql = "UPDATE admin SET adminID='$id', fname='$fname', lname='$lname', email='$email', pwd='$pwd', cnumber='$cnumber' WHERE adminID=$id";
+            $result = $conn->query($sql);
             echo "<script> alert('Update Successfully');</script>";
             
         }else{
+            echo "<script> alert('Password Not Matched');</script>";
+            header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
             die(mysqli_error($conn));
+            
         }
     }
     
@@ -121,6 +123,37 @@
                         $userName = $row['fname'];
                         echo "<h6>".$userName."'s profile </h6>";
                     ?>
+
+                    <div class="profile">
+
+                        <div class="pImg">
+                            <img src="images/profile logo.png" alt="profile">
+                        </div>
+
+                        <div class="details">
+
+                            <div class="fname" id="detBox">
+                                <p>First Name:<?php echo " " .$row['fname'] ?></p>
+                            </div>
+
+                            <div class="lname" id="detBox">
+                                <p>Last Name:<?php echo " " .$row['lname'] ?></p>
+                            </div>
+
+                            <div class="email" id="detBox">
+                                <p>Email:<?php echo " " .$row['email'] ?></p>
+                            </div>
+
+                            <div class="cnumber" id="detBox">
+                                <p>Contact Number:<?php echo " " .$row['cnumber'] ?></p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                   
+
+                    
                      
                 </div>
 
