@@ -1,5 +1,5 @@
 <?php
-
+    
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -11,12 +11,6 @@
         die("Connection failed: " . $conn->connect_error);
         echo "<script> alert('Connection UnnSuccessfull');</script>";
     }
-
-
-
-
-
-
-
+    
 
 ?>

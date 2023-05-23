@@ -1,5 +1,7 @@
 <?php
-     include_once("../admin/config.php");
+    include_once("../admin/database.php");
+    include_once("../admin/config.php");
+     
      session_start();
 
         if(isset($_POST['submit'])){
@@ -21,7 +23,7 @@
             }else{
                 
                 echo "<script> alert('No such records');</script>";
-                header("Refresh: 1; URL = adminloging.php");
+                header("Refresh: 0; URL = adminloging.php");
             }
                     
         }

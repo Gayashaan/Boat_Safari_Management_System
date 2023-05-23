@@ -85,7 +85,7 @@
             </div>
 
             <div class="middle_panel">
-            <div class="left_box">
+                <div class="left_box">
                         <h6>All Employees</h6>
                                     
                         <div class="grid">

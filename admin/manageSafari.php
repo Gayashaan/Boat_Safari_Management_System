@@ -81,8 +81,23 @@
             </div>
 
             <div class="middle_panel">
-        
+                <div class="left_box">
+                        <h6>All Safaries</h6>
+                         
+                                                    
+                </div>
+
+                <div class="right_box">
+                    <p>Add new Safari</p>
+                    
+                            
+                </div>
+                
+                                       
+                 
             </div>
+        
+            
         </div>
         
     </div>

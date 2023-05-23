@@ -8,9 +8,10 @@
 
         if($result){
             echo "<script> alert('Admin Deleted Successfully');</script>";
-            header("Location: manageUsers.php");
+            header("Refresh: 0; URL = manageUsers.php");
         }else{
             echo "<script> alert('Admin Deletion Failed');</script>";
+            header("Refresh: 0; URL = manageUsers.php");
         }
     }
 
