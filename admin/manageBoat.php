@@ -81,7 +81,20 @@
             </div>
 
             <div class="middle_panel">
-        
+                <div class="left_box">
+                        <h6>All Boats</h6>
+                         
+                                                    
+                </div>
+
+                <div class="right_box">
+                    <p>Add new boat</p>
+                    
+                            
+                </div>
+                
+                                       
+                 
             </div>
         </div>
         
