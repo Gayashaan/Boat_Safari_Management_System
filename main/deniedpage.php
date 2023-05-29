@@ -13,7 +13,7 @@
     <p>Access Denied</p>
     <h6>Wait till you be Redirected to login page</h6>
    <?php
-    header("Refresh: 4;URL = ../main/loging_selector_page.php");
+    header("Refresh: 2;URL = ../main/loging_selector_page.php");
 
    
    
