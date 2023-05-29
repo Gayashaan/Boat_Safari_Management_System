@@ -83,14 +83,67 @@
             <div class="middle_panel">
                 <div class="left_box">
                         <h6>All Safaries</h6>
+                        <p>this is left box</p>
                          
                                                     
                 </div>
 
                 <div class="right_box">
                     <p>Add new Safari</p>
-                    
+                    <form>
+  <label for="SID">Safari ID:</label><br>
+  <input type="text" id="SID" name="SID"><br>
+  <label for="Sname">Safari Name:</label><br>
+  <input type="text" id="Sname" name="Sname"><br>
+  <label for="location">Location:</label><br>
+  <input type="text" id="location" name="location"><br>
+  <label for="price">Price LKR:</label><br>
+  <input type="text" id="price" name="price"><br>
+  <label for="date">Date:</label><br>
+  <input type="text" id="date" name="date"><br>
+  <label for="description">Description::</label><br>
+  <input type="text" id="description" name="description"><br>
+
+  <input type="submit" value="Create" id="sbt" name="submit"><br>
+
+</form>
+<?php
+$sql = "SELECT * FROM msafari";
                             
+                            $result = $conn->query($sql);
+                
+                
+                            if($result->num_rows>0){
+                                while($row = $result->fetch_assoc()){
+                                    $ID = $row["ID"];
+                                    $Sname = $row["name"];
+                                    $location = $row["location"];
+                                    $price = $row["price"];
+                                    $date = $row["date"];
+                                    $description  =$row["description"];
+                                    
+                                    echo '
+                                            
+                                    <tr>
+                                        
+                                        <td>' . $Sname. '</td>
+                                        <td>' . $location. '</td>
+                                        <td>' . $price. '</td>
+                                        <td>' .$date. '</td>
+                                        <td>' .$description. '</td>
+                                        <td> 
+                                            <div class="opBtns">
+                                                <button id="vwBtn"><a href="updateAdmin.php?updateid='.$aID.'">View</a></button>
+                                                <button id="dlBtn"><a href="deleteAdmin.php?deleteid='.$aID.'">Delete</a></button>
+                                            </div>
+                                        </td>
+                                    </tr>';
+                                
+                        }
+                    }else{
+                        echo "Empty rows!!";
+                    }
+                            ?>
                 </div>
                 
                                        
