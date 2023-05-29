@@ -2,7 +2,7 @@
     include_once("config.php");
     session_start();
     if($_SESSION['adminID'] == ""){
-        header("Refresh: 4;URL = ../main/deniedpage.php");
+        header("LOCATION: ../main/deniedpage.php");
         echo "<script> alert('Please Login');</script>";
         // header("location: ../main/adminloging.php");
         die();
