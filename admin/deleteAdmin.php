@@ -3,14 +3,22 @@
 
     if(isset($_GET['deleteid'])){
         $id = $_GET['deleteid'];
-        $sql = "DELETE FROM admin WHERE adminID = '$id'";
-        $result = $conn->query($sql);
+        $userIdentification = str_split($id);
+
+        if($userIdentification[0] == 'A'){
+            $sql = "DELETE FROM admin WHERE adminID = '$id'";
+            $result = $conn->query($sql);
+        }else if($userIdentification[0] == 'U'){
+            $sql = "DELETE FROM user WHERE userID = '$id'";
+            $result = $conn->query($sql);
+        }
+        
 
         if($result){
-            echo "<script> alert('Admin Deleted Successfully');</script>";
+            echo "<script> alert('Deletion Successfull');</script>";
             header("Refresh: 0; URL = manageUsers.php");
         }else{
-            echo "<script> alert('Admin Deletion Failed');</script>";
+            echo "<script> alert('Deletion Failed');</script>";
             header("Refresh: 0; URL = manageUsers.php");
         }
     }

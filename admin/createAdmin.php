@@ -9,6 +9,7 @@
         $pwd = $_POST['pwd'];
         $cpwd = $_POST['cpwd'];
         
+        //to check if the email and password exist in the data base
         $existSql = "SELECT * FROM admin WHERE email = '$email' and pwd = '$pwd'"; 
         $result2 = $conn->query($existSql);
 
@@ -17,7 +18,23 @@
             header("Refresh: 0; URL = manageUsers.php");
 
         }else if($pwd == $cpwd){
-            $sql = "INSERT INTO admin(adminID, fname, lname, email, pwd, cnumber) VALUES ('','$fname', '$lname', '$email', '$pwd', '$cnumber')";
+
+            $prefix = "A";//ADMIN USER ID PREFIX
+            $last_db_id = "SELECT adminID FROM admin ORDER BY adminID DESC LIMIT 1";//check thee last id in the database
+            $result3 = $conn->query($last_db_id);
+
+            if($result3->num_rows > 0){
+                $row = $result3->fetch_assoc();
+                $lastID = $row['adminID'];//save last id in the database to a variable A001(EXAMPLE)
+                $incNumber = intval(substr($lastID, 1));//First remove the A(prefix) from the last id and then convert it into a intereger 1 MEAN A001 WILL BECOME 001 IF WE USE 2 IT WILL BECOME 01
+                $incNumber = $incNumber + 1;//inTval will convert string to int and substr will cut the string
+            }else{
+                $incNumber = 1;
+            }
+
+            $adminID = $prefix . sprintf("%03d", $incNumber);
+
+            $sql = "INSERT INTO admin(adminID, fname, lname, email, pwd, cnumber) VALUES ('$adminID','$fname', '$lname', '$email', '$pwd', '$cnumber')";
             //$result = mysqli_query($conn, $sql); //procedual method
             $result = $conn->query($sql); //oop method
 
@@ -38,5 +55,5 @@
         header("Refresh: 0; URL = manageUsers.php");
     }
 
-    mysqli_close($conn);
+    $conn->close();
 ?>
