@@ -25,12 +25,20 @@
         $cpwd = $_POST['cpwd'];
         
         $id = $_GET['updateid'];
+        $userIdentification = str_split($id);
+
 
 
         if($pwd == $cpwd){
-            $sql = "UPDATE admin SET adminID='$id', fname='$fname', lname='$lname', email='$email', pwd='$pwd', cnumber='$cnumber' WHERE adminID=$id";
-            $result = $conn->query($sql);
-            echo "<script> alert('Update Successfully');</script>";
+            if($userIdentification[0] == 'A'){
+                $sql = "UPDATE admin SET adminID='$id', fname='$fname', lname='$lname', email='$email', pwd='$pwd', cnumber='$cnumber' WHERE adminID='$id'";
+                $result = $conn->query($sql);
+                echo "<script> alert('Update Successfully');</script>";
+            }else if($userIdentification[0] == 'U'){
+                $sql = "UPDATE user SET userID='$id', fname='$fname', lname='$lname', email='$email', pwd='$pwd', cnumber='$cnumber' WHERE userID='$id'";
+                $result = $conn->query($sql);
+                echo "<script> alert('Update Successfully');</script>";
+            }
             
         }else{
             echo "<script> alert('Password Not Matched');</script>";
@@ -117,9 +125,21 @@
                 <div class="left_box">
                     <?php
                         $id = $_GET['updateid'];
-                        $sql = "SELECT * FROM admin WHERE adminID = '$id'";
-                        $result = $conn->query($sql);
-                        $row = $result->fetch_assoc();
+                        $userIdentification = str_split($id);
+                        
+
+                        if($userIdentification[0] == 'A'){
+
+                            $sql = "SELECT * FROM admin WHERE adminID = '$id'";
+                            $result = $conn->query($sql);
+                            $row = $result->fetch_assoc();
+
+                        }else if($userIdentification[0] == 'U'){
+
+                            $sql = "SELECT * FROM user WHERE userID = '$id'";
+                            $result = $conn->query($sql);
+                            $row = $result->fetch_assoc();
+                        }
                         $userName = $row['fname'];
                         echo "<h6>".$userName."'s profile </h6>";
                     ?>

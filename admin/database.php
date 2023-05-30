@@ -6,8 +6,8 @@
     $conn->query($createDB);//database creation
 */
     //query for table creation if not exists
-    $createTable = "CREATE TABLE IF NOT EXISTS admin(
-        adminID INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    $createTableAdmin = "CREATE TABLE IF NOT EXISTS admin(
+        adminID VARCHAR(10) PRIMARY KEY,
         fname VARCHAR(50) NOT NULL,
         lname VARCHAR(50) NOT NULL,
         email VARCHAR(50) NOT NULL,
@@ -15,27 +15,57 @@
         cnumber INT(10) NOT NULL
     )";
     //run the query to create tbale if table does not exists
-    $conn->query($createTable);//table creation
+    $conn->query($createTableAdmin);//table creation
 
     //query for insert data if table is empty
-    $insertData = "
+    $insertDataAdmin = "
     INSERT INTO admin(adminID, fname, lname, email, pwd, cnumber) VALUES
-    (1, 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'admin', 0771234569),
-    (2, 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'admin', 0771234569),
-    (3, 'shenal', 'somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963),
-    (4, 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'admin', 0771458963),
-    (5, 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'admin', 0774589632)";
+    ('A001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'admin', 0771234569),
+    ('A002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'admin', 0771234569),
+    ('A003', 'shenal', 'somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963),
+    ('A004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'admin', 0771458963),
+    ('A005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'admin', 0774589632)";
 
     
 
     
     // check the records in the table
-    $readTable = "SELECT * FROM admin";
-    $result = $conn->query($readTable);
+    $readTableAdmin = "SELECT * FROM admin";
+    $resultAdmin = $conn->query($readTableAdmin);
 
     //if table is empty insert data to the table
-    if($result->num_rows == 0){
-        $conn->query($insertData);
+    if($resultAdmin->num_rows == 0){
+        $conn->query($insertDataAdmin);
+    }
+
+
+    $createTableUser = "CREATE TABLE IF NOT EXISTS user(
+        userID VARCHAR(10) PRIMARY KEY,
+        fname VARCHAR(50) NOT NULL,
+        lname VARCHAR(50) NOT NULL,
+        email VARCHAR(50) NOT NULL,
+        pwd VARCHAR(50) NOT NULL,
+        cnumber INT(10) NOT NULL
+    )";
+
+    $conn->query($createTableUser);
+
+    $insertDataUser = "
+    INSERT INTO user(userID, fname, lname, email, pwd, cnumber) VALUES
+    ('U001', 'TEST1', 'Asithma', 'dinuviasithma@gmail.com', 'admin', 0771234569),
+    ('U002', 'TEST2', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'admin', 0771234569),
+    ('U003', 'TEST3', 'somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963),
+    ('U004', 'TEST4', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'admin', 0771458963),
+    ('U005', 'TES5', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'admin', 0774589632)";
+
+
+    // check the records in the table
+    $readTableUser = "SELECT * FROM USER";
+    $resultUser = $conn->query($readTableUser);
+
+    //if table is empty insert data to the table
+    if($resultUser->num_rows == 0){
+        $conn->query($insertDataUser);
     }
 
 ?>

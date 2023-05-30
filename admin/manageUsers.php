@@ -91,7 +91,7 @@
                         <div class="grid">
                             <table>
                                 <tr>
-                                    <!-- <th>AdminID</th> -->
+                                    <th>AdminID</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Contact No</th>
@@ -116,7 +116,7 @@
                                             echo '
                                             
                                                     <tr>
-                                                        
+                                                        <td>' . $aID. '</td>
                                                         <td>' . $fname. '</td>
                                                         <td>' . $lname. '</td>
                                                         <td>' . $cnumber. '</td>
@@ -130,7 +130,41 @@
                                                 
                                         }
                                     }else{
-                                        echo "Empty rows!!";
+                                        echo "<td>Empty rows!!</td>";
+                                    }
+
+                                    $sql2 = "SELECT * FROM user";
+                            
+                                    $result2 = $conn->query($sql2);
+                        
+                        
+                                    if($result2->num_rows>0){
+                                        while($row2 = $result2->fetch_assoc()){
+                                            $uID = $row2["userID"];
+                                            $ufname = $row2["fname"];
+                                            $ulname = $row2["lname"];
+                                            $uemail = $row2["email"];
+                                            $ucnumber = $row2["cnumber"];
+                                            
+                                    
+                                            echo '
+                                            
+                                                    <tr>
+                                                        <td>' . $uID. '</td>
+                                                        <td>' . $ufname. '</td>
+                                                        <td>' . $ulname. '</td>
+                                                        <td>' . $ucnumber. '</td>
+                                                        <td> 
+                                                            <div class="opBtns">
+                                                                <button id="vwBtn"><a href="updateAdmin.php?updateid='.$uID.'">View</a></button>
+                                                                <button id="dlBtn" onclick="return confirmDelete()"><a href="deleteAdmin.php?deleteid='.$uID.'">Delete</a></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>';
+                                                
+                                        }
+                                    }else{
+                                        echo "<td>Empty rows!!</td>";
                                     }
 
                                 ?>
