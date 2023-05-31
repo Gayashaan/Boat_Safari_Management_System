@@ -9,7 +9,7 @@
         <a href="#">Gallery</a>
         <a href="#">Tours</a>
         <a href="loging_selector_page.php">Login</a>
-        <a href="#">Sign Up</a>
+        <a href="signup.html">Sign Up</a>
     </nav>
 
 </header>
