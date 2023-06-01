@@ -75,6 +75,6 @@ span{
   transition: 0.5s;
 }
 .hire:hover{
-  background: #000;
+  background: #f9f0f0;
   border: 1px solid #4070f4;
 }
