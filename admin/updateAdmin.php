@@ -200,6 +200,8 @@
                             <input type="password" name="pwd" id="pwd" value="<?php echo $row['pwd']?>"><br>
                             <label for="cpwd">Confirm Password</label><br>
                             <input type="password" name="cpwd" id="cpwd" value="<?php echo $row['pwd']?>"><br>
+                            <span id="err">Password does not matched</span>
+                            <input type="checkbox" id="checkbox"><span class="pwdtxt">Show Password</span>
                                 
                             <input type="submit" value="Update" id="sbt" name="submit" onclick="return confirmUpdate('<?php echo $row['fname']?>')"><br>
 

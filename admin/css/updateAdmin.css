@@ -10,7 +10,7 @@
 
 .middle_panel > .left_box{
     width: 75%;
-    height: 455px;
+    height: 500px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
     padding: 10px;
@@ -23,7 +23,7 @@
 
 .middle_panel > .right_box{
     width: 45%;
-    height: 455px;
+    height: 500px;
     background-color: rgb(148, 141, 141);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
     padding: 10px;
@@ -34,7 +34,7 @@
 }
 input{
     width: 150px;
-    height: 18px;
+    height: 20px;
     border-radius: 5px;
     border: none;
     padding: 5px;
@@ -77,8 +77,8 @@ input{
 }
 .right_box > p{
     margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 6px;
+    margin-bottom: 10px;
     color: rgb(0, 0, 0);
     font-size: 23px;
 }
@@ -147,4 +147,27 @@ input{
     margin-top: 11%;
     border: 2px solid #000000;
     
+}
+
+#err{
+    color: red;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: none;
+}
+
+#checkbox{
+    margin: 5px 10px 0px 0px;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+}
+
+.pwdtxt{
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+    font-size: 14px;
 }

@@ -17,8 +17,45 @@
     <?php include("header.php"); ?>
     
     <div class="container">
+
         <div class="wrap">
-            still in progress
+
+            <div class="imgBox">
+                <div class="mainImg">
+                    <h1>main img</h1>
+                </div>
+                <div class="subImg">
+                    <h1>sub img1</h1>
+                </div>
+                <div class="subImg">
+                    <h1>sub img2</h1>
+                </div>
+                <div class="subImg">
+                    <h1>sub img3</h1>
+                </div>
+            </div>
+
+            <div class="safDetails">
+                <div class="heading">
+                    <h1>Safari Title</h1>
+                </div>
+                <div class="para">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus ducimus dolorem quidem labore accusantium fugit debitis excepturi asperiores ipsa, dolore vitae eos possimus magni numquam impedit illo corrupti doloribus.</p>
+
+                </div>
+                <fieldset>
+                    <form action="">
+                        <label for="">Number of Adults</label>
+                        <label for="">Number of Childrens</label>
+                        <label for="">Check in Date</label>
+                        <label for="">Add breakfast</label>
+                        <label for="">Add Lunch</label>
+                        <label for="">Email</label>
+                        <label for="">Contact Number</label>
+                    </form>
+                </fieldset>
+                
+            </div>
         </div>
     </div>
     

@@ -67,7 +67,7 @@
         
                         <div class="inputs">
                             <input type="submit" name="submit" value="Log In">
-                            <a href="../admin/dashboard.php">Forget password?(click here to see admin dashboard)</a>
+                            <a href="">Forget password?</a>
                         </div>
                     </div>
                     
