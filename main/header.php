@@ -7,7 +7,7 @@
         <a href="AboutUs.php">About Us </a>
         <a href="Contact_us.php">Contact</a>
         <a href="#">Gallery</a>
-        <a href="#">Tours</a>
+        <a href="reservation.php">Tours</a>
         <a href="loging_selector_page.php">Login</a>
         <a href="signup.html">Sign Up</a>
     </nav>

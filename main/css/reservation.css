@@ -1,0 +1,11 @@
+.container{
+    position: relative;
+    height: 100%;
+    background-color: aqua;
+}
+
+.wrap{
+    background-color: rgb(164, 224, 52);
+    position: relative;
+    top: 20%;
+}
