@@ -36,10 +36,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../main/css/header.css">
-    <link rel="stylesheet" href="css/adminloging.css">
-    <link rel="stylesheet" href="css/logging.css">
-    <title>Admin Loging</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/loging.css">
+    <title>User Loging</title>
 </head>
 <body>
     <?php include("header.php"); ?>
@@ -47,7 +46,7 @@
 
 
     <div class="container">
-        <img src="../main/images/boat1.jpg" alt="">
+        <!-- <img src="images/boat1.jpg" alt=""> -->
         <div class="wrap">
             <div class="formwrap">
                 <div class="imgwrap">
