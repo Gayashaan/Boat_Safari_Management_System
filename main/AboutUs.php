@@ -22,14 +22,14 @@
 
     <section class="about-us">
       <div class="about">
-        <!--<img src="girl.png" class="pic">-->
-        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3b/05/aa.jpg" class="pic" height="200px">
+      
+        <img src="https://www.zanviewhotel.com/media/img/14e/safari-blue3f300715.jpg" class="pic" height="200px">
         <div class="text">
           <h2>About Us</h2>
-          <h5>Front-end Developer & <span>Designer</span></h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
+          <h5>One Ride Million Memories</h5>
+                <p >Our main goal is to implant everlasting memories to people who ride with us. Our rides are full of joy and unforgetable moments. Join with our next ride to explore the beuty of nature</p>
           <div class="data">
-                <a href="#" class="hire">Hire Me</a>
+                <a href="signup.html" class="hire">Sign up</a>
           </div>
         </div>
       </div>
