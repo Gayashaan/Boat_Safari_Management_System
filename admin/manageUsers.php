@@ -86,7 +86,7 @@
 
             <div class="middle_panel">
                 <div class="left_box">
-                        <h6>All Employees</h6>
+                        <h6>All System Users</h6>
                                     
                         <div class="grid">
                             <table>
@@ -200,6 +200,9 @@
                             <input type="password" name="pwd" id="pwd" placeholder="Password"><br>
                             <label for="cpwd">Confirm Password</label><br>
                             <input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password"><br>
+                            <span id="err">Password does not matched</span>
+                            <input type="checkbox" id="checkbox"><span class="pwdtxt">Show Password</span>
+                            
                                 
                             <input type="submit" value="Create" id="sbt" name="submit"><br>
 
