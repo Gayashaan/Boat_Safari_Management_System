@@ -22,7 +22,7 @@
     INSERT INTO admin(adminID, fname, lname, email, pwd, cnumber) VALUES
     ('A001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'admin', 0771234569),
     ('A002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'admin', 0771234569),
-    ('A003', 'shenal', 'somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963),
+    ('A003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963),
     ('A004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'admin', 0771458963),
     ('A005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'admin', 0774589632)";
 
