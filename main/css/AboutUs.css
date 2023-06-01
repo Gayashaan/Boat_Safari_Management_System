@@ -10,7 +10,7 @@ html, body{
 .about-us{
   width: 100%;
   padding: 90px 0;
-  background-image: url('https://w0.peakpx.com/wallpaper/981/946/HD-wallpaper-green-lake-background-landscapes-creeks-bright-paisage-quiet-tranquil-beautiful-seasons-leaves-roots-parks-green-scenery-lakescape-lakes-paisagem-day-nature-reflected-branches.jpg');
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyQ2dQAWt-LkaSnh0KlbRmnp--dHnMcHgXxA&usqp=CAU);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Poppins', sans-serif;
@@ -20,6 +20,7 @@ html, body{
   width:100%;
   object-fit: cover;
   padding-right: 40px;
+  border-radius: 15%;
 }
 
 .about{
@@ -37,12 +38,20 @@ html, body{
   font-size: 90px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: #4070f4;
 
 }
 .text h5{
   font-size: 22px;
   font-weight: 500;
+ font-family:pacifica;
   margin-bottom: 20px;
+  color: rgb(14, 83, 174);
+}
+.text p{
+
+  font-style: italic;
+  color: darkslateblue;
 }
 span{
   color: #4070f4;
