@@ -1,18 +1,19 @@
 <?php
    include_once("config.php");
-   session_start();
-   if($_SESSION['adminID'] == ""){
-        header("LOCATION: ../main/deniedpage.php");
-       echo "<script> alert('Please Login');</script>";
-       // header("location: ../main/adminloging.php");
-       die();
+   include_once("session.php");
+//    session_start();
+//    if($_SESSION['adminID'] == ""){
+//         header("LOCATION: ../main/deniedpage.php");
+//         echo "<script> alert('Please Login');</script>";
+//        // header("location: ../main/adminloging.php");
+//        die();
        
-   }else{
-       $adminID = $_SESSION['adminID'];
-       $ufname = $_SESSION['fname'];
-       $ulname = $_SESSION['lname'];
-       $userName = $ufname . " " . $ulname;
-   }
+//    }else{
+//        $adminID = $_SESSION['adminID'];
+//        $ufname = $_SESSION['fname'];
+//        $ulname = $_SESSION['lname'];
+//        $userName = $ufname . " " . $ulname;
+//    }
 
 ?>
 <!DOCTYPE html>
@@ -83,31 +84,7 @@
             <div class="middle_panel">
                 <div class="left_box">
                         <h6>All Safaries</h6>
-                        <p>this is left box</p>
-                         
-                                                    
-                </div>
-
-                <div class="right_box">
-                    <p>Add new Safari</p>
-                    <form>
-  <label for="SID">Safari ID:</label><br>
-  <input type="text" id="SID" name="SID"><br>
-  <label for="Sname">Safari Name:</label><br>
-  <input type="text" id="Sname" name="Sname"><br>
-  <label for="location">Location:</label><br>
-  <input type="text" id="location" name="location"><br>
-  <label for="price">Price LKR:</label><br>
-  <input type="text" id="price" name="price"><br>
-  <label for="date">Date:</label><br>
-  <input type="text" id="date" name="date"><br>
-  <label for="description">Description::</label><br>
-  <input type="text" id="description" name="description"><br>
-
-  <input type="submit" value="Create" id="sbt" name="submit"><br>
-
-</form>
-<?php
+                        <?php
 $sql = "SELECT * FROM msafari";
                             
                             $result = $conn->query($sql);
@@ -143,7 +120,31 @@ $sql = "SELECT * FROM msafari";
                     }else{
                         echo "Empty rows!!";
                     }
-                            ?>
+?>
+                         
+                                                    
+                </div>
+
+                <div class="right_box">
+                    <p>Add new Safari</p>
+                    <form action="createSafari.php" method="post">
+                        <label for="SID">Safari ID:</label><br>
+                        <input type="text" id="SID" name="SID"><br>
+                        <label for="Sname">Safari Name:</label><br>
+                        <input type="text" id="Sname" name="Sname"><br>
+                        <label for="location">Location:</label><br>
+                        <input type="text" id="location" name="location"><br>
+                        <label for="price">Price LKR:</label><br>
+                        <input type="text" id="price" name="price"><br>
+                        <label for="date">Date:</label><br>
+                        <input type="text" id="date" name="date"><br>
+                        <label for="description">Description::</label><br>
+                        <input type="text" id="description" name="description"><br>
+
+                        <input type="submit" value="Create" id="sbt" name="submit"><br>
+
+                    </form>
+
                 </div>
                 
                                        
