@@ -89,25 +89,56 @@
             
             <div class="middle_panel">
                 <div class="upper_box">
+                    <?php
+                        $date = date("Y-m-d");
+
+                        // $sqlUser = "SELECT sum(countUser) AS 'Total user Count'FROM(
+                        //                                                     SELECT count(*) AS 'countUser' FROM admin
+                        //                                                     UNION ALL
+                        //                                                     SELECT count(*) AS 'countUser' FROM user
+                        //                                                     )countUser";
+
+                        function totalUser($conn){
+                            $sqlUser = "SELECT count(*) AS 'Total user Count' FROM user";
+                            $resultUser = $conn->query($sqlUser);
+                            $rowUser = $resultUser->fetch_assoc();
+                            $totalUser = $rowUser['Total user Count'];
+                            return $totalUser;
+                        }
+                        function totalAdmin($conn){
+                            $sqlAdmin = "SELECT count(*) AS 'Total admin Count' FROM admin";
+                            $resultAdmin = $conn->query($sqlAdmin);
+                            $rowAdmin = $resultAdmin->fetch_assoc();
+                            $totalAdmin = $rowAdmin['Total admin Count'];
+                            return $totalAdmin;
+                        }
+                        
+                        $systemUsers = totalUser($conn) + totalAdmin($conn);
+
+                        
+
+                    ?>
+
                     <div class="box">
                         <h6>Total Trips</h6>
                         <p class="val">40876</p>
-                        <p class="date">date base date</p>
+                        <p class="date"><?php echo $date?></p>
                     </div>
                     <div class="box">
-                        <h6>Total sales</h6>
-                        <p class="val">40876</p>
-                        <p class="date">date base date</p>
+                        
+                        <h6>Total Users</h6>
+                        <p class="val"><?php echo $systemUsers?></p>
+                        <p class="date"><?php echo $date?></p>
                     </div>
                     <div class="box">
                         <h6>Total profit</h6>
                         <p class="val">40876</p>
-                        <p class="date">date base date</p>
+                        <p class="date"><?php echo $date?></p>
                     </div>
                     <div class="box">
                         <h6>Total Boats</h6>
                         <p class="val">40876</p>
-                        <p class="date">date base date</p>
+                        <p class="date"><?php echo $date?></p>
                     </div>
                 </div>
 
