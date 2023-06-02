@@ -5,7 +5,7 @@
     unset($_SESSION['lname']);
     unset($_SESSION['adminID']);
     session_destroy();
-    header("Refresh: 2; URL = ../main/adminloging.php");
+    header("Refresh: 2; URL = ../main/loging_selector_page.php");
     // exit();
 
 ?>

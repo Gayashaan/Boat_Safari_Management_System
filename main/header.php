@@ -1,15 +1,34 @@
+<?php
+
+    $isSessionActive = (session_status() == PHP_SESSION_ACTIVE);
+    if(!$isSessionActive){
+        session_start();
+    } 
+?>
 <header class = "header">
     
     <img  src="images/favpng_ferry-ship-boat-tour.png" class ="logo"  height="100px" width="250px"/>
     
     <nav class="nav-items">
-        <a href="index.html" >Home</a>
+        <a href="index.php" >Home</a>
         <a href="AboutUs.php">About Us </a>
         <a href="Contact_us.php">Contact</a>
         <a href="#">Gallery</a>
         <a href="reservation.php">Tours</a>
-        <a href="loging_selector_page.php">Login</a>
-        <a href="signup.html">Sign Up</a>
+
+        <?php
+
+            if(isset($_SESSION["userID"])){
+                echo "<a href='user_profile.php'>Profile</a>";
+                echo "<a href='../admin/logout.php'>Logout</a>";
+            }else{
+                echo "<a href='loging_selector_page.php'>Login</a>";
+                echo "<a href='signup.html'>Sign Up</a>";
+            }
+            
+        ?>
+        <!-- <a href="loging_selector_page.php">Login</a>
+        <a href="signup.html">Sign Up</a> -->
     </nav>
 
 </header>

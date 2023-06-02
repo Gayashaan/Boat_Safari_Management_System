@@ -15,8 +15,8 @@
             if(mysqli_num_rows($result) > 0){
                 
                 echo "<script> alert('You have succesfully logged In');</script>";
-                header("Refresh: 0; URL = ../admin/dashboard.php");
-                $_SESSION['adminID'] = $row['adminID'];
+                header("Refresh: 0; URL = ../main/index.php");
+                $_SESSION['userID'] = $row['adminID'];
                 $_SESSION['fname'] = $row['fname'];
                 $_SESSION['lname'] = $row['lname'];
 
