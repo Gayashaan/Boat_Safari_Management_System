@@ -23,7 +23,7 @@
             }else{
                 
                 echo "<script> alert('No such records');</script>";
-                header("Refresh: 0; URL = adminloging.php");
+                header("Refresh: 0; URL = login.php");
             }
                     
         }
