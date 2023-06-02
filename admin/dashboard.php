@@ -1,6 +1,6 @@
 <?php
     include_once("config.php");
-    include_once("session.php");
+    include_once("sessionAdmin.php");
     // session_start();
     // if($_SESSION['adminID'] == ""){
     //     header("LOCATION: ../main/deniedpage.php");

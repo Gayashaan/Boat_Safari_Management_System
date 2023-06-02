@@ -1,19 +1,20 @@
 <?php
 
     include_once("config.php");
-    session_start();
-    if($_SESSION['adminID'] == ""){
-        header("LOCATION: ../main/deniedpage.php");
-        echo "<script> alert('Please Login');</script>";
-        // header("location: ../main/adminloging.php");
-        die();
+    include_once("sessionAdmin.php");
+    // session_start();
+    // if($_SESSION['adminID'] == ""){
+    //     header("LOCATION: ../main/deniedpage.php");
+    //     echo "<script> alert('Please Login');</script>";
+    //     // header("location: ../main/adminloging.php");
+    //     die();
         
-    }else{
-        $adminID = $_SESSION['adminID'];
-        $ufname = $_SESSION['fname'];
-        $ulname = $_SESSION['lname'];
-        $userName = $ufname . " " . $ulname;
-    }
+    // }else{
+    //     $adminID = $_SESSION['adminID'];
+    //     $ufname = $_SESSION['fname'];
+    //     $ulname = $_SESSION['lname'];
+    //     $userName = $ufname . " " . $ulname;
+    // }
 
     
     if(isset($_POST['submit'])){
@@ -184,7 +185,7 @@
                         <div class="namewrap">
                             <div class="fwrap">
                                 <label for="fname">First name</label><br>
-                                <input type="text" name="fname" id="fname" value="<?php echo $row['fname']?>" ><br>
+                                <input type="text" name="fname" id="fname" value="<?php echo $row['fname']?>" >
                             </div>
                             <div class="lwrap">
                                 <label for="lname">Last name</label><br>
