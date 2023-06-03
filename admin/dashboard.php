@@ -45,7 +45,15 @@
 
         <div class="right_panel">
 
-            <?php include_once("upperPanel.php"); ?>
+            
+            <div class="upper_panel">
+                <div class="upper_panel_left">
+                    <h6>Dashboard</h6>
+                </div>
+
+                <?php include_once("upperPanelRight.php"); ?>
+
+            </div>
             
             <div class="greeting">
                 <p class="head">Welcome <?php echo $userName ?></p>
