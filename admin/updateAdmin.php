@@ -226,6 +226,7 @@
                             <input type="checkbox" id="checkbox"><span class="pwdtxt">Show Password</span>
                             <label for="fileupload" id="upload">Upload a Image</label>
                             <input type="file" id="fileupload" name="profileImg" hidden>
+                            <p id="file_chosen">No File Chosen</p>
                                 
                             <input type="submit" value="Update" id="sbt" name="submit" onclick="return confirmUpdate('<?php echo $row['fname']?>')"><br>
 
