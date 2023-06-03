@@ -51,7 +51,7 @@
                     <h6>Dashboard</h6>
                 </div>
 
-                <?php include_once("upperPanelRight.php"); ?>
+            <?php include_once("upperPanelRight.php") ?>
 
             </div>
             

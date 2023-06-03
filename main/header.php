@@ -23,7 +23,7 @@
                 echo "<a href='../admin/logout.php'>Logout</a>";
             }else{
                 echo "<a href='loging_selector_page.php'>Login</a>";
-                echo "<a href='signup.html'>Sign Up</a>";
+                echo "<a href='signup.php'>Sign Up</a>";
             }
             
         ?>

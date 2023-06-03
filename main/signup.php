@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Sign up page</title>
-        <link rel="stylesheet" href="stylesignup.css">
-    </head>
-    <body>
-         <div class="container">
-            <form id="signup">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/signup.css">
+    
+    <title>Sign Up</title>
+</head>
+
+<body>
+
+    <?php include("header.php"); ?>
+    
+    <div class="container">
+
+        <div class="wrap">
+
+        <form id="signup">
               <h1>Sign Up</h1>
 
               <label for="Firstname"><b>First Name</b></label>
@@ -48,7 +62,9 @@
 
               <button type="submit" form="signup" value="Submit">Submit</button>
             </form> 
-            </div>
-         
-    </body>
+        </div>
+    </div>
+    
+    
+</body>
 </html>

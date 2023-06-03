@@ -6,11 +6,11 @@
     $conn->query($createDB);//database creation
 */
     //query for table creation if not exists
-    $deletetable = "DROP TABLE IF EXISTS admin";
-    $conn->query($deletetable);
+    // $deletetable = "DROP TABLE IF EXISTS admin";
+    // $conn->query($deletetable);
 
-    $deletetable = "DROP TABLE IF EXISTS user";
-    $conn->query($deletetable);
+    // $deletetable = "DROP TABLE IF EXISTS user";
+    // $conn->query($deletetable);
 
     
     $createTableAdmin = "CREATE TABLE IF NOT EXISTS admin(
