@@ -41,17 +41,17 @@
 
             <div class="imgBox">
                 <div class="mainImg">
-                    <img class="img1" src="images/safari_img1.jpg" alt="">
+                    <img class="img1" id="mainImg" src="images/safari_img1.jpg" alt="">
                 </div>
                 <div class="subImgWrap">
                     <div class="subImg">
-                        <img class="subImg1" src="images/safari_img2.jpeg" alt="">
+                        <img class="subImg1" id="img1" src="images/safari_img2.jpeg" alt="">
                     </div>
                     <div class="subImg">
-                        <img class="subImg1" src="images/safari_img2.jpeg" alt="">
+                        <img class="subImg1"  id="img2" src="images/safari_img3.jpg" alt="">
                     </div>
                     <div class="subImg">
-                        <img class="subImg1" src="images/safari_img2.jpeg" alt="">
+                        <img class="subImg1" id="img3" src="images/safari_img4.jpg" alt="">
                     </div>
                 </div>
                 
@@ -130,5 +130,6 @@
     </div>
     
     
+    <script src="js/index.js"></script>
 </body>
 </html>
