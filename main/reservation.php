@@ -22,36 +22,82 @@
 
             <div class="imgBox">
                 <div class="mainImg">
-                    <h1>main img</h1>
+                    <img class="img1" src="images/safari_img1.jpg" alt="">
                 </div>
-                <div class="subImg">
-                    <h1>sub img1</h1>
+                <div class="subImgWrap">
+                    <div class="subImg">
+                        <img class="subImg1" src="images/safari_img2.jpeg" alt="">
+                    </div>
+                    <div class="subImg">
+                        <img class="subImg1" src="images/safari_img2.jpeg" alt="">
+                    </div>
+                    <div class="subImg">
+                        <img class="subImg1" src="images/safari_img2.jpeg" alt="">
+                    </div>
                 </div>
-                <div class="subImg">
-                    <h1>sub img2</h1>
-                </div>
-                <div class="subImg">
-                    <h1>sub img3</h1>
-                </div>
+                
             </div>
 
             <div class="safDetails">
                 <div class="heading">
                     <h1>Safari Title</h1>
+                    <div class="sub">
+                        <h2>Avialability</h2>
+                        <h2>$Price</h2>
+                    </div>
                 </div>
                 <div class="para">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus ducimus dolorem quidem labore accusantium fugit debitis excepturi asperiores ipsa, dolore vitae eos possimus magni numquam impedit illo corrupti doloribus.</p>
 
                 </div>
                 <fieldset>
-                    <form action="">
-                        <label for="">Number of Adults</label>
-                        <label for="">Number of Childrens</label>
-                        <label for="">Check in Date</label>
-                        <label for="">Add breakfast</label>
-                        <label for="">Add Lunch</label>
-                        <label for="">Email</label>
-                        <label for="">Contact Number</label>
+                    <form action="" method="post">
+                        <div class="horizontalWrap1">
+                            <div class="section">
+                                <label for="adults">Number of Adults</label><br>
+                                <input type="number" name="adults" id="adults">
+                            </div>
+
+                            <div class="section">
+                                <label for="childrens">Number of Childrens</label><br>
+                                <input type="number" name="childrens" id="childrens">
+                            </div>
+
+                            <div class="section">
+                                <label for="checkIn">Check in Date</label><br>
+                                <input type="date" name="checkIn" id="checkIn">
+                            </div>
+                    
+                        </div>
+                        
+                        <div class="horizontalWrap2">
+                            <div class="section">
+                                <label for="breakfast">Add breakfast</label><br>
+                                <input type="text" name="breakfast" id="breakfast">
+                            </div>
+                            <div class="section">
+                                <label for="lunch">Add Lunch</label><br>
+                                <input type="text" name="lunch" id="lunch">
+                            </div>
+
+                        </div>
+
+                        <div class="horizontalWrap2">
+
+                            <div class="section">
+                                <label for="email">Email</label><br>
+                                <input type="email" name="email" id="email">
+                            </div>
+
+                            <div class="section">
+                                <label for="cnumber">Contact Number</label><br>
+                                <input type="number" name="cnumber" id="cnumber">
+                            </div>
+
+                        </div>
+
+                        <button type="submit">Book Now</button>
+                        
                     </form>
                 </fieldset>
                 
