@@ -44,7 +44,14 @@
 
         <div class="right_panel">
 
-            <?php include_once("upperPanel.php"); ?>
+            <div class="upper_panel">
+                <div class="upper_panel_left">
+                    <h6>Manage Safari</h6>
+                </div>
+
+                <?php include_once("upperPanelRight.php"); ?>
+
+            </div>
 
             <div class="middle_panel">
                 <div class="left_box">

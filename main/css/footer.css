@@ -4,9 +4,10 @@ footer{
     bottom: 0;
     left: 0; */
     width: 100%;
-    background-color: #3997c0;
+    background-color: #484c4e;
     color: #fff;  
     height: fit-content;
+    font-family: 'Raleway',Helvetica,Arial,Lucida,sans-serif;
     
 }
 /* .footer_container{
@@ -26,11 +27,11 @@ footer{
 hr{
     margin-left: auto;
     margin-right: auto;
-    margin: 0;
+    margin-bottom: 10px;
     padding: 0;
     border: 0;
     height: 2px;
-    width: 1180px;
+    width: 100%;
     background-color: #000000;
     
 }
@@ -65,7 +66,7 @@ footer > .footer_container >.wrap > .follow_wrap{
 
 footer > .footer_container >.wrap > .logo_wrap{
     margin-right: 70px;
-    margin-left: 90px;
+    margin-left: 125px;
 }
 footer > .footer_container >.wrap > .logo_wrap > img{
     height: 90px;
