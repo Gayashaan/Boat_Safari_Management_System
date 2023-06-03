@@ -50,7 +50,7 @@
                 <div class="left_box">
                         <h6>All Safaries</h6>
                         <?php
-$sql = "SELECT * FROM msafari";
+                            $sql = "SELECT * FROM msafari";
                             
                             $result = $conn->query($sql);
                 
@@ -85,9 +85,8 @@ $sql = "SELECT * FROM msafari";
                     }else{
                         echo "Empty rows!!";
                     }
-?>
-                         
-                                                    
+                    ?>
+                               
                 </div>
 
                 <div class="right_box">
