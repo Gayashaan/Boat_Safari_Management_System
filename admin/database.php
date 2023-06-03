@@ -12,19 +12,21 @@
         lname VARCHAR(50) NOT NULL,
         email VARCHAR(50) NOT NULL,
         pwd VARCHAR(50) NOT NULL,
-        cnumber INT(10) NOT NULL
+        cnumber INT(10) NOT NULL,
+        img VARCHAR(100)
     )";
     //run the query to create tbale if table does not exists
     $conn->query($createTableAdmin);//table creation
 
     //query for insert data if table is empty
     $insertDataAdmin = "
-    INSERT INTO admin(adminID, fname, lname, email, pwd, cnumber) VALUES
-    ('A001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'admin', 0771234569),
-    ('A002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'admin', 0771234569),
-    ('A003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963),
-    ('A004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'admin', 0771458963),
-    ('A005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'admin', 0774589632)";
+    INSERT INTO admin 
+    VALUES
+    ('A001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'admin', 0771234569, 'img1.jpg'),
+    ('A002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'admin', 0771234569, 'img2.jpg'),
+    ('A003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963, 'img3.jpg'),
+    ('A004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'admin', 0771458963, 'img4.jpg'),
+    ('A005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'admin', 0774589632, 'img5.jpg')";
 
     
 

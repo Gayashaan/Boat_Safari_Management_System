@@ -130,9 +130,10 @@ html,body{
     align-items: center;
 }
 
-.right_panel > .upper_panel > .upper_panel_right > .user > img{
+.right_panel > .upper_panel > .upper_panel_right > .user>img{
     height: 35px;
     width: 35px;
+    object-fit: cover;
     border-radius: 50%;
     margin-right: 10px;
 }
