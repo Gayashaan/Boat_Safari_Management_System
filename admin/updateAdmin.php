@@ -47,7 +47,7 @@
                 echo "<script> alert('Update Successfully');</script>";
 
                 if(!empty($update_image)){
-                    if($update_image_size > 5000000){
+                    if($update_image_size > 50000000){
                         echo "<script> alert('Image size is too large');</script>";
                         header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
                         die(mysqli_error($conn));
