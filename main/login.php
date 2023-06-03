@@ -10,7 +10,7 @@
             
             $Sql = "SELECT * FROM user WHERE email = '$email' and pwd = '$pwd'"; 
             $result = $conn->query($Sql);
-            $row = mysqli_fetch_assoc($result);
+            $row = $result->fetch_assoc();
     
             if(mysqli_num_rows($result) > 0){
                 
@@ -19,6 +19,8 @@
                 $_SESSION['userID'] = $row['userID'];
                 $_SESSION['fname'] = $row['fname'];
                 $_SESSION['lname'] = $row['lname'];
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['cnumber'] = $row['cnumber'];
 
             }else{
                 

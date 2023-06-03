@@ -1,3 +1,22 @@
+<?php
+    include_once("../admin/config.php");
+
+    session_start();
+    if($_SESSION['userID'] == ""){
+        header("LOCATION: ../main/deniedpage.php");
+        echo "<script> alert('Please Login');</script>";
+        // header("location: ../main/adminloging.php");
+        die();
+        
+    }else{
+        $userID = $_SESSION['userID'];
+        $ufname = $_SESSION['fname'];
+        $ulname = $_SESSION['lname'];
+        $uemail = $_SESSION['email'];
+        $ucnumber = $_SESSION['cnumber'];
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +71,7 @@
                 </div>
                 <fieldset>
                     <form action="" method="post">
-                        <div class="horizontalWrap1">
+                        <div class="horizontalWrap1" id="horizontalWrap">
                             <div class="section">
                                 <label for="adults">Number of Adults</label><br>
                                 <input type="number" name="adults" id="adults">
@@ -70,7 +89,7 @@
                     
                         </div>
                         
-                        <div class="horizontalWrap2">
+                        <div class="horizontalWrap2" id="horizontalWrap">
                             <div class="section">
                                 <label for="breakfast">Add breakfast</label><br>
                                 <input type="text" name="breakfast" id="breakfast">
@@ -82,16 +101,21 @@
 
                         </div>
 
-                        <div class="horizontalWrap2">
+                        <div class="horizontalWrap3" id="horizontalWrap">
+                        
+                            <div class="section">
+                                <label for="name">Name</label><br>
+                                <input type="text" name="name" id="name" value="<?php echo $ufname?>" readonly>
+                            </div>
 
                             <div class="section">
                                 <label for="email">Email</label><br>
-                                <input type="email" name="email" id="email">
+                                <input type="email" name="email" id="email" value="<?php echo $uemail?>">
                             </div>
 
                             <div class="section">
                                 <label for="cnumber">Contact Number</label><br>
-                                <input type="number" name="cnumber" id="cnumber">
+                                <input type="number" name="cnumber" id="cnumber" value="<?php echo $ucnumber?>">
                             </div>
 
                         </div>

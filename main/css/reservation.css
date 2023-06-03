@@ -65,6 +65,7 @@
 .safDetails{
     
     padding: 10px;
+    /* width: 900px; */
     margin-left: 2%;
     margin-right: 5%;
     background-color: rgb(255, 255, 255);
@@ -104,16 +105,18 @@
 }
 
 fieldset{
+   
     margin-top: 10px;
     padding: 10px;
 }
 
-.horizontalWrap1{
+#horizontalWrap{
     display: flex;
     margin-top: 5px;
     /* background-color: rgb(201, 91, 27); */
     margin-left: auto;
     margin-right: auto;
+    justify-content: space-between;
 }
 .section{
     padding: 5px;
@@ -133,14 +136,6 @@ fieldset{
     
 }
 
-.horizontalWrap2{
-    display: flex;
-    margin-top: 5px;
-    /* background-color: rgb(201, 91, 27); */
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-between;
-}
 
 .horizontalWrap2 > .section >input{
     width: 300px;
@@ -149,6 +144,18 @@ fieldset{
     border-radius: 5px;
     outline: none;
     
+}
+
+.horizontalWrap3 > .section >input{
+    width: 200px;
+    border: 1px solid rgb(0, 0, 0);
+    height: 22px;
+    border-radius: 5px;
+    outline: none;
+}
+
+#name{
+    cursor: not-allowed;
 }
 
 label{
