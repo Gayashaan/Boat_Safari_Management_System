@@ -11,8 +11,8 @@
             if($imgRow['img'] == NULL){
                 echo "<img src='uploads/profile logo.png' alt='profile'>";
             }else{
-                echo "<img src='uploads/".$imgRow['img']."' alt='profile'>";
-                // echo '<a href="updateAdmin.php?'.$adminID.'"><img src="uploads/'.$imgRow['img'].'" alt="profile"></a>';
+                //echo "<img src='uploads/".$imgRow['img']."' alt='profile'>";
+                echo '<a href="updateAdmin.php?'.$adminID.'"><img src="uploads/'.$imgRow['img'].'" alt="profile"></a>';
             }
         ?>
         <!-- <img src="images/profile logo.png" alt="user"> -->
