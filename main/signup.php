@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <title>Sign up page</title>
@@ -7,6 +8,31 @@
     <body>
          <div class="container">
             <header> Sign Up</header>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/signup.css">
+    
+    <title>Sign Up</title>
+</head>
+
+<body>
+
+    <?php include("header.php"); ?>
+    
+    <div class="container">
+
+        <div class="wrap">
+
+        <form id="signup">
+              <h1>Sign Up</h1>
+
 
               <form action="#"></form>
 
@@ -39,6 +65,7 @@
                   <input type="radio" name ="gender" id="male">
                   <span id="male">Male</span>
 
+
                   <input type="radio" name ="gender" id="female">
                   <span id="female">Female</span>
                 </div>
@@ -62,4 +89,13 @@
        </div>
          
     </body>
+
+              <button type="submit" form="signup" value="Submit">Submit</button>
+            </form> 
+        </div>
+    </div>
+    
+    
+</body>
+
 </html>

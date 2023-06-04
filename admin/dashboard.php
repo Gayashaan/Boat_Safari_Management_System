@@ -1,18 +1,19 @@
 <?php
     include_once("config.php");
-    session_start();
-    if($_SESSION['adminID'] == ""){
-        header("LOCATION: ../main/deniedpage.php");
-        echo "<script> alert('Please Login');</script>";
-        // header("location: ../main/adminloging.php");
-        die();
+    include_once("sessionAdmin.php");
+    // session_start();
+    // if($_SESSION['adminID'] == ""){
+    //     header("LOCATION: ../main/deniedpage.php");
+    //     echo "<script> alert('Please Login');</script>";
+    //     // header("location: ../main/adminloging.php");
+    //     die();
         
-    }else{
-        $adminID = $_SESSION['adminID'];
-        $ufname = $_SESSION['fname'];
-        $ulname = $_SESSION['lname'];
-        $userName = $ufname . " " . $ulname;
-    }
+    // }else{
+    //     $adminID = $_SESSION['adminID'];
+    //     $ufname = $_SESSION['fname'];
+    //     $ulname = $_SESSION['lname'];
+    //     $userName = $ufname . " " . $ulname;
+    // }
     
 
 
@@ -40,48 +41,20 @@
 <body>
     <div class="container">
 
-        <div class="left_panel">
-
-            <div class="logo">
-                <img src="../main/images/favpng_ferry-ship-boat-tour.png" alt="logo">
-                <!-- <p>Brand Name</p> -->
-            </div>
-
-            
-            <ul>
-                <li><a href="dashboard.php"> <i class="material-icons" style="font-size:25px; color:white">dashboard</i>Dash Board</a></li>
-                <li><a href="manageUsers.php"> <i class="fa fa-user" style="font-size:25px; color:white"></i>Manage Users</a></li>
-                <li><a href="manageBooking.php"> <i class="material-icons" style="font-size:25px;color:white">library_books</i>Manage Booking</a></li>
-                <li><a href="manageEnquiry.php"> <i class="material-icons" style="font-size:25px;color:white">question_answer</i>Manage Enquiries</a></li>
-                <li><a href="manageSafari.php"> <i class="fa fa-safari" style="font-size:25px;color:white"></i>Manage Safari</a></li>
-                <li><a href="manageBoat.php"> <i class="material-icons" style="font-size:25px;color:white">directions_boat</i>Manage Boats</a></li>
-                <li><a href="manageGallery.php"> <i class="material-icons" style="font-size:25px;color:white">directions_boat</i>Manage Gallery</a></li>
-                <li id="logout"><a href="logout.php"> <i class="fa fa-sign-out" style="font-size:25px;color:white"></i>Log Out</a></li>
-            </ul>
-          
-            
-        </div>
+        <?php include_once("leftPanel.php"); ?>
 
         <div class="right_panel">
 
+            
             <div class="upper_panel">
-
                 <div class="upper_panel_left">
-                    
-                    <h6>DashBoard</h6>
+                    <h6>Dashboard</h6>
                 </div>
-    
-                <div class="upper_panel_right">
-                    <div class="user">
-                        <img src="images/profile logo.png" alt="user">
-                    </div>
-                    <div class="user_name">
-                        <p><?php echo $userName ?></p>
-                    </div>
-    
-                </div>
-                
+
+            <?php include_once("upperPanelRight.php") ?>
+
             </div>
+            
             <div class="greeting">
                 <p class="head">Welcome <?php echo $userName ?></p>
                 <p>You have (number of) unread alerts</p>
@@ -89,25 +62,56 @@
             
             <div class="middle_panel">
                 <div class="upper_box">
+                    <?php
+                        $date = date("Y-m-d");
+
+                        // $sqlUser = "SELECT sum(countUser) AS 'Total user Count'FROM(
+                        //                                                     SELECT count(*) AS 'countUser' FROM admin
+                        //                                                     UNION ALL
+                        //                                                     SELECT count(*) AS 'countUser' FROM user
+                        //                                                     )countUser";
+
+                        function totalUser($conn){
+                            $sqlUser = "SELECT count(*) AS 'Total user Count' FROM user";
+                            $resultUser = $conn->query($sqlUser);
+                            $rowUser = $resultUser->fetch_assoc();
+                            $totalUser = $rowUser['Total user Count'];
+                            return $totalUser;
+                        }
+                        function totalAdmin($conn){
+                            $sqlAdmin = "SELECT count(*) AS 'Total admin Count' FROM admin";
+                            $resultAdmin = $conn->query($sqlAdmin);
+                            $rowAdmin = $resultAdmin->fetch_assoc();
+                            $totalAdmin = $rowAdmin['Total admin Count'];
+                            return $totalAdmin;
+                        }
+                        
+                        $systemUsers = totalUser($conn) + totalAdmin($conn);
+
+                        
+
+                    ?>
+
                     <div class="box">
                         <h6>Total Trips</h6>
                         <p class="val">40876</p>
-                        <p class="date">date base date</p>
+                        <p class="date"><?php echo $date?></p>
                     </div>
                     <div class="box">
-                        <h6>Total sales</h6>
-                        <p class="val">40876</p>
-                        <p class="date">date base date</p>
+                        
+                        <h6>Total Users</h6>
+                        <p class="val"><?php echo $systemUsers?></p>
+                        <p class="date"><?php echo $date?></p>
                     </div>
                     <div class="box">
                         <h6>Total profit</h6>
                         <p class="val">40876</p>
-                        <p class="date">date base date</p>
+                        <p class="date"><?php echo $date?></p>
                     </div>
                     <div class="box">
                         <h6>Total Boats</h6>
                         <p class="val">40876</p>
-                        <p class="date">date base date</p>
+                        <p class="date"><?php echo $date?></p>
                     </div>
                 </div>
 

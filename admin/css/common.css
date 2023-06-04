@@ -120,9 +120,6 @@ html,body{
 }
 
 
-
-
-
 .right_panel > .upper_panel > .upper_panel_right{
     margin: 2px;
     margin-right: 15px;
@@ -131,10 +128,21 @@ html,body{
 }
 
 .right_panel > .upper_panel > .upper_panel_right > .user > img{
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
     border-radius: 50%;
+    margin-top: 25%;
     margin-right: 10px;
+}
+.right_panel > .upper_panel > .upper_panel_right > .user_name > p > a{
+    text-decoration: none;
+    color: #000000;
+    /* color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: 0.5s; */
 }
 
 /* .middle_panel{
