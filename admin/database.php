@@ -9,8 +9,8 @@
     // $deletetable = "DROP TABLE IF EXISTS admin";
     // $conn->query($deletetable);
 
-    // $deletetable = "DROP TABLE IF EXISTS user";
-    // $conn->query($deletetable);
+     //$deletetable = "DROP TABLE IF EXISTS user";
+     //$conn->query($deletetable);
 
     
     $createTableAdmin = "CREATE TABLE IF NOT EXISTS admin(
@@ -54,22 +54,23 @@
         lname VARCHAR(50) NOT NULL,
         email VARCHAR(50) NOT NULL,
         pwd VARCHAR(50) NOT NULL,
-        cnumber INT(10) NOT NULL
+        cnumber INT(10) NOT NULL,
+        Address VARCHAR(200) NOT NULL
     )";
 
     $conn->query($createTableUser);
 
     $insertDataUser = "
-    INSERT INTO user(userID, fname, lname, email, pwd, cnumber) VALUES
-    ('U001', 'TEST1', 'Asithma', 'dinuviasithma@gmail.com', 'admin', 0771234569),
-    ('U002', 'TEST2', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'admin', 0771234569),
-    ('U003', 'TEST3', 'somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963),
-    ('U004', 'TEST4', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'admin', 0771458963),
-    ('U005', 'TES5', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'admin', 0774589632)";
+    INSERT INTO user(userID, fname, lname, email, pwd, cnumber,Address) VALUES
+    ('U001', 'TEST1', 'Asithma', 'dinuviasithma@gmail.com', 'admin', 0771234569,'adbc'),
+    ('U002', 'TEST2', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'admin', 0771234569,'dsds'),
+    ('U003', 'TEST3', 'somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963,'dsdf'),
+    ('U004', 'TEST4', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'admin', 0771458963,'dfssd'),
+    ('U005', 'TES5', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'admin', 0774589632,'dfkkd')";
 
 
     // check the records in the table
-    $readTableUser = "SELECT * FROM USER";
+    $readTableUser = "SELECT * FROM user";
     $resultUser = $conn->query($readTableUser);
 
     //if table is empty insert data to the table
