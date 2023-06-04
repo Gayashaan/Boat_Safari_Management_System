@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Sign up page</title>
-        <link rel="stylesheet" href="signupstyle.css">
-    </head>
-    <body>
-         <div class="container">
-            <header> Sign Up</header>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -89,13 +79,7 @@
        </div>
          
     </body>
-
-              <button type="submit" form="signup" value="Submit">Submit</button>
-            </form> 
-        </div>
-    </div>
-    
-    
+   
 </body>
 
 </html>
