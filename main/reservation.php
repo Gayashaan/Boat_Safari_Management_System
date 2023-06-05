@@ -69,61 +69,63 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus ducimus dolorem quidem labore accusantium fugit debitis excepturi asperiores ipsa, dolore vitae eos possimus magni numquam impedit illo corrupti doloribus.</p>
 
                 </div>
-                <fieldset>
+                
                     <form action="" method="post">
-                        <div class="horizontalWrap1" id="horizontalWrap">
-                            <div class="section">
-                                <label for="adults">Number of Adults</label><br>
-                                <input type="number" name="adults" id="adults">
-                            </div>
+                        <fieldset>
+                            <!-- <legend>Form</legend> -->
+                            <div class="horizontalWrap1" id="horizontalWrap">
+                                <div class="section">
+                                    <label for="adults">Number of Adults</label><br>
+                                    <input type="number" name="adults" id="adults">
+                                </div>
 
-                            <div class="section">
-                                <label for="childrens">Number of Childrens</label><br>
-                                <input type="number" name="childrens" id="childrens">
-                            </div>
+                                <div class="section">
+                                    <label for="childrens">Number of Childrens</label><br>
+                                    <input type="number" name="childrens" id="childrens">
+                                </div>
 
-                            <div class="section">
-                                <label for="checkIn">Check in Date</label><br>
-                                <input type="date" name="checkIn" id="checkIn">
-                            </div>
-                    
-                        </div>
+                                <div class="section">
+                                    <label for="checkIn">Check in Date</label><br>
+                                    <input type="date" name="checkIn" id="checkIn">
+                                </div>
                         
-                        <div class="horizontalWrap2" id="horizontalWrap">
-                            <div class="section">
-                                <label for="breakfast">Add breakfast</label><br>
-                                <input type="text" name="breakfast" id="breakfast">
                             </div>
-                            <div class="section">
-                                <label for="lunch">Add Lunch</label><br>
-                                <input type="text" name="lunch" id="lunch">
-                            </div>
+                            
+                            <div class="horizontalWrap2" id="horizontalWrap">
+                                <div class="section">
+                                    <label for="breakfast">Add breakfast</label><br>
+                                    <input type="text" name="breakfast" id="breakfast">
+                                </div>
+                                <div class="section">
+                                    <label for="lunch">Add Lunch</label><br>
+                                    <input type="text" name="lunch" id="lunch">
+                                </div>
 
-                        </div>
-
-                        <div class="horizontalWrap3" id="horizontalWrap">
-                        
-                            <div class="section">
-                                <label for="name">Name</label><br>
-                                <input type="text" name="name" id="name" value="<?php echo $ufname?>" readonly>
                             </div>
 
-                            <div class="section">
-                                <label for="email">Email</label><br>
-                                <input type="email" name="email" id="email" value="<?php echo $uemail?>">
+                            <div class="horizontalWrap3" id="horizontalWrap">
+                            
+                                <div class="section">
+                                    <label for="name">Name</label><br>
+                                    <input type="text" name="name" id="name" value="<?php echo $ufname?>" readonly>
+                                </div>
+
+                                <div class="section">
+                                    <label for="email">Email</label><br>
+                                    <input type="email" name="email" id="email" value="<?php echo $uemail?>">
+                                </div>
+
+                                <div class="section">
+                                    <label for="cnumber">Contact Number</label><br>
+                                    <input type="number" name="cnumber" id="cnumber" value="<?php echo $ucnumber?>">
+                                </div>
+
                             </div>
 
-                            <div class="section">
-                                <label for="cnumber">Contact Number</label><br>
-                                <input type="number" name="cnumber" id="cnumber" value="<?php echo $ucnumber?>">
-                            </div>
-
-                        </div>
-
-                        <button type="submit">Book Now</button>
-                        
+                            <button type="submit">Book Now</button>
+                        </fieldset>
                     </form>
-                </fieldset>
+                
                 
             </div>
         </div>
