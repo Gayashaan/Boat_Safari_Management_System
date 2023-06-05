@@ -14,7 +14,7 @@
         <a href="AboutUs.php">About Us </a>
         <a href="Contact_us.php">Contact</a>
         <a href="#">Gallery</a>
-        <a href="reservation.php">Tours</a>
+        <a href="tours.php">Tours</a>
 
         <?php
 
