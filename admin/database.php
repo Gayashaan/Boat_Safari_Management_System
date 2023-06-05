@@ -21,7 +21,7 @@
         pwd VARCHAR(50) NOT NULL,
         cnumber INT(10) NOT NULL,
         img VARCHAR(100)
-    )";
+ )";
     //run the query to create tbale if table does not exists
     $conn->query($createTableAdmin);//table creation
 

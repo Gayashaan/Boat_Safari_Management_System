@@ -19,53 +19,38 @@
    <div class="container">
 
       <div class="wrap">
-
-        <form id="signup">
+ 
+        <form action="createaccount.php" method="post">
             <h1>Sign Up</h1>
-            <div class="fields">
-               <div class="class input-fields">
+            <div class="form">
+               
                   <label for="firstname">First Name</label>
-                  <input type="text" placeholder="Enter First name" id="firstname" required>
-               </div>
-               <div class="class input-fields">
-                  <label for="lastname"> Last Name</label>
-                  <input type="text" placeholder="Enter Last name" id="lastname" required>
-               </div>
-              
-               <div class="class input-fields">
-                  <label for="email">Email</label>
-                  <input type="text" placeholder="Enter Email" id="email" required>
-               </div>
-              
-               <div class="class input-fields">
-                  <label for="phone number">Phone number</label>
-                  <input type="text" placeholder="Enter Phone number" id="phoneNum" required>
-               </div>
-              
-               <div class="class input-fields">
-                  <label for="address">Address</label>
-                  <input type="text" placeholder="Enter Address" id="address" required>
-               </div>
-              
-               <div class="class input-fields">
-                  <input type="radio" name ="gender" id="male">
-                  <span id="male">Male</span>
-
-
-                  <input type="radio" name ="gender" id="female">
-                  <span id="female">Female</span>
-               </div>
-              
-              <div class="class input-fields">
+                  <input type="text" placeholder="Enter First name" id="firstname" name="fname" required>
+               
+                 <label for="lastname"> Last Name</label>
+                  <input type="text" placeholder="Enter Last name" id="lastname" name="lname" required><br><br>
+               
+                 <label for="email">Email</label>
+                 <input type="text" placeholder="Enter Email" id="email" name="email" required><br><br>
+               
+                 <label for="phonenumber">Phone number</label>
+                 <input type="text" placeholder="Enter Phone number" id="phoneNum" name="cnumber" required><br><br>
+               
+                 <label for="address">Address</label>
+                 <input type="text" placeholder="Enter Address" id="address" name="Address" required><br><br>
+               
+                 <input type="radio" name ="gender" id="male" name="Gender" value="m">
+                 <span id="male">Male</span>
+                 
+                 <input type="radio" name ="gender" id="female" name="Gender" value="f">
+                  <span id="female">Female</span><br><br>
+               
                  <label for="password">Password</label>
-                 <input type="password" placeholder="Enter Password" id="psw" required>
-              </div>
+                 <input type="password" placeholder="Enter Password" id="psw" name="pwd" required><br><br>
               
-              <div class="class input-fields">
                  <label for="confirm password">Confirm Password</label>
-                 <input type="password" placeholder="Confirm Password" id="psw-confirm" required>
-              </div>
-
+                 <input type="password" placeholder="Confirm Password" id="psw-confirm" name="confirmpsw" required><br><br>
+              
             </div>
           
          <p>By clicking the submit button you agree to our <a href="#" >Terms & Conditions</a></p><br>
