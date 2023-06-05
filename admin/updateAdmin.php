@@ -30,10 +30,10 @@
         $id = $_GET['updateid'];
         $prefix = str_split($id);
 
-        $update_image = $_FILES['profileImg']['name'];
-        $update_image_size = $_FILES['profileImg']['size'];
-        $update_image_tmp_name = $_FILES['profileImg']['tmp_name'];
-        $update_image_folder = 'uploads/'.$update_image;
+        $image_name = $_FILES['profileImg']['name'];//return the name of the image or file
+        $image_size = $_FILES['profileImg']['size'];//return the name of the image or file in bytes
+        $image_tmp_name = $_FILES['profileImg']['tmp_name'];//return the temp name of the image or file
+        $image_folder = '../uploads/adminImg/'.$image_name;//image destination
 
 
 
@@ -46,15 +46,15 @@
                 $conn->query($sql);
                 echo "<script> alert('Update Successfully');</script>";
 
-                if(!empty($update_image)){
-                    if($update_image_size > 50000000){
+                if(!empty($image_name)){
+                    if($image_size > 50000000){
                         echo "<script> alert('Image size is too large');</script>";
                         header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
                         die(mysqli_error($conn));
                     }else{
-                        if(move_uploaded_file($update_image_tmp_name, $update_image_folder)){
+                        if(move_uploaded_file($image_tmp_name, $image_folder)){//as the file uploaded to server in temp name we have to use temp name as the file name to move the file to the destination folder
                             
-                            $update_img_query = "UPDATE admin SET img='$update_image' WHERE adminID='$id'";
+                            $update_img_query = "UPDATE admin SET img='$image_name' WHERE adminID='$id'";
                             $conn->query($update_img_query);
                             echo "<script> alert('Image Updated');</script>";
                             
@@ -160,12 +160,12 @@
 
                                 if($prefix[0] == 'A'){
                                     if($row['img'] == NULL){
-                                        echo "<img src='uploads/profile logo.png' alt='profile'>";
+                                        echo "<img src='../uploads/adminImg/profile logo.png' alt='profile'>";
                                     }else{
-                                        echo "<img src='uploads/".$row['img']."' alt='profile'>";
+                                        echo "<img src='../uploads/adminImg/".$row['img']."' alt='profile'>";
                                     }
                                 }else{
-                                    echo "<img src='uploads/profile logo.png' alt='profile'>";
+                                    echo "<img src='../uploads/adminImg/profile logo.png' alt='profile'>";
                                 }
                                 
                             ?>

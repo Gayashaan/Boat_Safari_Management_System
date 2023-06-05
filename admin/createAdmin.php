@@ -34,7 +34,7 @@
 
             $adminID = $prefix . sprintf("%03d", $incNumber);
 
-            $sql = "INSERT INTO admin(adminID, fname, lname, email, pwd, cnumber) VALUES ('$adminID','$fname', '$lname', '$email', '$pwd', '$cnumber')";
+            $sql = "INSERT INTO admin(adminID, fname, lname, email, pwd, cnumber, img) VALUES ('$adminID','$fname', '$lname', '$email', '$pwd', '$cnumber', '')";
             //$result = mysqli_query($conn, $sql); //procedual method
             $result = $conn->query($sql); //oop method
 
