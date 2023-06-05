@@ -14,11 +14,7 @@
     //     $ufname = $_SESSION['fname'];
     //     $ulname = $_SESSION['lname'];
     //     $userName = $ufname . " " . $ulname;
-    // }
-
-    
-
-    
+    // }  
     if(isset($_POST['submit'])){
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
@@ -46,6 +42,7 @@
                 $sql = "UPDATE admin SET adminID='$id', fname='$fname', lname='$lname', email='$email', pwd='$pwd', cnumber='$cnumber' WHERE adminID='$id'";
                 $conn->query($sql);
                 echo "<script> alert('Update Successfully');</script>";
+                header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
 
                 if(!empty($image_name)){
                     if($image_size > 50000000){
@@ -81,7 +78,6 @@
             
         }
     }
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -243,6 +239,9 @@
         </div>
         
     </div>
+    <?php
+        
+    ?>
 
     
    <script src="adminindex.js"></script>
