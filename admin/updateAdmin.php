@@ -14,11 +14,7 @@
     //     $ufname = $_SESSION['fname'];
     //     $ulname = $_SESSION['lname'];
     //     $userName = $ufname . " " . $ulname;
-    // }
-
-    
-
-    
+    // }  
     if(isset($_POST['submit'])){
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
@@ -34,10 +30,11 @@
         $image_size = $_FILES['profileImg']['size'];//return the name of the image or file in bytes
         $image_tmp_name = $_FILES['profileImg']['tmp_name'];//return the temp name of the image or file
         $image_folder = '../uploads/adminImg/'.basename($image_name);//image destination
+        $image_extension = strtolower(pathinfo($image_folder, PATHINFO_EXTENSION));//return the extension of the file or image strtolower
         //basename($_FILES['profileImg']['name'], suffix) or basename($image_name) return the name of the image or file with extention when the variable inside bracket have specified with the path
         //suffix can be used to remove the file extension of the file name when we know the file extension of that particular file
         // $h = "../uploads/adminImg/image1.jpg";
-        // echo '<script> console.log("'.basename($h).'");</script>';
+        //echo '<script> console.log("'.$image_extension.'");</script>';
         
 
 
@@ -46,25 +43,44 @@
                 $sql = "UPDATE admin SET adminID='$id', fname='$fname', lname='$lname', email='$email', pwd='$pwd', cnumber='$cnumber' WHERE adminID='$id'";
                 $conn->query($sql);
                 echo "<script> alert('Update Successfully');</script>";
+                header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
 
-                if(!empty($image_name)){
-                    if($image_size > 50000000){
-                        echo "<script> alert('Image size is too large');</script>";
-                        header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
-                        die(mysqli_error($conn));
+                if(!empty($image_name)){//echk if the image is selected
+                    if(file_exists($image_folder)){//check if the file or image is already exist in the destination folder
+                        //unlink($image_folder);//if the file or image is already exist in the destination folder delete the file or image
+                        echo "<script> alert('Image Already Exist! Please Rename the file');</script>";
                     }else{
-                        if(move_uploaded_file($image_tmp_name, $image_folder)){//as the file uploaded to server in temp name we have to use temp name as the file name to move the file to the destination folder
-                            
-                            $update_img_query = "UPDATE admin SET img='$image_name' WHERE adminID='$id'";
-                            $conn->query($update_img_query);
-                            echo "<script> alert('Image Updated');</script>";
-                            
-                        }else{
-                            echo "<script> alert('Image Update failed');</script>";
+                        if($image_extension != 'jpg' && $image_extension != 'jpeg' && $image_extension != 'png'){//check if the image extension is valid
+                            echo "<script> alert('Image Extension is not valid');</script>";
                             header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
-                            die(mysqli_error($conn));
+                        }else{
+                            if($image_size > 50000000){//check if the image size is too large
+                                echo "<script> alert('Image size is too large');</script>";
+                                header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
+                                
+                            }else{
+                                if(move_uploaded_file($image_tmp_name, $image_folder)){//as the file uploaded to server in temp name we have to use temp name as the file name to move the file to the destination folder
+                                    
+                                    $update_img_query = "UPDATE admin SET img='$image_name' WHERE adminID='$id'";
+                                    $conn->query($update_img_query);
+                                    echo "<script> alert('Image Updated');</script>";
+                                    
+                                }else{
+                                    echo "<script> alert('Image Update failed');</script>";
+                                    header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
+                                    
+                                }
+                            }
+    
                         }
+
                     }
+                    
+                    
+                }else{
+                    echo "<script> alert('Image Not Selected');</script>";
+                    header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
+                    
                 }
 
                 
@@ -81,7 +97,6 @@
             
         }
     }
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -203,7 +218,7 @@
                 <div class="right_box">
                 
                     <p>Update <?php echo $Name."'s"; ?> Account</p>
-                    <form method="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data" action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>">
                         <div class="namewrap">
                             <div class="fwrap">
                                 <label for="fname">First name</label><br>
@@ -243,6 +258,9 @@
         </div>
         
     </div>
+    <?php
+        
+    ?>
 
     
    <script src="adminindex.js"></script>
