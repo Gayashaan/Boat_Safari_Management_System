@@ -12,13 +12,13 @@
                 echo "<img src='../uploads/adminImg/profile logo.png' alt='profile'>";
             }else{
                 //echo "<img src='uploads/".$imgRow['img']."' alt='profile'>";
-                echo '<a href="updateAdmin.php?'.$adminID.'"><img src="../uploads/adminImg/'.$imgRow['img'].'" alt="profile"></a>';
+                echo '<a href="updateUsers.php?'.$adminID.'"><img src="../uploads/adminImg/'.$imgRow['img'].'" alt="profile"></a>';
             }
         ?>
         <!-- <img src="images/profile logo.png" alt="user"> -->
     </div>
     <div class="user_name">
-        <p><?php echo '<a href="updateAdmin.php?updateid='.$adminID.'">'.$userName.'</a>'?></p>
+        <p><?php echo '<a href="updateUsers.php?updateid='.$adminID.'">'.$userName.'</a>'?></p>
             
     </div>
 

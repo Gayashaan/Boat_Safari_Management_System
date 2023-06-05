@@ -43,7 +43,7 @@
                 $sql = "UPDATE admin SET adminID='$id', fname='$fname', lname='$lname', email='$email', pwd='$pwd', cnumber='$cnumber' WHERE adminID='$id'";
                 $conn->query($sql);
                 echo "<script> alert('Update Successfully');</script>";
-                header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
+                header("Refresh: 0; URL = updateUsers.php?updateid=$id");
 
                 if(!empty($image_name)){//echk if the image is selected
                     if(file_exists($image_folder)){//check if the file or image is already exist in the destination folder
@@ -52,11 +52,11 @@
                     }else{
                         if($image_extension != 'jpg' && $image_extension != 'jpeg' && $image_extension != 'png'){//check if the image extension is valid
                             echo "<script> alert('Image Extension is not valid');</script>";
-                            header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
+                            header("Refresh: 0; URL = updateUsers.php?updateid=$id");
                         }else{
                             if($image_size > 50000000){//check if the image size is too large
                                 echo "<script> alert('Image size is too large');</script>";
-                                header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
+                                header("Refresh: 0; URL = updateUsers.php?updateid=$id");
                                 
                             }else{
                                 if(move_uploaded_file($image_tmp_name, $image_folder)){//as the file uploaded to server in temp name we have to use temp name as the file name to move the file to the destination folder
@@ -67,7 +67,7 @@
                                     
                                 }else{
                                     echo "<script> alert('Image Update failed');</script>";
-                                    header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
+                                    header("Refresh: 0; URL = updateUsers.php?updateid=$id");
                                     
                                 }
                             }
@@ -79,7 +79,7 @@
                     
                 }else{
                     echo "<script> alert('Image Not Selected');</script>";
-                    header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
+                    header("Refresh: 0; URL = updateUsers.php?updateid=$id");
                     
                 }
 
@@ -92,7 +92,7 @@
             
         }else{
             echo "<script> alert('Password Not Matched');</script>";
-            header("Refresh: 0; URL = updateAdmin.php?updateid=$id");
+            header("Refresh: 0; URL = updateUsers.php?updateid=$id");
             die(mysqli_error($conn));
             
         }
@@ -106,7 +106,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="manageUsers.css"> -->
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/updateAdmin.css">
+    <link rel="stylesheet" href="css/updateUsers.css">
     
     
     
@@ -190,21 +190,29 @@
 
                         <div class="details">
 
-                            <div class="fname" id="detBox">
+                            <div class="detBox">
                                 <p>First Name:<?php echo " " .$row['fname'] ?></p>
                             </div>
 
-                            <div class="lname" id="detBox">
+                            <div class="detBox">
                                 <p>Last Name:<?php echo " " .$row['lname'] ?></p>
                             </div>
 
-                            <div class="email" id="detBox">
+                            <div class="detBox">
                                 <p>Email:<?php echo " " .$row['email'] ?></p>
                             </div>
 
-                            <div class="cnumber" id="detBox">
+                            <div class="detBox">
                                 <p>Contact Number:<?php echo " " .$row['cnumber'] ?></p>
                             </div>
+
+                            <?php
+                                if($prefix[0] == 'U'){
+                                    echo "<div class='detBox'>";
+                                    echo "<p>Address:".$row['Address']."</p>";
+                                    echo "</div>";
+                                }
+                            ?>
 
                         </div>
 
