@@ -51,7 +51,7 @@
             <div class="formwrap">
                 <div class="imgwrap">
                 </div>
-                <form action="" method="post">
+                <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
                     <div class="background">
                         <p>Log In</p>
                         <div class="inputs">
