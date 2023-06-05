@@ -33,10 +33,11 @@
         $image_name = $_FILES['profileImg']['name'];//return the name of the image or file
         $image_size = $_FILES['profileImg']['size'];//return the name of the image or file in bytes
         $image_tmp_name = $_FILES['profileImg']['tmp_name'];//return the temp name of the image or file
-        $image_folder = '../uploads/adminImg/'.$image_name;//image destination
-
-
-
+        $image_folder = '../uploads/adminImg/'.basename($image_name);//image destination
+        //basename($_FILES['profileImg']['name'], suffix) or basename($image_name) return the name of the image or file with extention when the variable inside bracket have specified with the path
+        //suffix can be used to remove the file extension of the file name when we know the file extension of that particular file
+        // $h = "../uploads/adminImg/image1.jpg";
+        // echo '<script> console.log("'.basename($h).'");</script>';
         
 
 
