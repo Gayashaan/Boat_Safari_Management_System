@@ -92,7 +92,7 @@
                                                         <td>' . $cnumber. '</td>
                                                         <td> 
                                                             <div class="opBtns">
-                                                                <button id="vwBtn"><a href="updateAdmin.php?updateid='.$aID.'">View</a></button>
+                                                                <button id="vwBtn"><a href="updateUsers.php?updateid='.$aID.'">View</a></button>
                                                                 <button id="dlBtn" onclick="return confirmDelete()"><a href="deleteAdmin.php?deleteid='.$aID.'">Delete</a></button>
                                                             </div>
                                                         </td>
@@ -126,7 +126,7 @@
                                                         <td>' . $ucnumber. '</td>
                                                         <td> 
                                                             <div class="opBtns">
-                                                                <button id="vwBtn"><a href="updateAdmin.php?updateid='.$uID.'">View</a></button>
+                                                                <button id="vwBtn"><a href="updateUsers.php?updateid='.$uID.'">View</a></button>
                                                                 <button id="dlBtn" onclick="return confirmDelete()"><a href="deleteAdmin.php?deleteid='.$uID.'">Delete</a></button>
                                                             </div>
                                                         </td>
