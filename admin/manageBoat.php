@@ -56,16 +56,85 @@
             <div class="middle_panel">
                 <div class="left_box">
                         <h6>All Boats</h6>
-                        <h2>Boats</h2>
-                        <h2>Boats</h2>
-                        <h2>Boats</h2>
 
-                                                    
+                        <table>
+                            <tr>
+                                <th>Boat ID</th>
+                                <th>Boat License No</th>
+                                <th>Boat Name</th>
+                                <th>Capacity</th>
+                                <th></th>
+                            </tr>
+                        
+                        <?php
+                            $sql = "SELECT * FROM boat";
+                            
+                            $result = $conn->query($sql);
+                
+                
+                            if($result->num_rows>0){
+                                while($row = $result->fetch_assoc()){
+                                    $b_license_no = $row['b_license_no'];
+                                    $b_name = $row['b_name'];
+                                    $b_model = $row['b_model'];
+                                    $b_capacity = $row['b_capacity'];
+                                    $b_length = $row['b_length'];
+                                    $b_weight = $row['b_weight'];
+                                    $b_id = $row['b_id'];
+                                    
+                            
+                                    echo "
+                                    
+                                            <tr>
+                                                <td>$b_id</td>
+                                                <td>$b_license_no</td>
+                                                <td>$b_name</td>
+                                                <td>$b_capacity</td>
+                                                <td> 
+                                                    <div class='opBtns'>
+                                                        <button id='vwBtn'><a href='updateBoat.php?updateid=".$b_id."'>View</a></button>
+                                                        <button id='dlBtn' onclick='return confirmDelete()'><a href='deleteBoat.php?deleteid=".$b_id."'>Delete</a></button>
+                                                    </div>
+                                                </td>
+                                            </tr>";
+                                        
+                                }
+                            }else{
+                                echo "<td>Empty rows!!</td>";
+                            }
+
+
+                         ?> 
+                         </table>                          
                 </div>
 
                 <div class="right_box">
                     <p>Add new boat</p>
                     
+                    <form method="POST" action="addBoat.php" enctype="multipart/form-data">
+                        <label for="b_license_no">License No</label><br>
+                        <input type="text" name="b_license_no" id="b_license_no"><br><br>
+
+                        <label for="b_name">Boat name</label><br>
+                        <input type="text" name="b_name" id="b_name"><br><br>
+
+                        <label for="b_model">Model</label><br>
+                        <input type="text" name="b_model" id="b_model"><br><br>
+
+                        <label for="b_capacity">Capacity</label><br>
+                        <input type="text" name="b_capacity" id="b_capacity"><br><br>
+
+                        <label for="b_length">Length</label><br>
+                        <input type="text" name="b_length" id="b_length"><br><br>
+
+                        <label for="b_weight">Weight</label><br>
+                        <input type="text" name="b_weight" id="b_weight"><br><br>
+
+                        <label for="b_image" id="b_image">Upload Image</label><br>
+                        <input type="file" name="b_image" id="b_image">
+
+                        <input type="submit" name="submit" id="submit">
+                    </form>
                             
                 </div>
                 
