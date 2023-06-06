@@ -188,17 +188,19 @@
                                     }else{
                                         echo "<img src='../uploads/adminImg/".$row['img']."' alt='profile'>";
                                     }
+
+                                    echo '<form action="" method="post">';
+                                    echo '<button type="submit" class="statusBtn" name="status" value="Activated">Activate</button>';
+                                    echo '<button type="submit" class="statusBtn" name="status" value="Deactivated">Deactivate</button>';
+                                    echo '</form>';
                                 }else{
                                     echo "<img src='../uploads/adminImg/profile logo.png' alt='profile'>";
                                 }
                             
-                               
+                                
                                 
                             ?>
-                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
-                                <button type="submit" class="statusBtn" name="status" value="Activated">Activate</button>
-                                <button type="submit" class="statusBtn" name="status" value="Deactivated">Deactivate</button>
-                            </form>
+                            
                             
                             <!-- <img src="uploads/profile logo.png" alt="profile"> -->
                         </div>
@@ -229,9 +231,14 @@
                                 }
                             ?>
 
-                            <div class="detBox">
-                                <p>Status:<?php echo " " .$row['status'] ?></p>
-                            </div>
+                            <?php
+                                if($prefix[0] == 'A'){
+                                    echo "<div class='detBox'>";
+                                    echo "<p>Status:".$row['status']."</p>";
+                                    echo "</div>";
+                                }
+                            ?>
+                            
 
                         </div>
 
