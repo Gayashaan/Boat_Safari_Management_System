@@ -20,8 +20,18 @@
 
         <div class="wrap">
 
-            <p>still in construction</p>
-            
+            <div class="tour1">
+                <img src="images/tour1.jpg" width="700px" height="350px">
+                <h2>Tour name</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec quam augue. Aliquam condimentum eros a nunc fringilla, eu accumsan odio eleifend. Nunc ac mauris quis est volutpat malesuada nec ac felis. Phasellus quis metus placerat, condimentum ligula vel, gravida justo. Pellentesque congue purus sit amet tempor ultrice</p>
+
+            </div>
+            <div class="tour2">
+                <img src="images/tour2.jpg" width="700px" height="350px">
+                <h2>Tour name</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec quam augue. Aliquam condimentum eros a nunc fringilla, eu accumsan odio eleifend. Nunc ac mauris quis est volutpat malesuada nec ac felis. Phasellus quis metus placerat, condimentum ligula vel, gravida justo. Pellentesque congue purus sit amet tempor ultrice</p>
+
+            </div>
         </div>
     </div>
     
