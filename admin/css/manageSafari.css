@@ -4,6 +4,7 @@
 }
 .middle_panel{
     display: flex;
+    height: 100vh;
    
 }
 
@@ -53,3 +54,62 @@
     font-weight: 500;
     color: #000000;
 } 
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: 400px;
+  }
+  
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
+  
+  .opBtns{
+      display: flex;
+  }
+  .opBtns > button > a{
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      padding: 2px;
+      margin: 2px;
+  }
+  #vwBtn{
+      background-color: #5cec3f;
+      margin-right: 5px;
+      border-radius: 5px;
+      border: none;
+      width: auto;
+      height: 30px;
+      width:65px;
+      transition: 0.5s;
+  }
+  
+  #dlBtn{
+      background-color: #ff0000;
+      border-radius: 5px;
+      border: none;
+      height: 30px;
+      width:65px;
+      transition: 0.5s;
+      
+  }
+  
+  #vwBtn:hover, #dlBtn:hover{
+      -ms-transform: scale(1.1); /* IE 9 */
+      -webkit-transform: scale(1.1); /* Safari 3-8 */
+      transform: scale(1.1);
+      
+      cursor: pointer;
+  }

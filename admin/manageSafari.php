@@ -56,6 +56,17 @@
             <div class="middle_panel">
                 <div class="left_box">
                         <h6>All Safaries</h6>
+                        <table>
+                            <tr>
+                                <th>Safari Name</th>
+                                <th>Location</th>
+                                <th>Price</th>
+                                <th>Date</th>
+                                <th>Options</th>
+                            </tr>
+
+
+                        
                         <?php
                             $sql = "SELECT * FROM msafari";
                             
@@ -76,14 +87,14 @@
                                     <tr>
                                         
                                         <td>' . $Sname. '</td>
-                                        <td>' . $Slocation. '</td>
-                                        <td>' . $Sprice. '</td>
-                                        <td>' .$Sdate. '</td>
-                                        <td>' .$Sdescription. '</td>
+                                        <td>' . $location. '</td>
+                                        <td>' . $price. '</td>
+                                        <td>' .$date. '</td>
+                                        
                                         <td> 
                                             <div class="opBtns">
-                                                <button id="vwBtn"><a href="updateAdmin.php?updateid='.$aID.'">View</a></button>
-                                                <button id="dlBtn"><a href="deleteAdmin.php?deleteid='.$aID.'">Delete</a></button>
+                                                <button id="vwBtn"><a href="updateSafari.php?updateid='.$ID.'">View</a></button>
+                                                <button id="dlBtn"><a href="deleteSafari.php?deleteid='.$ID.'">Delete</a></button>
                                             </div>
                                         </td>
                                     </tr>';
@@ -93,6 +104,7 @@
                         echo "Empty rows!!";
                     }
                     ?>
+                    </table>
                                
                 </div>
 
