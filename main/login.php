@@ -1,4 +1,7 @@
 <?php
+    
+    echo "<script> alert('Please use \'user\' as user loging password');</script>";"')";
+
     include_once("../admin/database.php");
     include_once("../admin/config.php");
      
