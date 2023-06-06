@@ -5,7 +5,7 @@
     session_start();
     if (!isset($_SESSION['adminLoginAttempts'])) {
         // Initialize the login attempts session variable to 0
-        $_SESSION['loginAttempts'] = 0;
+        $_SESSION['adminLoginAttempts'] = 0;
     }
 ;     
     $_SESSION['adminMaxloginAttempts'] = 3;
@@ -30,6 +30,7 @@
                     $_SESSION['adminID'] = $row['adminID'];
                     $_SESSION['fname'] = $row['fname'];
                     $_SESSION['lname'] = $row['lname'];
+                    $_SESSION['adminLoginAttempts'] = 0;
 
                 }
                     
@@ -38,7 +39,8 @@
             }else{
                 
                 $_SESSION['adminLoginAttempts']++;
-                echo "<script> alert('No such records: Login Tries->". $_SESSION['loginAttempts']."');</script>";
+                echo "<script> alert('No such records: Login Tries->". $_SESSION['adminLoginAttempts']."');</script>";
+
                 if($_SESSION['adminLoginAttempts'] >= $_SESSION['adminMaxloginAttempts']){
                     $updateStatus = "UPDATE admin SET status = 'Deactivated' WHERE email = '$email'";
                     $conn->query($updateStatus);
