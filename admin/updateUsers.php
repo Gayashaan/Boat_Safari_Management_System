@@ -190,16 +190,19 @@
                                     }
 
                                     echo '<form action="" method="post">';
-                                    echo '<button type="submit" class="statusBtn" name="status" value="Activated">Activate</button>';
-                                    echo '<button type="submit" class="statusBtn" name="status" value="Deactivated">Deactivate</button>';
+                                        echo '<button type="submit" class="statusBtn" name="status" value="Activated">Activate</button>';
+                                        echo'<button type="submit" class="statusBtn" name="status" value="Deactivated">Deactivate</button>';
                                     echo '</form>';
+
+                                    
                                 }else{
                                     echo "<img src='../uploads/adminImg/profile logo.png' alt='profile'>";
                                 }
-                            
+                                
                                 
                                 
                             ?>
+                            
                             
                             
                             <!-- <img src="uploads/profile logo.png" alt="profile"> -->
