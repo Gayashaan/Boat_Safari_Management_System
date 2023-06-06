@@ -1,6 +1,4 @@
 <?php
-    
-    echo "<script> alert('Please use \'user\' as user loging password');</script>";"')";
 
     include_once("../admin/database.php");
     include_once("../admin/config.php");
@@ -15,7 +13,7 @@
             $result = $conn->query($Sql);
             $row = $result->fetch_assoc();
     
-            if(mysqli_num_rows($result) > 0){
+            if($result->num_rows > 0){
                 
                 echo "<script> alert('You have succesfully logged In');</script>";
                 header("Refresh: 0; URL = ../main/index.php?userID=$row[userID]");

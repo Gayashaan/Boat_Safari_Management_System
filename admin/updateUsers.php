@@ -15,6 +15,17 @@
     //     $ulname = $_SESSION['lname'];
     //     $userName = $ufname . " " . $ulname;
     // }  
+    $id = $_GET['updateid'];
+    $prefix = str_split($id);
+
+    if(isset($_POST['status'])){
+        $status = $_POST['status'];
+        $sql = "UPDATE admin SET status='$status' WHERE adminID='$id'";
+        $conn->query($sql);
+        echo "<script> alert('Status $status Successfully');</script>";
+        header("Refresh: 0; URL = updateUsers.php?updateid=$id");
+    }
+
     if(isset($_POST['submit'])){
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
@@ -23,8 +34,7 @@
         $pwd = $_POST['pwd'];
         $cpwd = $_POST['cpwd'];
         
-        $id = $_GET['updateid'];
-        $prefix = str_split($id);
+        
 
         $image_name = $_FILES['profileImg']['name'];//return the name of the image or file
         $image_size = $_FILES['profileImg']['size'];//return the name of the image or file in bytes
@@ -148,8 +158,6 @@
                     
                         
                     <?php
-                        $id = $_GET['updateid'];
-                        $prefix = str_split($id);
                         
 
                         if($prefix[0] == 'A'){
@@ -183,8 +191,15 @@
                                 }else{
                                     echo "<img src='../uploads/adminImg/profile logo.png' alt='profile'>";
                                 }
+                            
+                               
                                 
                             ?>
+                            <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
+                                <button type="submit" class="statusBtn" name="status" value="Activated">Activate</button>
+                                <button type="submit" class="statusBtn" name="status" value="Deactivated">Deactivate</button>
+                            </form>
+                            
                             <!-- <img src="uploads/profile logo.png" alt="profile"> -->
                         </div>
 
@@ -213,6 +228,10 @@
                                     echo "</div>";
                                 }
                             ?>
+
+                            <div class="detBox">
+                                <p>Status:<?php echo " " .$row['status'] ?></p>
+                            </div>
 
                         </div>
 

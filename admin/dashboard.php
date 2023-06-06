@@ -71,16 +71,16 @@
                         //                                                     SELECT count(*) AS 'countUser' FROM user
                         //                                                     )countUser";
 
-                        function totalUser($conn){
+                        function totalUser($connection){// i have pass the connection variable to the function else $conn cannot be used insed the function
                             $sqlUser = "SELECT count(*) AS 'Total user Count' FROM user";
-                            $resultUser = $conn->query($sqlUser);
+                            $resultUser = $connection->query($sqlUser);
                             $rowUser = $resultUser->fetch_assoc();
                             $totalUser = $rowUser['Total user Count'];
                             return $totalUser;
                         }
-                        function totalAdmin($conn){
+                        function totalAdmin($connection){
                             $sqlAdmin = "SELECT count(*) AS 'Total admin Count' FROM admin";
-                            $resultAdmin = $conn->query($sqlAdmin);
+                            $resultAdmin = $connection->query($sqlAdmin);
                             $rowAdmin = $resultAdmin->fetch_assoc();
                             $totalAdmin = $rowAdmin['Total admin Count'];
                             return $totalAdmin;
@@ -88,6 +88,23 @@
                         
                         $systemUsers = totalUser($conn) + totalAdmin($conn);
 
+                        function totalBoat($connection){
+                            $sqlBoat = "SELECT count(*) AS 'Total boat Count' FROM boat";
+                            $resultBoat = $connection->query($sqlBoat);
+                            $rowBoat = $resultBoat->fetch_assoc();
+                            $totalBoat = $rowBoat['Total boat Count'];
+                            return $totalBoat;
+                        }
+
+                        function totalSafari($connection){
+                            $sqlSafari = "SELECT count(*) AS 'Total safari Count' FROM msafari";
+                            $resultSafari = $connection->query($sqlSafari);
+                            $rowSafari = $resultSafari->fetch_assoc();
+                            $totalSafari = $rowSafari['Total safari Count'];
+                            return $totalSafari;
+                        }
+                        
+                        
                         
 
                     ?>
@@ -104,13 +121,13 @@
                         <p class="date"><?php echo $date?></p>
                     </div>
                     <div class="box">
-                        <h6>Total profit</h6>
-                        <p class="val">40876</p>
+                        <h6>Safari Availables</h6>
+                        <p class="val"><?php echo totalSafari($conn)?></p>
                         <p class="date"><?php echo $date?></p>
                     </div>
                     <div class="box">
                         <h6>Total Boats</h6>
-                        <p class="val">40876</p>
+                        <p class="val"><?php echo totalBoat($conn)?></p>
                         <p class="date"><?php echo $date?></p>
                     </div>
                 </div>

@@ -2,29 +2,56 @@
     include_once("../admin/database.php");
     include_once("../admin/config.php");
      
-     session_start();
+    session_start();
+    if (!isset($_SESSION['adminLoginAttempts'])) {
+        // Initialize the login attempts session variable to 0
+        $_SESSION['loginAttempts'] = 0;
+    }
+;     
+    $_SESSION['adminMaxloginAttempts'] = 3;
 
         if(isset($_POST['submit'])){
             $email = $_POST['email'];
             $pwd = $_POST['password'];
             
+            
             $Sql = "SELECT * FROM admin WHERE email = '$email' and pwd = '$pwd'"; 
             $result = $conn->query($Sql);
-            $row = mysqli_fetch_assoc($result);
-    
-            if(mysqli_num_rows($result) > 0){
-                
-                echo "<script> alert('You have succesfully logged In');</script>";
-                header("Refresh: 0; URL = ../admin/dashboard.php");
-                $_SESSION['adminID'] = $row['adminID'];
-                $_SESSION['fname'] = $row['fname'];
-                $_SESSION['lname'] = $row['lname'];
+            $row = $result->fetch_assoc();
 
+            if($result->num_rows > 0){
+
+                if($row['status'] == "Deactivated"){
+                    echo "<script> alert('Your account has been deactivated. Please contact the admin');</script>";
+                    header("Refresh: 0; URL = adminloging.php");
+                }else{
+                    echo "<script> alert('You have succesfully logged In');</script>";
+                    header("Refresh: 0; URL = ../admin/dashboard.php");
+                    $_SESSION['adminID'] = $row['adminID'];
+                    $_SESSION['fname'] = $row['fname'];
+                    $_SESSION['lname'] = $row['lname'];
+
+                }
+                    
+
+                
             }else{
                 
-                echo "<script> alert('No such records');</script>";
+                $_SESSION['adminLoginAttempts']++;
+                echo "<script> alert('No such records: Login Tries->". $_SESSION['loginAttempts']."');</script>";
+                if($_SESSION['adminLoginAttempts'] >= $_SESSION['adminMaxloginAttempts']){
+                    $updateStatus = "UPDATE admin SET status = 'Deactivated' WHERE email = '$email'";
+                    $conn->query($updateStatus);
+                    echo "<script> alert('You login Attemp Reached Out. Account will be Temporary Deactivated');</script>";
+                    $_SESSION['adminLoginAttempts'] = 0;
+                }
                 header("Refresh: 0; URL = adminloging.php");
+
             }
+
+            
+    
+            
                     
         }
 
