@@ -64,22 +64,22 @@
                 
                             if($result->num_rows>0){
                                 while($row = $result->fetch_assoc()){
-                                    $ID = $row["ID"];
-                                    $Sname = $row["name"];
-                                    $location = $row["location"];
-                                    $price = $row["price"];
-                                    $date = $row["date"];
-                                    $description  =$row["description"];
+                                    $ID = $row["Sid"];
+                                    $Sname = $row["Sname"];
+                                    $location = $row["Slocation"];
+                                    $price = $row["Sprice"];
+                                    $date = $row["Sdate"];
+                                    $description  =$row["Sdescription"];
                                     
                                     echo '
                                             
                                     <tr>
                                         
                                         <td>' . $Sname. '</td>
-                                        <td>' . $location. '</td>
-                                        <td>' . $price. '</td>
-                                        <td>' .$date. '</td>
-                                        <td>' .$description. '</td>
+                                        <td>' . $Slocation. '</td>
+                                        <td>' . $Sprice. '</td>
+                                        <td>' .$Sdate. '</td>
+                                        <td>' .$Sdescription. '</td>
                                         <td> 
                                             <div class="opBtns">
                                                 <button id="vwBtn"><a href="updateAdmin.php?updateid='.$aID.'">View</a></button>
@@ -99,18 +99,18 @@
                 <div class="right_box">
                     <p>Add new Safari</p>
                     <form action="createSafari.php" method="post">
-                        <label for="SID">Safari ID:</label><br>
-                        <input type="text" id="SID" name="SID"><br>
+                        <label for="Sid">Safari ID:</label><br>
+                        <input type="text" id="Sid" name="Sid"><br>
                         <label for="Sname">Safari Name:</label><br>
                         <input type="text" id="Sname" name="Sname"><br>
-                        <label for="location">Location:</label><br>
-                        <input type="text" id="location" name="location"><br>
-                        <label for="price">Price LKR:</label><br>
-                        <input type="text" id="price" name="price"><br>
-                        <label for="date">Date:</label><br>
-                        <input type="text" id="date" name="date"><br>
-                        <label for="description">Description::</label><br>
-                        <input type="text" id="description" name="description"><br>
+                        <label for="Slocation">Location:</label><br>
+                        <input type="text" id="Slocation" name="Slocation"><br>
+                        <label for="Sprice">Price LKR:</label><br>
+                        <input type="text" id="Sprice" name="Sprice"><br>
+                        <label for="Sdate">Date:</label><br>
+                        <input type="text" id="Sdate" name="Sdate"><br>
+                        <label for="Sdescription">Description::</label><br>
+                        <input type="text" id="Sdescription" name="Sdescription"><br>
 
                         <input type="submit" value="Create" id="sbt" name="submit"><br>
 
