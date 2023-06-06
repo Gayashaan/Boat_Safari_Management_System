@@ -12,11 +12,11 @@
     // $deletetable = "DROP TABLE IF EXISTS user";
     // $conn->query($deletetable);
 
-    //$deletetable = "DROP TABLE IF EXISTS boat";
-    //$conn->query($deletetable);
+    // $deletetable = "DROP TABLE IF EXISTS boat";
+    // $conn->query($deletetable);
 
-    //$deletetable = "DROP TABLE IF EXISTS msafari";
-    //$conn->query($deletetable);
+    // $deletetable = "DROP TABLE IF EXISTS msafari";
+    // $conn->query($deletetable);
 
     
     $createTableAdmin = "CREATE TABLE IF NOT EXISTS admin(
@@ -26,7 +26,8 @@
         email VARCHAR(50) NOT NULL,
         pwd VARCHAR(50) NOT NULL,
         cnumber INT(10) NOT NULL,
-        img VARCHAR(100)
+        img VARCHAR(100) NOT NULL,
+        status VARCHAR(11) NOT NULL
     )";
     //run the query to create tbale if table does not exists
     $conn->query($createTableAdmin);//table creation
@@ -35,11 +36,11 @@
     $insertDataAdmin = "
     INSERT INTO admin 
     VALUES
-    ('A001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'admin', 0771234569, 'img1.jpg'),
-    ('A002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'admin', 0771234569, 'img2.jpg'),
-    ('A003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963, 'img3.jpg'),
-    ('A004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'admin', 0771458963, 'img4.jpg'),
-    ('A005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'admin', 0774589632, 'img5.jpg')";
+    ('A001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'admin', 0771234569, 'img1.jpg', 'Activated'),
+    ('A002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'admin', 0771234569, 'img2.jpg', 'Activated'),
+    ('A003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963, 'img3.jpg', 'Activated'),
+    ('A004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'admin', 0771458963, 'img4.jpg', 'Activated'),
+    ('A005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'admin', 0774589632, 'img5.jpg', 'Activated')";
 
     
 
