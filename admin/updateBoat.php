@@ -35,7 +35,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="manageUsers.css"> -->
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/updateUsers.css">
+    <link rel="stylesheet" href="css/updateBoat.css">
     
     
     
@@ -53,7 +53,7 @@
     <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <!-- scroll reveal effect -->
     <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
-    <title>User Management</title>
+    <title>Boat Management</title>
 </head>
 <body>
     <div class="container">
@@ -90,7 +90,7 @@
                         
                         
                         $bName = $row['b_name'];
-                        echo "<h6>".$bName." details </h6>";
+                        echo "<h6 id='left-top'>".$bName." details </h6>";
                     ?>
 
                     <div class="profile">
@@ -149,7 +149,7 @@
 
                 <div class="right_box">
                 
-                    <p>Update <?php echo $bName; ?></p>
+                    <p id="right-top">Update <?php echo $bName; ?></p>
                     <form method="POST" enctype="multipart/form-data" action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>">
                         <div class="namewrap">
                             <div class="fwrap">
