@@ -6,10 +6,13 @@
     $conn->query($createDB);//database creation
 */
     //query for table creation if not exists
-    $deletetable = "DROP TABLE IF EXISTS admin";
-    $conn->query($deletetable);
+    // $deletetable = "DROP TABLE IF EXISTS admin";
+    // $conn->query($deletetable);
 
-    $deletetable = "DROP TABLE IF EXISTS user";
+    // $deletetable = "DROP TABLE IF EXISTS user";
+    // $conn->query($deletetable);
+
+    $deletetable = "DROP TABLE IF EXISTS boat";
     $conn->query($deletetable);
 
     
@@ -76,6 +79,41 @@
     //if table is empty insert data to the table
     if($resultUser->num_rows == 0){
         $conn->query($insertDataUser);
+    }
+
+    $createTableBoat = "CREATE TABLE IF NOT EXISTS boat(
+        b_id VARCHAR(20) PRIMARY KEY,
+        b_license_no VARCHAR(20) NOT NULL,
+        b_name VARCHAR(20) NOT NULL,
+        b_model VARCHAR(20) NOT NULL,
+        b_capacity VARCHAR(20) NOT NULL,
+        b_length VARCHAR(20) NOT NULL,
+        b_weight VARCHAR(20) NOT NULL,
+        b_image VARCHAR(20) NOT NULL
+ )";
+    //run the query to create tbale if table does not exists
+    $conn->query($createTableBoat);//table creation
+
+    //query for insert data if table is empty
+    $insertDateBoat = "
+    INSERT INTO boat 
+    VALUES
+    ('B001', '1254587', 'Blackperl', 'MB0012', '15', '80m','100Kg', 'img1.jpg'),
+    ('B002', '1254565', 'Kraken', 'MB0054', '20', '50m', '120Kg', 'img2.jpeg'),
+    ('B003', '1254598', 'Dqeen', 'MB0087', '25', '65m', '130Kg', 'img3.jpeg'),
+    ('B004', '1254502', 'Vqeen', 'MB0045', '50', '90m', '125Kg', 'img4.jpg'),
+    ('B005', '1254554', 'Gking', 'MB0069', '25', '89m', '135Kg', 'img5.jpeg')";
+
+    
+
+    
+    // check the records in the table
+    $readTableBoat = "SELECT * FROM boat";
+    $resultBoat = $conn->query($readTableBoat);
+
+    //if table is empty insert data to the table
+    if($resultBoat->num_rows == 0){
+        $conn->query($insertDateBoat);
     }
 
 ?>
