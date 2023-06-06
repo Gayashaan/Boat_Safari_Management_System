@@ -57,6 +57,8 @@
                 <div class="left_box">
                         <h6>All Boats</h6>
                         <h2>Boats</h2>
+                        <h2>Boats</h2>
+
                                                     
                 </div>
 
