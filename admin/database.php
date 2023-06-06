@@ -15,6 +15,9 @@
     $deletetable = "DROP TABLE IF EXISTS boat";
     $conn->query($deletetable);
 
+    $deletetable = "DROP TABLE IF EXISTS msafari";
+    $conn->query($deletetable);
+
     
     $createTableAdmin = "CREATE TABLE IF NOT EXISTS admin(
         adminID VARCHAR(10) PRIMARY KEY,
@@ -24,7 +27,7 @@
         pwd VARCHAR(50) NOT NULL,
         cnumber INT(10) NOT NULL,
         img VARCHAR(100)
- )";
+    )";
     //run the query to create tbale if table does not exists
     $conn->query($createTableAdmin);//table creation
 
@@ -49,6 +52,8 @@
     if($resultAdmin->num_rows == 0){
         $conn->query($insertDataAdmin);
     }
+
+
 
 
     $createTableUser = "CREATE TABLE IF NOT EXISTS user(
@@ -81,6 +86,10 @@
         $conn->query($insertDataUser);
     }
 
+
+
+
+
     $createTableBoat = "CREATE TABLE IF NOT EXISTS boat(
         b_id VARCHAR(20) PRIMARY KEY,
         b_license_no VARCHAR(20) NOT NULL,
@@ -90,7 +99,7 @@
         b_length VARCHAR(20) NOT NULL,
         b_weight VARCHAR(20) NOT NULL,
         b_image VARCHAR(20) NOT NULL
- )";
+    )";
     //run the query to create tbale if table does not exists
     $conn->query($createTableBoat);//table creation
 
@@ -115,5 +124,44 @@
     if($resultBoat->num_rows == 0){
         $conn->query($insertDateBoat);
     }
+
+
+
+
+
+    $createTableSafari = "CREATE TABLE IF NOT EXISTS msafari(
+        Sid VARCHAR(20) PRIMARY KEY,
+        Sname VARCHAR(50) NOT NULL,
+        Slocation VARCHAR(50) NOT NULL,
+        Sprice VARCHAR(50) NOT NULL,
+        Sdate DATE NOT NULL,
+        Sdescription VARCHAR(500) NOT NULL,
+        Simage VARCHAR(30) NOT NULL
+    )";
+    //run the query to create tbale if table does not exists
+    $conn->query($createTableSafari);//table creation
+
+    //query for insert data if table is empty
+    $insertDateSafari = "
+    INSERT INTO msafari 
+    VALUES
+    ('S001', 'Safari 1', 'Bentota', 'LKR15000', '2023-06-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img1.jpg'),
+    ('S002', 'Safari 2', 'Trincomalee', 'LKR18000', '2023-07-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img2.jpg'),
+    ('S003', 'Safari 3', 'Mirissa', 'LKR19000', '2023-08-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img3.jpg'),
+    ('S004', 'Safari 4', 'Koggala', 'LKR20000', '2023-06-15', 'Experiance a magical boat ride in the picturesqure water of place', 'img4.jpeg'),
+    ('S005', 'Safari 5', 'Galle', 'LKR15000', '2023-09-10', 'Experiance a magical boat ride in the picturesqure water of place', 'img5.jpg')";
+
+    
+
+    
+    // check the records in the table
+    $readTableSafari = "SELECT * FROM msafari";
+    $resultSafari = $conn->query($readTableSafari);
+
+    //if table is empty insert data to the table
+    if($resultSafari->num_rows == 0){
+        $conn->query($insertDateSafari);
+    }
+
 
 ?>
