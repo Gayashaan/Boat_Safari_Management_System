@@ -23,7 +23,8 @@
         //suffix can be used to remove the file extension of the file name when we know the file extension of that particular file
         // $h = "../uploads/adminImg/image1.jpg";
         //echo '<script> console.log("'.$image_extension.'");</script>';
-        $sql = ""
+        $sql = "";
+    }
 
 ?>
 <!DOCTYPE html>
@@ -99,7 +100,7 @@
 
                                 
                               if($row['b_image'] == NULL){
-                                echo "<img src='../uploads/Boats_img/boat logo.png' alt='profile'>";
+                                echo "<img src='../uploads/Boats_img/boat_default.png' alt='profile'>";
                               }else{
                                 echo "<img src='../uploads/Boats_img/".$row['b_image']."' alt='profile'>";
                               }
@@ -188,9 +189,7 @@
         </div>
         
     </div>
-    <?php
-        
-    ?>
+   
 
     
    <script src="adminindex.js"></script>
