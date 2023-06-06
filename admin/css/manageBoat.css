@@ -40,6 +40,7 @@
     margin-bottom: 15px;
     color: rgb(0, 0, 0);
     font-size: 25px;
+    /*background-color: #5cec3f;*/
 }
 
 
@@ -110,4 +111,25 @@ table {
       transform: scale(1.1);
       
       cursor: pointer;
+  }
+  
+  .right_box > .fieldsWrap{
+    margin-left: 10px;
+    margin-right: 30px;
+    padding: 10px;
+  }
+
+  .topwrap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  input{
+    width: 50%;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-bottom: 5px;
   }
