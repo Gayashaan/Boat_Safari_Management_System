@@ -28,7 +28,7 @@
 
         $Sid = $prefix . sprintf("%03d", $incNumber);
 
-        $sql = "INSERT INTO msafari(Sname,Slocation,Sprice,Sdate,Sdescription) VALUES ('$Sid','$Sname', '$Slocation', '$Sprice', '$Sdate')";
+        $sql = "INSERT INTO msafari(Sid,Sname,Slocation,Sprice,Sdate,Sdescription) VALUES ('$Sid','$Sname', '$Slocation', '$Sprice', '$Sdate','$Sdescription')";
             //$result = mysqli_query($conn, $sql); //procedual method
         $result = $conn->query($sql); //oop method
 
@@ -41,8 +41,8 @@
             header("Refresh: 0; URL = manageUsers.php");
         }
         
-        }else{
-           echo "<script> alert('Please Click Submit Button');</script>";
+    }else{
+        echo "<script> alert('Please Click Submit Button');</script>";
         header("Refresh: 0; URL = manageUsers.php");
     }
 

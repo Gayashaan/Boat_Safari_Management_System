@@ -99,8 +99,7 @@
                 <div class="right_box">
                     <p>Add new Safari</p>
                     <form action="createSafari.php" method="post">
-                        <label for="Sid">Safari ID:</label><br>
-                        <input type="text" id="Sid" name="Sid"><br>
+                       
                         <label for="Sname">Safari Name:</label><br>
                         <input type="text" id="Sname" name="Sname"><br>
                         <label for="Slocation">Location:</label><br>
