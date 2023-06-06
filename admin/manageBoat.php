@@ -111,31 +111,37 @@
                 <div class="right_box">
                     <p>Add new boat</p>
                     
-                    <form method="POST" action="addBoat.php" enctype="multipart/form-data">
-                        <label for="b_license_no">License No</label><br>
-                        <input type="text" name="b_license_no" id="b_license_no"><br><br>
+                    <div class="fieldsWrap">
+                        <form method="POST" action="addBoat.php" enctype="multipart/form-data">
 
-                        <label for="b_name">Boat name</label><br>
-                        <input type="text" name="b_name" id="b_name"><br><br>
+                            <div class="topwrap">
+                                <label for="b_license_no">License No</label><br>
+                                <input type="text" name="b_license_no" id="b_license_no"><br><br>
 
-                        <label for="b_model">Model</label><br>
-                        <input type="text" name="b_model" id="b_model"><br><br>
+                                <label for="b_name">Boat name</label><br>
+                                <input type="text" name="b_name" id="b_name"><br><br>
+                            </div>
 
-                        <label for="b_capacity">Capacity</label><br>
-                        <input type="text" name="b_capacity" id="b_capacity"><br><br>
+                            <div class="othrwrap">
+                                <label for="b_model">Model</label><br>
+                                <input type="text" name="b_model" id="b_model"><br><br>
 
-                        <label for="b_length">Length</label><br>
-                        <input type="text" name="b_length" id="b_length"><br><br>
+                                <label for="b_capacity">Capacity</label><br>
+                                <input type="text" name="b_capacity" id="b_capacity"><br><br>
 
-                        <label for="b_weight">Weight</label><br>
-                        <input type="text" name="b_weight" id="b_weight"><br><br>
+                                <label for="b_length">Length</label><br>
+                                <input type="text" name="b_length" id="b_length"><br><br>
 
-                        <label for="b_image" id="b_image">Upload Image</label><br>
-                        <input type="file" name="b_image" id="b_image">
+                                <label for="b_weight">Weight</label><br>
+                                <input type="text" name="b_weight" id="b_weight"><br><br>
 
-                        <input type="submit" name="submit" id="submit">
-                    </form>
-                            
+                                <label for="b_image" id="b_image">Upload Image</label><br>
+                                <input type="file" name="b_image" id="b_image">
+
+                                <input type="submit" name="submit" id="submit">
+                            </div>
+                        </form>
+                    </div>        
                 </div>
                 
                                        
