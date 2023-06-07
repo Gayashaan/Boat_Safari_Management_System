@@ -12,7 +12,7 @@
   height: 500px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
   margin-left: 50px;
   
@@ -94,6 +94,12 @@ input{
   transition: 0.5s;
   
 }
+/*
+.btnwrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}*/
 #upload:hover{
   background-color: #2c84f7;
   color: white;
@@ -130,27 +136,35 @@ input{
 .profile{
   display: flex;
   height: 400px;
-  /* background-color: aqua; */
+  /*background-color: aqua; */
 }
 
+.vl {
+  border-left: 3px solid #dddddd;
+  height: 300px;
+  
+  left: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
 .middle_panel > .left_box > .profile > .pImg{
-  /* background-color: #00ff62; */
+  /*background-color: #00ff62; */
   width: 220px;
   height: 220px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
-  border-radius: 10%;
+  /*border-radius: 10%;*/
 }
 
 .middle_panel > .left_box > .profile >  .pImg > img{
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #000000;
-  margin: 4%;
+  /*border-radius: 50%;*/
+  border: 5px solid #dddddd;
+  /*margin: 4%;*/
 }
 .middle_panel > .left_box > .profile > .details{
   margin-left: auto;
@@ -178,6 +192,6 @@ input{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10%;
-  border: 2px solid #000000;
+  border: 2px solid #dddddd;
   
 }

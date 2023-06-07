@@ -108,6 +108,8 @@
                             ?>
                             
                         </div>
+                        
+                        <div class="vl" id="vl"></div>
 
                         <div class="details">
 
@@ -161,6 +163,7 @@
                                 <input type="text" name="bname" id="bname" value="<?php echo $row['b_name']?>">
                             </div>
                         </div>
+
                         <div class="otherwrap">
                             <label for="model">Model</label><br>
                             <input type="text" name="model" id="model" value="<?php echo $row['b_model']?>"><br>
@@ -171,12 +174,12 @@
                             <label for="weight">weight</label><br>
                             <input type="text" name="weight" id="weight" value="<?php echo $row['b_weight']?>"><br>
                             
-                            
-                            <label for="b_image" id="upload">Upload a Image</label>
-                            <input type="file" id="b_image" name="b_image">
-                                
-                            <input type="submit" value="Update" id="sbt" name="submit"><br>
-
+                            <div class="btnwrap">
+                                <label for="b_image" id="upload">Upload a Image</label>
+                                <input type="file" id="b_image" name="b_image" hidden>
+                                    
+                                <input type="submit" value="Update" id="sbt" name="submit"><br>
+                            </div>
                         </div>
                                   
                     </form>
