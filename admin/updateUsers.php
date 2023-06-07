@@ -190,8 +190,12 @@
                                     }
 
                                     echo '<form action="" method="post">';
-                                        echo '<button type="submit" class="statusBtn" name="status" value="Activated">Activate</button>';
-                                        echo'<button type="submit" class="statusBtn" name="status" value="Deactivated">Deactivate</button>';
+                                        if($row['status'] == 'Deactivated'){
+                                            echo '<button type="submit" class="statusBtn" name="status" value="Activated">Activate</button>';
+                                        }else{
+                                            echo'<button type="submit" class="statusBtn" name="status" value="Deactivated">Deactivate</button>';
+                                        }
+                                        
                                     echo '</form>';
 
                                     
