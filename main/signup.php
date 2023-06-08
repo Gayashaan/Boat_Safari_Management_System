@@ -46,7 +46,8 @@
                   <span id="female">Female</span><br><br>
                
                  <label for="password">Password</label>
-                 <input type="password" placeholder="Enter Password" id="psw" name="pwd" required><br><br>
+                 <input type="password" placeholder="Enter Password" id="psw" name="pwd"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain atleast one number and one uppercase and lowercase letter
+                 ,and at least 8 or more characters" required><br><br>
               
                  <label for="confirm password">Confirm Password</label>
                  <input type="password" placeholder="Confirm Password" id="psw-confirm" name="confirmpsw" required><br><br>
