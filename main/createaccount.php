@@ -14,7 +14,7 @@
       $sql = "INSERT INTO user(fname,lname,email,pwd,cnumber,Address)
               VALUES($fname,$lname,$email,$cnumber,$pwd,$Address)";
               if($conn->query($sql)){
-                echo"Inserted successfully"
+                echo"Inserted successfully";
               }
               else{
                echo"Error:".$conn->error;
