@@ -12,7 +12,7 @@
       
       
       $sql = "INSERT INTO user(fname,lname,email,pwd,cnumber,Address)
-              VALUES($fname,$lname,$email,$cnumber,$pwd,$Address)";
+              VALUES('$fname','$lname','$email','$pwd','$cnumber','$Address')";
               if($conn->query($sql)){
                 echo"Inserted successfully";
               }
@@ -21,5 +21,5 @@
               }
      $conn->close();
       
-      
+  
 ?>
