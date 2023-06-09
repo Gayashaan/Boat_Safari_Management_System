@@ -7,18 +7,19 @@
       $email=$_POST['email'];
       $cnumber=$_POST['cnumber'];
       $Address=$_POST['Address'];
-      $Gender=$_POST['Gender'];
       $pwd=$_POST['pwd'];
       
       
       
-      //Database connection
-        $stmt = $conn->qury("insert into user(fname,lname,email,pwd,cnumber,Address,Gender)
-             values(?,?,?,?,?,?,?)");
-        $stmt->bind_param("ssssiss",$fname,$lname,$email,$pwd,$cnumber,$Address,$Gender);
-        $stmt->execute();
-        echo"registration successful";
-        $stmt->close();
-        $conn->close();
+      $sql = "INSERT INTO user(fname,lname,email,pwd,cnumber,Address)
+              VALUES('$fname','$lname','$email','$pwd','$cnumber','$Address')";
+              if($conn->query($sql)){
+                echo"Inserted successfully";
+              }
+              else{
+               echo"Error:".$conn->error;
+              }
+     $conn->close();
       
+  
 ?>
