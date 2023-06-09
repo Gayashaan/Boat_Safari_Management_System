@@ -51,7 +51,7 @@
             </div>
           
          <p>By clicking the submit button you agree to our <a href="#" >Terms & Conditions</a></p><br>
-         <button type="submit" form="signup" value="Submit">Submit</button><br>
+         <button type="submit" value="Submit">Submit</button><br>
          <input type="reset" value="reset">
          <hr>
          <p>Already have an account? <a href="#">Login here</a></p>
