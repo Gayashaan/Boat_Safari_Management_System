@@ -39,11 +39,14 @@
                  <label for="address">Address</label>
                  <input type="text" placeholder="Enter Address" id="address" name="Address" required><br><br>
                
+                 <input type="radio" name ="gender" id="male" name="Gender" value="m">
+                 <span id="male">Male</span>
                  
-               
+                 <input type="radio" name ="gender" id="female" name="Gender" value="f">
+                  <span id="female">Female</span><br><br>
+
                  <label for="password">Password</label>
-                 <input type="password" placeholder="Enter Password" id="psw" name="pwd"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain atleast one number and one uppercase and lowercase letter
-                 ,and at least 8 or more characters" required><br><br>
+                 <input type="password" placeholder="Enter Password" id="psw" name="pwd" required><br><br>
               
                  <label for="confirm password">Confirm Password</label>
                  <input type="password" placeholder="Confirm Password" id="psw-confirm" name="confirmpsw" required><br><br>
@@ -52,7 +55,7 @@
           
          <p>By clicking the submit button you agree to our <a href="#" >Terms & Conditions</a></p><br>
          <button type="submit" value="Submit">Submit</button><br>
-         <input type="reset" value="reset">
+         
          <hr>
          <p>Already have an account? <a href="#">Login here</a></p>
        </form> 
