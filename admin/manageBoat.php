@@ -115,11 +115,15 @@
                         <form method="POST" action="addBoat.php" enctype="multipart/form-data">
 
                             <div class="topwrap">
-                                <label for="b_license_no">Boat License</label><br>
-                                <input type="text" name="b_license_no" id="b_license_no"><br><br>
+                                <div class="fwrap">
+                                    <label for="b_license_no">Boat License</label><br>
+                                    <input type="text" name="b_license_no" id="b_license_no">
+                                </div>
 
-                                <label for="b_name">Boat name</label><br>
-                                <input type="text" name="b_name" id="b_name"><br><br>
+                                <div class="lwrap">
+                                    <label for="b_name">Boat name</label><br>
+                                    <input type="text" name="b_name" id="b_name">
+                                </div>
                             </div>
 
                             <div class="otherwrap">

@@ -9,7 +9,7 @@
 
 .middle_panel > .left_box{
     width: 75%;
-    height: 455px;
+    height: 500px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
     padding: 10px;
@@ -154,6 +154,9 @@ input > #b_image{
 .topwrap{
   display: flex;
   justify-content: space-around;
+  /* background-color: #00ff62;
+  height: fit-content; */
+
 }
 #b_license_no, #b_name{
     width: 122px;
