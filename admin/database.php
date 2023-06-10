@@ -64,18 +64,19 @@
         email VARCHAR(50) NOT NULL,
         pwd VARCHAR(50) NOT NULL,
         cnumber INT(10) NOT NULL,
-        Address VARCHAR(200) NOT NULL
+        Address VARCHAR(200) NOT NULL,
+        gender VARCHAR(50) NOT NULL
     )";
 
     $conn->query($createTableUser);
 
     $insertDataUser = "
-    INSERT INTO user(userID, fname, lname, email, pwd, cnumber,Address) VALUES
-    ('U001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'user', 0771234569,'adbc'),
-    ('U002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'user', 0771234569,'dsds'),
-    ('U003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'user', 0774587963,'dsdf'),
-    ('U004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'user', 0771458963,'dfssd'),
-    ('U005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'user', 0774589632,'dfkkd')";
+    INSERT INTO user(userID, fname, lname, email, pwd, cnumber,Address,gender) VALUES
+    ('U001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'user', 0771234569,'adbc','female'),
+    ('U002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'user', 0771234569,'dsds','male'),
+    ('U003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'user', 0774587963,'dsdf','male'),
+    ('U004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'user', 0771458963,'dfssd','male'),
+    ('U005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'user', 0774589632,'dfkkd','male')";
 
 
     // check the records in the table

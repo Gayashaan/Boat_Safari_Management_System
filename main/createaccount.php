@@ -8,6 +8,7 @@
       $cnumber=$_POST['cnumber'];
       $Address=$_POST['Address'];
       $pwd=$_POST['pwd'];
+      $gender=$_POST['Gender'];
 
       //user id generation
 
@@ -30,8 +31,8 @@
       
       
       
-      $sql = "INSERT INTO user(userID,fname,lname,email,pwd,cnumber,Address)
-              VALUES('$userID','$fname','$lname','$email','$pwd','$cnumber','$Address')";
+      $sql = "INSERT INTO user(userID,fname,lname,email,pwd,cnumber,Address,gender)
+              VALUES('$userID','$fname','$lname','$email','$pwd','$cnumber','$Address','$gender')";
               if($conn->query($sql)){
                 echo"Inserted successfully";
               }

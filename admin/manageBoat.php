@@ -115,27 +115,31 @@
                         <form method="POST" action="addBoat.php" enctype="multipart/form-data">
 
                             <div class="topwrap">
-                                <label for="b_license_no">License No</label><br>
-                                <input type="text" name="b_license_no" id="b_license_no"><br><br>
+                                <div class="fwrap">
+                                    <label for="b_license_no">Boat License</label><br>
+                                    <input type="text" name="b_license_no" id="b_license_no">
+                                </div>
 
-                                <label for="b_name">Boat name</label><br>
-                                <input type="text" name="b_name" id="b_name"><br><br>
+                                <div class="lwrap">
+                                    <label for="b_name">Boat name</label><br>
+                                    <input type="text" name="b_name" id="b_name">
+                                </div>
                             </div>
 
-                            <div class="othrwrap">
+                            <div class="otherwrap">
                                 <label for="b_model">Model</label><br>
-                                <input type="text" name="b_model" id="b_model"><br><br>
+                                <input type="text" name="b_model" id="b_model"><br>
 
                                 <label for="b_capacity">Capacity</label><br>
-                                <input type="text" name="b_capacity" id="b_capacity"><br><br>
+                                <input type="text" name="b_capacity" id="b_capacity"><br>
 
                                 <label for="b_length">Length</label><br>
-                                <input type="text" name="b_length" id="b_length"><br><br>
+                                <input type="text" name="b_length" id="b_length"><br>
 
                                 <label for="b_weight">Weight</label><br>
-                                <input type="text" name="b_weight" id="b_weight"><br><br>
+                                <input type="text" name="b_weight" id="b_weight"><br>
 
-                                <label for="b_image" id="b_image">Upload Image</label><br>
+                                <label for="b_image" id="b_image">Upload Image</label>
                                 <input type="file" name="b_image" id="b_image">
 
                                 <input type="submit" name="submit" id="submit">

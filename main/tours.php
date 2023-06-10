@@ -27,19 +27,19 @@
                       <h2>Tour name</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec quam augue. Aliquam condimentum eros a nunc fringilla, eu accumsan odio eleifend. Nunc ac mauris quis est volutpat malesuada nec ac felis. Phasellus quis metus placerat, condimentum ligula vel, gravida justo. Pellentesque congue purus sit amet tempor ultrice</p>
                       <a href="tourView.php"> <button type="submit" value="Submit" >View </button></a>
-             </div>
-             <div class="tour2">
+                </div>
+                <div class="tour2">
                       <img src="images/tour2.jpg" width="700px" height="350px">
                      <h2>Tour name</h2>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec quam augue. Aliquam condimentum eros a nunc fringilla, eu accumsan odio eleifend. Nunc ac mauris quis est volutpat malesuada nec ac felis. Phasellus quis metus placerat, condimentum ligula vel, gravida justo. Pellentesque congue purus sit amet tempor ultrice</p>
                     <a href="tourView.php"> <button type="submit" value="Submit" >View </button></a>
-             </div>
-             <div class="tour3">
+                </div>
+                <div class="tour3">
                       <img src="images/tour3.jpg" width="700px" height="350px">
                      <h2>Tour name</h2>
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec quam augue. Aliquam condimentum eros a nunc fringilla, eu accumsan odio eleifend. Nunc ac mauris quis est volutpat malesuada nec ac felis. Phasellus quis metus placerat, condimentum ligula vel, gravida justo. Pellentesque congue purus sit amet tempor ultrice</p>
                      <a href="tourView.php"><button type="submit" value="Submit" >View </button></a>
-             </div>
+                </div>
             </div>
         </div>
     </div>
