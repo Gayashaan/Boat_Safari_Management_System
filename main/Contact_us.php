@@ -42,14 +42,7 @@
 			<div class="Container_2">
 				<form id="form" action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
 				<h1 class="subheading">Contact Us</h1>
-				<?php
-						$msg="";
-						if(isset($_GET['Error']))
-						{
-							$msg="Please Fill In The Blanks";
-							echo <div class="alert alert-danger">'.$msg.'</div>
-						}
-				?>
+		
 				<p>Welcome to our Boat Safari Management System! We are delighted to assist you. If you have any questions, feedback, or inquiries, please don't hesitate to reach out to our dedicated team. Your satisfaction is our top priority, and we are here to ensure your boat safari experience is unforgettable. Contact us today!</p>
 				<h2>We value Your Feedbacks</h2>
 				<label for="fname">Name:</label>
