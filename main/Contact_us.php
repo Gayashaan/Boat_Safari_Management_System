@@ -16,15 +16,32 @@
 
 
 	<?php include("header.php"); ?>
-
-
-
-
-
-
-
-	<div class="container">
+		<div class="container">
 		<div class="wrap">
+			<?php
+				include "config.php";
+
+				if(isset($_POST['Submit']))
+				{
+					$name = $_POST['Name'];
+					$Email = $_POST['Email'];
+					$msg = $_POST['Message'];
+				}
+
+				$sql = "INSERT INTO 'inquiry_tb'('Name','Email','Message')	VALUES ('$name','$Email','$msg')";
+				$result = $conn->query($sql);
+					if($result == true)
+					{
+						echo "New Record Added Successfully";
+					}
+					else
+					{
+						echo "Error:" . $sql . "<br>" . $conn->error; 
+					}
+
+					$conn->close()
+			
+			?>
 			<Center>
 			<div class="Container_2">
 				<form id="form" action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
