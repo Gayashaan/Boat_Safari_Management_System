@@ -2,7 +2,10 @@ html, body{
 	margin: 0;
 	padding: 0;
 	height: 100%;
-    background-color: #3f51b5;
+    background-image: url(../images/contactus.jpg);
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: 100%;
 	
   } 
 
@@ -30,10 +33,11 @@ html, body{
 }
 .Container_2
 {
+    padding: 10px;
     width:100%;
     margin:10px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5); 
+    
 
 }
 
@@ -52,6 +56,7 @@ html, body{
     border-radius: 8px;
     padding: 20px;
     float:none;
+    background-color: rgba(0, 0, 0, 0.5); 
     
     
 }
