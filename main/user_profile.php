@@ -61,9 +61,20 @@
                     <label> Confirm Password<label>
                     <input type="password" value="Confirm password"><br><br>
                 </div>
+                <div class="buttons">
                 <div class="updatebtn">
-                    <button type="submit" value="submit">Update</button>
+                    <button type="submit" value="submit"><a href="update.php">Update</a></button>
                 </div>
+                <div class="deletebtn">
+                    <button type="submit" value="submit"><a href="delete.php">Delete Account</a></button>
+                </div>
+                </div>
+
+        </div>
+        <div class="Feedback">
+            <h2> Give us your Feedback</h2>
+            <input type="textarea" name="feedback">
+            <button type="submit" value="submit"> Submit Feedback</button>
         </div>
     </div>
     
