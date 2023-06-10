@@ -2,6 +2,7 @@
 
     include_once("config.php");
     include_once("sessionAdmin.php");
+    
     // session_start();
     // if($_SESSION['adminID'] == ""){
     //     header("LOCATION: ../main/deniedpage.php");
@@ -20,33 +21,43 @@
 
     if(isset($_POST['status'])){
         $status = $_POST['status'];
-        $sql = "UPDATE admin SET status='$status' WHERE adminID='$id'";
+        $sql = "UPDATE msafari SET status='$status' WHERE Sid='$ID'";
         $conn->query($sql);
         echo "<script> alert('Status $status Successfully');</script>";
-        header("Refresh: 0; URL = updateUsers.php?updateid=$id");
+        header("Refresh: 0; URL = updateSafari.php?updateid=$ID");
     }
 
     if(isset($_POST['submit'])){
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $email = $_POST['email'];
-        $cnumber = $_POST['cNo'];
-        $pwd = $_POST['pwd'];
-        $cpwd = $_POST['cpwd'];
+        $Sname = $_POST['Sname'];
+        $location = $_POST['Slocation'];
+        $price = $_POST['Sprice'];
+        $date = $_POST['Sdate'];
+        $description= $_POST['Sdescription'];
+
+
+        if($pwd == $cpwd){
+            if($prefix[0] == 'A'){
+                $sql = "UPDATE admin SET Sid='$ID', Sname='$Sname', Slocation='$location', Sprice='$price', Sdate='$date', Sdescription='$description' WHERE adminID='$ID'";
+                $conn->query($sql);
+                echo "<script> alert('Update Successfully');</script>";
+                header("Refresh: 0; URL = updateSafari.php?updateid=$ID");
         
         
+            
+        
 
-        $image_name = $_FILES['profileImg']['name'];//return the name of the image or file
-        $image_size = $_FILES['profileImg']['size'];//return the name of the image or file in bytes
-        $image_tmp_name = $_FILES['profileImg']['tmp_name'];//return the temp name of the image or file
-        $image_folder = '../uploads/adminImg/'.basename($image_name);//image destination
-        $image_extension = strtolower(pathinfo($image_folder, PATHINFO_EXTENSION));//return the extension of the file or image strtolower
-        //basename($_FILES['profileImg']['name'], suffix) or basename($image_name) return the name of the image or file with extention when the variable inside bracket have specified with the path
-        //suffix can be used to remove the file extension of the file name when we know the file extension of that particular file
-        // $h = "../uploads/adminImg/image1.jpg";
-        //echo '<script> console.log("'.$image_extension.'");</script>';
-    }
-
+            }else if($prefix[0] == 'U'){
+                $sql = "UPDATE user SET Sid='$ID', Sname='$Sname', Slocation='$location', Sprice='$price', Sdate='$date', Sdescription='$description' WHERE userID='$ID'";
+                $conn->query($sql);
+                echo "<script> alert('Update Successfully');</script>";
+                
+            }
+        }else{
+            echo "<script> alert('Password Not Matched');</script>";
+            header("Refresh: 0; URL = updateUsers.php?updateid=$id");
+            die(mysqli_error($conn));
+            }
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +96,7 @@
 
             <div class="upper_panel">
                 <div class="upper_panel_left">
-                    <h6>Manage Users</h6>
+                    <h6>Manage Safari</h6>
                 </div>
 
                 <?php include_once("upperPanelRight.php"); ?>
@@ -95,7 +106,71 @@
 
             <div class="middle_panel">
                 <div class="left_box">
-                    
+                <?php
+                        
+
+                        if($prefix[0] == 'A'){
+
+                            $sql = "SELECT * FROM msafari WHERE Sid = '$ID'";
+                            $result = $conn->query($sql);
+                            $row = $result->fetch_assoc();
+
+                        }else if($prefix[0] == 'U'){
+
+                            $sql = "SELECT * FROM msafari WHERE userID = '$ID'";
+                            $result = $conn->query($sql);
+                            $row = $result->fetch_assoc();
+                        }
+                        
+                        $Name = $row['Sname'];
+                        echo "<h6>".$name."'s profile </h6>";
+                    ?>
+
+                    <div class="profile">
+
+                        
+
+                        <div class="details">
+
+                            <div class="detBox">
+                                <p>Safari Name:<?php echo " " .$row['Sname'] ?></p>
+                            </div>
+
+                            <div class="detBox">
+                                <p>Location:<?php echo " " .$row['Slocation'] ?></p>
+                            </div>
+
+                            <div class="detBox">
+                                <p>Price:<?php echo " " .$row['Sprice'] ?></p>
+                            </div>
+
+                            <div class="detBox">
+                                <p>Date:<?php echo " " .$row['Sdate'] ?></p>
+                            </div>
+                            <div class="detBox">
+                                <p>Description:<?php echo " " .$row['Sdescription'] ?></p>
+                            </div>
+
+                            <?php
+                                if($prefix[0] == 'U'){
+                                    echo "<div class='detBox'>";
+                                    echo "<p>Address:".$row['Address']."</p>";
+                                    echo "</div>";
+                                }
+                            ?>
+
+                            <?php
+                                if($prefix[0] == 'A'){
+                                    echo "<div class='detBox'>";
+                                    echo "<p>Status:".$row['status']."</p>";
+                                    echo "</div>";
+                                }
+                            ?>
+                            
+
+                        </div>
+
+                    </div>
                         
                     
                             
@@ -115,6 +190,25 @@
 
                 <div class="right_box">
                 
+                    <p>Add new Safari</p>
+                    <form action="createSafari.php" method="post">
+                       
+                        <label for="Sname">Safari Name:</label><br>
+                        <input type="text" id="Sname" name="Sname"><br>
+                        <label for="Slocation">Location:</label><br>
+                        <input type="text" id="Slocation" name="Slocation"><br>
+                        <label for="Sprice">Price LKR:</label><br>
+                        <input type="text" id="Sprice" name="Sprice"><br>
+                        <label for="Sdate">Date:</label><br>
+                        <input type="text" id="Sdate" name="Sdate"><br>
+                        <label for="Sdescription">Description::</label><br>
+                        <input type="text" id="Sdescription" name="Sdescription"><br>
+
+                        <input type="submit" value="SUbmit" id="sbt" name="submit"><br>
+
+                    </form>
+
+                </div>
                     
                         
                                   
