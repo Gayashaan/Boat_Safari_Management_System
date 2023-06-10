@@ -16,6 +16,11 @@
         $ucnumber = $_SESSION['cnumber'];
         
     }
+
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM msafari WHERE Sid = '$id'";
+    $result = $conn->query($sql);
+    $row = $result -> fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,14 +64,15 @@
 
             <div class="safDetails">
                 <div class="heading">
-                    <h1>Safari Title</h1>
+                    <?php echo "<h1>".$row['Sname']."</h1>" ?>
                     <div class="sub">
-                        <h2>Avialability</h2>
-                        <h2>$Price</h2>
+                        <h2>Avialable</h2>
+                        <?php echo "<h2>".$row['Sprice']."</h2>" ?>
                     </div>
                 </div>
                 <div class="para">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus ducimus dolorem quidem labore accusantium fugit debitis excepturi asperiores ipsa, dolore vitae eos possimus magni numquam impedit illo corrupti doloribus.</p>
+                    <?php echo "<p>".$row['Sdescription']."</p>" ?>
+                    
 
                 </div>
                 
