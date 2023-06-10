@@ -13,20 +13,7 @@
 
 
 <body>
-<?php	
-		if(isset($_POST['bttn']))
-		{
-			$name = $_POST['fname'];
-			$mail = $_POST['Email'];
-			$msg = $_POST['Message'];
 
-		$conn = new mysqli($fname, $Email, $Message);
-
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-			}
-			echo "Connected successfully";
-?>
 
 	<?php include("header.php"); ?>
 
@@ -77,7 +64,7 @@
 
 	</div>
 
-	<?php include("footer.php"); ?>
+	<?php include("footer.php");
+	?>
 </body>
-
 </html>
