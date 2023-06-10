@@ -128,15 +128,15 @@
                     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
                        
                         <label for="Sname">Safari Name:</label><br>
-                        <input type="text" id="Sname" name="Sname"><br>
+                        <input type="text" id="Sname" name="Sname" value="<?php echo $row['Sname']?>"><br>
                         <label for="Slocation">Location:</label><br>
-                        <input type="text" id="Slocation" name="Slocation"><br>
+                        <input type="text" id="Slocation" name="Slocation" value="<?php echo $row['Slocation']?>"><br>
                         <label for="Sprice">Price LKR:</label><br>
-                        <input type="text" id="Sprice" name="Sprice"><br>
+                        <input type="text" id="Sprice" name="Sprice" value="<?php echo $row['Sprice']?>"><br>
                         <label for="Sdate">Date:</label><br>
-                        <input type="date" id="Sdate" name="Sdate"><br>
+                        <input type="date" id="Sdate" name="Sdate" value="<?php echo $row['Sdate']?>"><br>
                         <label for="Sdescription">Description::</label><br>
-                        <input type="text" id="Sdescription" name="Sdescription"><br>
+                        <input type="text" id="Sdescription" name="Sdescription"  value="<?php echo $row['Sdescription']?>"><br>
 
                         <input type="submit" value="SUbmit" id="sbt" name="submit"><br>
 

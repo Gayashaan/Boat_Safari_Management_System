@@ -1,46 +1,19 @@
-
 .upper_panel{
     margin-bottom: 50px;
 }
 .middle_panel{
     display: flex;
     height: 100vh;
-   
 }
 
 .middle_panel > .left_box{
     width: 75%;
-    height: 455px;
+    height: 500px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
     padding: 10px;
     border-radius: 10px;
-    margin-left: 50px;
-    
-
-    
-}
-
-.middle_panel > .right_box{
-    width: 45%;
-    height: 455px;
-    background-color: rgb(148, 141, 141);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 30px;
-    margin-right: 50px;
-    
-}
-
-
-
-.right_box > p{
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    color: rgb(0, 0, 0);
-    font-size: 25px;
+    margin-left: 50px;   
 }
 
 
@@ -54,7 +27,6 @@
     font-weight: 500;
     color: #000000;
 } 
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -113,3 +85,89 @@ table {
       
       cursor: pointer;
   }
+  
+  .middle_panel > .right_box{
+    width: 45%;
+    height: 500px;
+    background-color: rgb(148, 141, 141);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-right: 50px;
+    
+}
+
+  /*add boat heading*/
+.right_box > p{
+  margin-left: 20px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  /*background-color: #2c84f7;*/
+}
+
+input{
+  width: 200px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  /*background-color: rgb(150, 97, 27);*/
+  
+}
+
+/*choose file to upload*/
+input > #b_image{
+  width: 190px;
+  height: 20px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+  /*background-color: rgb(134, 137, 167);*/
+}
+
+/*update button*/
+#submit{
+  width: 150px;
+  height: 30px;
+  margin-left: 20%;
+  transition: 0.5s;
+  background-color: rgb(47, 255, 57);
+  margin-top: 10px;
+}
+
+#submit:hover{
+  background-color: #00ff62;
+  color: white;
+  cursor: pointer;
+}
+
+.topwrap{
+  display: flex;
+  justify-content: space-around;
+  /* background-color: #00ff62;
+  height: fit-content; */
+
+}
+#b_license_no, #b_name{
+    width: 122px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.otherwrap{
+  margin-left: 11%;
+}
+  
+  
