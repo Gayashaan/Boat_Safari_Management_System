@@ -57,7 +57,6 @@
             
             <div class="greeting">
                 <p class="head">Welcome <?php echo $userName ?></p>
-                <p>You have (number of) unread alerts</p>
             </div>
             
             <div class="middle_panel">
@@ -104,14 +103,21 @@
                             return $totalSafari;
                         }
                         
+                        function totalreservations($connection){
+                            $sqlreseravtion = "SELECT count(*) AS 'Total reservation Count' FROM booking";
+                            $resultreseravtion = $connection->query($sqlreseravtion);
+                            $rowreseravtion = $resultreseravtion->fetch_assoc();
+                            $totalreseravtion = $rowreseravtion['Total reservation Count'];
+                            return $totalreseravtion;
+                        }
                         
                         
 
                     ?>
 
                     <div class="box">
-                        <h6>Total Trips</h6>
-                        <p class="val">40876</p>
+                        <h6>Total Bookings</h6>
+                        <p class="val"><?php echo totalreservations($conn)?></p>
                         <p class="date"><?php echo $date?></p>
                     </div>
                     <div class="box">
@@ -139,47 +145,65 @@
                         <h6>Recent Bookings</h6>
 
                         <div class="grid">
-                            <ul class="details">
-                                <li class = "topic">Date</li>
-                                <?php
-                                    $date = 1;
-                                    for($i=0; $i<10; $i++){
-                                        echo "<li> $date jan 2021</li>";
-                                        $date++;
-                                    }
-                                ?>
-                            </ul>
 
-                            <ul class="details">
-                                <li class = "topic">Customer</li>
-                                <?php
-                                    for($i=0; $i<10; $i++){
-                                        echo "<li class>Joahn Doe</li>";
-                                    }
-                                ?>
-                            </ul>
+                        
+                            <table>
+                                <tr>
+                                    <th>Booking ID</th>
+                                    <th>Date</th>
+                                    <th>Customer</th>
+                                    <th>Trip</th>
 
-                            <ul class="details">
-                                <li class = "topic">Trip</li>
-                                <?php
-                                    for($i=0; $i<10; $i++){
-                                        echo "<li>Pending</li>";
-                                    }
-                                ?>
-                            </ul>
-
-                            <ul class="details">
-                                <li class = "topic">Total</li>
-                                <?php
-                                    for($i=0; $i<10; $i++){
-                                        echo "<li>$5000</li>";
-                                    }
-                                ?>
-                            </ul>
+                                </tr>
 
                             
-                            
+                                <?php
+
+                                    $sql = "SELECT * FROM booking";
+                                                                
+                                    $result = $conn->query($sql);
+
+
+                                    if($result->num_rows>0){
+                                        while($row = $result->fetch_assoc()){
+                                            $bID = $row["bookingID"];
+                                            $date = $row["date"];
+                                            $userID = $row["userID"];
+                                            $Sid = $row["Sid"];
+
+                                            $getUser = "SELECT fname FROM user WHERE userID = '$userID'";
+                                            $resultUser = $conn->query($getUser);
+                                            $rowUser = $resultUser->fetch_assoc();
+                                            $userName = $rowUser["fname"];
+
+                                            $getSafari = "SELECT Sname FROM msafari WHERE Sid = '$Sid'";
+                                            $resultSafari = $conn->query($getSafari);
+                                            $rowSafari = $resultSafari->fetch_assoc();
+                                            $safariName = $rowSafari["Sname"];
+                                            
+
+                                            echo '
+                                            
+                                                    <tr>
+                                                        <td>' . $bID. '</td>
+                                                        <td>' . $date. '</td>
+                                                        <td>' . $userName. '</td>
+                                                        <td>' . $safariName. '</td>
+                                                        
+                                                    </tr>';
+                                                
+                                        }
+                                    }else{
+                                        echo "<td>Empty rows!!</td>";
+                                    }
+
+
+                                ?>
+
+                            </table>
                         </div>
+
+                        
                         
                                                 
                     </div>

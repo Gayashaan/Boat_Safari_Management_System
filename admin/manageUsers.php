@@ -167,9 +167,11 @@
                             <label for="cNo">Contact No</label><br>
                             <input type="number" name="cNo" id="cNo" placeholder="Contact Number"><br>
                             <label for="pwd">Password</label><br>
-                            <input type="password" name="pwd" id="pwd" placeholder="Password"><br>
+                            <input type="password" name="pwd" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
                             <label for="cpwd">Confirm Password</label><br>
-                            <input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password"><br>
+                            <input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
                             <span id="err">Password does not matched</span>
                             <input type="checkbox" id="checkbox"><span class="pwdtxt">Show Password</span>
                             
