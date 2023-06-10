@@ -3,29 +3,9 @@
     include_once("config.php");
     include_once("sessionAdmin.php");
     
-    // session_start();
-    // if($_SESSION['adminID'] == ""){
-    //     header("LOCATION: ../main/deniedpage.php");
-    //     echo "<script> alert('Please Login');</script>";
-    //     // header("location: ../main/adminloging.php");
-    //     die();
-        
-    // }else{
-    //     $adminID = $_SESSION['adminID'];
-    //     $ufname = $_SESSION['fname'];
-    //     $ulname = $_SESSION['lname'];
-    //     $userName = $ufname . " " . $ulname;
-    // }  
-    $id = $_GET['updateid'];
-    $prefix = str_split($id);
 
-    if(isset($_POST['status'])){
-        $status = $_POST['status'];
-        $sql = "UPDATE msafari SET status='$status' WHERE Sid='$ID'";
-        $conn->query($sql);
-        echo "<script> alert('Status $status Successfully');</script>";
-        header("Refresh: 0; URL = updateSafari.php?updateid=$ID");
-    }
+    $id = $_GET['updateid'];
+    
 
     if(isset($_POST['submit'])){
         $Sname = $_POST['Sname'];
@@ -34,30 +14,12 @@
         $date = $_POST['Sdate'];
         $description= $_POST['Sdescription'];
 
+        $sql = "UPDATE msafari SET Sname='$Sname', Slocation='$location', Sprice='$price', Sdate='$date', Sdescription='$description' WHERE Sid='$id'";
+        $conn->query($sql);
+        echo "<script> alert('Update Successfully');</script>";
+        header("Refresh: 0; URL = updateSafari.php?updateid=$id");
 
-        if($pwd == $cpwd){
-            if($prefix[0] == 'A'){
-                $sql = "UPDATE admin SET Sid='$ID', Sname='$Sname', Slocation='$location', Sprice='$price', Sdate='$date', Sdescription='$description' WHERE adminID='$ID'";
-                $conn->query($sql);
-                echo "<script> alert('Update Successfully');</script>";
-                header("Refresh: 0; URL = updateSafari.php?updateid=$ID");
-        
-        
-            
-        
-
-            }else if($prefix[0] == 'U'){
-                $sql = "UPDATE user SET Sid='$ID', Sname='$Sname', Slocation='$location', Sprice='$price', Sdate='$date', Sdescription='$description' WHERE userID='$ID'";
-                $conn->query($sql);
-                echo "<script> alert('Update Successfully');</script>";
-                
-            }
-        }else{
-            echo "<script> alert('Password Not Matched');</script>";
-            header("Refresh: 0; URL = updateUsers.php?updateid=$id");
-            die(mysqli_error($conn));
-            }
-        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,24 +68,19 @@
 
             <div class="middle_panel">
                 <div class="left_box">
-                <?php
+                    <?php
                         
 
-                        if($prefix[0] == 'A'){
+                        
 
-                            $sql = "SELECT * FROM msafari WHERE Sid = '$ID'";
-                            $result = $conn->query($sql);
-                            $row = $result->fetch_assoc();
+                        $sql = "SELECT * FROM msafari WHERE Sid = '$id'";
+                        $result = $conn->query($sql);
+                        $row = $result->fetch_assoc();
 
-                        }else if($prefix[0] == 'U'){
-
-                            $sql = "SELECT * FROM msafari WHERE userID = '$ID'";
-                            $result = $conn->query($sql);
-                            $row = $result->fetch_assoc();
-                        }
+                        
                         
                         $Name = $row['Sname'];
-                        echo "<h6>".$name."'s profile </h6>";
+                        echo "<h6>".$Name."'s profile </h6>";
                     ?>
 
                     <div class="profile">
@@ -151,33 +108,10 @@
                                 <p>Description:<?php echo " " .$row['Sdescription'] ?></p>
                             </div>
 
-                            <?php
-                                if($prefix[0] == 'U'){
-                                    echo "<div class='detBox'>";
-                                    echo "<p>Address:".$row['Address']."</p>";
-                                    echo "</div>";
-                                }
-                            ?>
-
-                            <?php
-                                if($prefix[0] == 'A'){
-                                    echo "<div class='detBox'>";
-                                    echo "<p>Status:".$row['status']."</p>";
-                                    echo "</div>";
-                                }
-                            ?>
-                            
-
                         </div>
 
                     </div>
-                        
-                    
-                            
-                            
-                            
-                        
-                            
+        
 
                 </div>
 
@@ -191,7 +125,7 @@
                 <div class="right_box">
                 
                     <p>Add new Safari</p>
-                    <form action="createSafari.php" method="post">
+                    <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
                        
                         <label for="Sname">Safari Name:</label><br>
                         <input type="text" id="Sname" name="Sname"><br>
@@ -200,7 +134,7 @@
                         <label for="Sprice">Price LKR:</label><br>
                         <input type="text" id="Sprice" name="Sprice"><br>
                         <label for="Sdate">Date:</label><br>
-                        <input type="text" id="Sdate" name="Sdate"><br>
+                        <input type="date" id="Sdate" name="Sdate"><br>
                         <label for="Sdescription">Description::</label><br>
                         <input type="text" id="Sdescription" name="Sdescription"><br>
 
