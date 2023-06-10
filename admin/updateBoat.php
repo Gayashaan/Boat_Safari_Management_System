@@ -90,7 +90,7 @@
                         
                         
                         $bName = $row['b_name'];
-                        echo "<h6 id='left-top'>".$bName." details </h6>";
+                        echo "<p id='left-top'>".$bName." details </p>";
                     ?>
 
                     <div class="profile">
@@ -151,9 +151,9 @@
 
                 <div class="right_box">
                 
-                    <p id="right-top">Update <?php echo $bName; ?></p>
+                    <p>Update <?php echo $bName; ?></p>
                     <form method="POST" enctype="multipart/form-data" action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>">
-                        <div class="namewrap">
+                        <div class="topwrap">
                             <div class="fwrap">
                                 <label for="blic">Boat License</label><br>
                                 <input type="text" name="blic" id="blic" value="<?php echo $row['b_license_no']?>" >
@@ -176,10 +176,10 @@
                             
                             <div class="btnwrap">
                                 <label for="b_image" id="upload">Upload a Image</label>
-                                <input type="file" id="b_image" name="b_image" hidden>
-                                    
-                                <input type="submit" value="Update" id="sbt" name="submit"><br>
+                                <input type="file" id="b_image" name="b_image" >        
                             </div>
+
+                            <input type="submit" value="Update" id="sbt" name="submit"><br>
                         </div>
                                   
                     </form>
