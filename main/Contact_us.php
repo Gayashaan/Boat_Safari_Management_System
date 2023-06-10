@@ -19,7 +19,7 @@
 		<div class="container">
 		<div class="wrap">
 			<?php
-				include "../admin/config.php";
+				include ("../admin/config.php");
 
 				if(isset($_POST['Submit']))
 				{
@@ -28,7 +28,7 @@
 					$msg = $_POST['Message'];
 				}
 
-				$sql = "INSERT INTO 'inquiry_tb'('Name','Email','Message')	VALUES ('$name','$Email','$msg')";
+				$sql = "INSERT INTO `inquiry_tb` (`Name`, `Email`, `Message`) VALUES ('$name', '$Email', '$msg')";
 				$result = $conn->query($sql);
 					if($result == true)
 					{
