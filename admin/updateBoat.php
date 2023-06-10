@@ -2,17 +2,19 @@
 
     include_once("config.php");
     include_once("sessionAdmin.php");
-    
-    if(isset($_POST['submit'])){
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $email = $_POST['email'];
-        $cnumber = $_POST['cNo'];
-        $pwd = $_POST['pwd'];
-        $cpwd = $_POST['cpwd'];
-        
+
         $id = $_GET['updateid'];
         $prefix = str_split($id);
+    
+    if(isset($_POST['submit'])){
+        $blic = $_POST['blic'];
+        $bname = $_POST['bname'];
+        $bmodel = $_POST['model'];
+        $bcapacity = $_POST['cap'];
+        $blength = $_POST['length'];
+        $bweight = $_POST['weight'];
+        
+        
 
         $image_name = $_FILES['b_image']['name'];//return the name of the image or file
         $image_size = $_FILES['b_image']['size'];//return the name of the image or file in bytes
@@ -23,7 +25,36 @@
         //suffix can be used to remove the file extension of the file name when we know the file extension of that particular file
         // $h = "../uploads/adminImg/image1.jpg";
         //echo '<script> console.log("'.$image_extension.'");</script>';
-        $sql = "";
+        $sql = "UPDATE boat SET b_license_no='$blic', b_name='$bname', b_model='$bmodel', b_capacity='$bcapacity', b_length='$blength', b_weight='$bweight' WHERE b_id='$id'";
+        $result = $conn->query($sql);
+
+        if($result){
+            echo "<script> alert('Boat Updated Successfully');</script>";
+            header("Refresh: 0; URL = updateBoat.php?updateid=$id");
+        }else{
+            echo "<script> alert('Boat Not Updated');</script>";
+        }
+
+        if(!empty($image_name)){
+            if($image_extension == "jpg" || $image_extension == "png" || $image_extension == "jpeg" || $image_extension == "gif"){
+                if($image_size <= 5000000){
+                    if(move_uploaded_file($image_tmp_name, $image_folder)){
+                        $sql = "UPDATE boat SET b_image='$image_name' WHERE b_id='$id'";
+                        $conn->query($sql);
+                        echo "<script> alert('Boat Image Updated Successfully');</script>";
+                        header("Refresh: 0; URL = updateBoat.php?updateid=$id");
+                    }else{
+                        echo "<script> alert('Image not uploaded');</script>";
+                    }
+                }else{
+                    echo "<script> alert('Image size is too large');</script>";
+                }
+    
+            }
+        }else{
+            echo "<script> alert('Please select an image to update the image');</script>";
+        }
+        
     }
 
 ?>
@@ -77,8 +108,6 @@
                     
                         
                     <?php
-                        $id = $_GET['updateid'];
-                        $prefix = str_split($id);
                         
 
                         
