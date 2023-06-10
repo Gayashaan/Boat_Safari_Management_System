@@ -36,6 +36,7 @@
                     anim id est laborum.
                     </p>
                 </div>
+              <button type="submit" value="Submit">Book Now</button><br>
             </div>
         </div>
     </div>
