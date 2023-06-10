@@ -26,8 +26,8 @@
     // $conn->query($deletetable);
     
 
-    $deletetable = "DROP TABLE IF EXISTS inquiry_tb";
-    $conn->query($deletetable);
+    // $deletetable = "DROP TABLE IF EXISTS inquiry_tb";
+    // $conn->query($deletetable);
 
     
     $createTableAdmin = "CREATE TABLE IF NOT EXISTS admin(
