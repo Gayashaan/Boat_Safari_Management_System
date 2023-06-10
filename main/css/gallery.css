@@ -11,3 +11,63 @@
     position: relative;
     top: 20%;
 }
+
+#Pic1
+{
+    width: 600px;
+    height:400px;
+    background-color:white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#Pic2
+{
+    width: 600px;
+    height:400px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin-left: 25px;
+    
+}
+#Pic3
+{
+    width: 600px;
+    height:400px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#Pic4
+{
+    width: 600px;
+    height:400px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin-left: 25px;
+   
+}
+#Pic5
+{
+    width: 600px;
+    height:400px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#Pic6
+{
+    width: 600px;
+    height:400px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
