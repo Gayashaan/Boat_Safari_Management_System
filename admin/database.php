@@ -6,24 +6,24 @@
     // $conn->query($createDB);//database creation
 
     //query for table creation if not exists
-    $deletetable = "DROP TABLE IF EXISTS admin";
-    $conn->query($deletetable);
+    // $deletetable = "DROP TABLE IF EXISTS admin";
+    // $conn->query($deletetable);
 
-    $deletetable = "DROP TABLE IF EXISTS user";
-    $conn->query($deletetable);
+    // $deletetable = "DROP TABLE IF EXISTS user";
+    // $conn->query($deletetable);
 
-    $deletetable = "DROP TABLE IF EXISTS boat";
-    $conn->query($deletetable);
+    // $deletetable = "DROP TABLE IF EXISTS boat";
+    // $conn->query($deletetable);
 
-    $deletetable = "DROP TABLE IF EXISTS msafari";
-    $conn->query($deletetable);
+    // $deletetable = "DROP TABLE IF EXISTS msafari";
+    // $conn->query($deletetable);
 
-    // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
-    // $conn->query($dropconstraint);
-    // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY user_id_fk";
-    // $conn->query($dropconstraint);
-    $deletetable = "DROP TABLE IF EXISTS booking";
-    $conn->query($deletetable);
+    // // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
+    // // $conn->query($dropconstraint);
+    // // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY user_id_fk";
+    // // $conn->query($dropconstraint);
+    // $deletetable = "DROP TABLE IF EXISTS booking";
+    // $conn->query($deletetable);
     
 
     $deletetable = "DROP TABLE IF EXISTS inquiry_tb";
@@ -221,7 +221,7 @@
     }
 
     $createTableInquiry = "CREATE TABLE IF NOT EXISTS inquiry_tb(
-        inquiry_tb VARCHAR(10) PRIMARY KEY,
+        inquiryId VARCHAR(10) PRIMARY KEY,
         Name VARCHAR(50) NOT NULL,
         Email VARCHAR(50) NOT NULL,
         Message VARCHAR(1000) NOT NULL
