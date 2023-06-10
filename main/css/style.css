@@ -59,6 +59,10 @@ html,body{
 .intro button:hover {
   background-color: rgb(255, 0, 230);
 }
+.intro > button >  a{
+  text-decoration: none;
+  color: black;
+} 
 /* .upcoming-tours{
   background-color: #5edaf0;
   

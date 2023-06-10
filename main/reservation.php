@@ -49,7 +49,7 @@
        
         
 
-        $sql = "INSERT INTO booking (bookingID, userID, noOfAdults, noOfChild, date, breakfast, lunch, cnumber, Email, Sid) VALUES ('$bookingID','$userID','$adults', '$childrens', '$date', '$breakfast', '$lunch', '$email', '$cnumber','$sid')";
+        $sql = "INSERT INTO booking (bookingID, userID, noOfAdults, noOfChild, date, breakfast, lunch, cnumber, Email, Sid) VALUES ('$bookingID','$userID','$adults', '$childrens', '$date', '$breakfast', '$lunch', '$cnumber', '$email','$sid')";
         $result = $conn->query($sql);
 
         if($result == TRUE){

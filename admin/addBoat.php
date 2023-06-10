@@ -50,7 +50,7 @@ if(isset($_POST['submit']))
   {
     if($_img_extension == "jpg" || $_img_extension == "png" || $_img_extension == "jpeg")
     {
-      if($b_image_size < 1000000)
+      if($b_image_size < 5000000)
       {
         if(move_uploaded_file($b_image_tmp, $_img_folder))
         {

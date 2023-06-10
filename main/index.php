@@ -19,7 +19,7 @@
             <!-- <img src="https://gloogs.com/wp-content/uploads/2022/05/Ruta-Guiada3-02.jpg" alt=""> -->
             <video autoplay muted loop src="videos/pexels-twicce-switzerland-6560037-3840x2160-30fps.mp4"></video>
             <h1>LET YOUR DREAMS SET SAIL</h1>
-            <button>Gallery</button>
+            <button><a href="gallery.php">Gallery</a></button>
             <div class="playPause_btn" onclick="playPause()">
                 <img id="playpause" src="images/icons/pause.png" alt="play_pause">
             </div>
