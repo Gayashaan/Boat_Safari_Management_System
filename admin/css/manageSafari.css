@@ -58,7 +58,7 @@ table {
       margin: 2px;
   }
   #vwBtn{
-      background-color: #5cec3f;
+      background-color: #2641d7;
       margin-right: 5px;
       border-radius: 5px;
       border: none;
@@ -69,7 +69,7 @@ table {
   }
   
   #dlBtn{
-      background-color: #ff0000;
+      background-color: #0c042f;
       border-radius: 5px;
       border: none;
       height: 30px;
@@ -157,6 +157,8 @@ input > #b_image{
   height: fit-content; */
 
 }
+
+
 #b_license_no, #b_name{
     width: 122px;
     height: 20px;
