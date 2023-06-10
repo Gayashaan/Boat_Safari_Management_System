@@ -20,10 +20,10 @@ let checkbox = document.getElementById("checkbox");
 
 function passwordMatch() {
   if(password.value !== cpassword.value) {
-    console.log("Passwords do not match");
+    // console.log("Passwords do not match");
     errorMSG.style.display = "block";
   }else{
-    console.log("Passwords match");
+    // console.log("Passwords match");
     errorMSG.style.display = "none";
   }
     
@@ -51,4 +51,4 @@ let fileChosen = document.getElementById('file_chosen');
 
 actualBtn.addEventListener('change', function(){
   fileChosen.textContent = this.files[0].name
-})
+});
