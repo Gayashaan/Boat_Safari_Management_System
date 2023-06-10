@@ -23,12 +23,12 @@
 
 				if(isset($_POST['Submit']))
 				{
-					$name = $_POST['fname'];
+					$Name = $_POST['Name'];
 					$Email = $_POST['Email'];
-					$msg = $_POST['Message'];
+					$Msg = $_POST['Message'];
 				}
 
-				$sql = "INSERT INTO `inquiry_tb` (`Name`, `Email`, `Message`) VALUES ('$name', '$Email', '$msg')";
+				$sql = "INSERT INTO `inquiry_tb` (`Name`, `Email`, `Message`) VALUES ('$Name', '$Email', '$Msg')";
 				$result = $conn->query($sql);
 					if($result == true)
 					{
@@ -50,7 +50,7 @@
 				<p>Welcome to our Boat Safari Management System! We are delighted to assist you. If you have any questions, feedback, or inquiries, please don't hesitate to reach out to our dedicated team. Your satisfaction is our top priority, and we are here to ensure your boat safari experience is unforgettable. Contact us today!</p>
 				<h2>We value Your Feedbacks</h2>
 				<label for="fname">Name:</label>
-				<input type="text" id="fname" name="fname">
+				<input type="text" id="Name" name="Name">
 				<br>
 				<br>
 				<label for="Email">Email:</label>
