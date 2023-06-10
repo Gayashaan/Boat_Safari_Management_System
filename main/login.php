@@ -16,7 +16,7 @@
             if($result->num_rows > 0){
                 
                 echo "<script> alert('You have succesfully logged In');</script>";
-                header("Refresh: 0; URL = ../main/index.php?userID=$row[userID]");
+                header("Refresh: 0; URL = ../main/index.php");
                 $_SESSION['userID'] = $row['userID'];
                 $_SESSION['fname'] = $row['fname'];
                 $_SESSION['lname'] = $row['lname'];
