@@ -20,7 +20,7 @@
 
         <div class="wrap">
             
-        <div class="container">
+        <div class="container_2">
         <center><h1>Image Gallery</h1></center>
         <div class="gallery">
             
