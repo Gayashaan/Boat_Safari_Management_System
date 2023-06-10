@@ -39,6 +39,10 @@
                     <h3>Topic 2</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eaque. Laboriosam reprehenderit, soluta esse molestias alias saepe consequatur ipsa quaerat! Illo, distinctio! Tempora nulla nisi, voluptatum maxime ad maiores optio.</p>
                 </div>
+                <div class="topic">
+                    <h3>Topic 2</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eaque. Laboriosam reprehenderit, soluta esse molestias alias saepe consequatur ipsa quaerat! Illo, distinctio! Tempora nulla nisi, voluptatum maxime ad maiores optio.</p>
+                </div>
 
             </div>
 
@@ -57,6 +61,57 @@
         </div>
 
         <div class="feedContainer">
+
+            <div class="feedbox">
+                <div class="pImg">
+                    <img src="images/profile logo.png" alt="profile image">
+                    <!-- images/profile logo.png -->
+                </div>
+                <div class="rate">
+                    5
+                </div>
+                <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                </div>
+            </div>
+
+            <div class="feedbox">
+                <div class="pImg">
+                    <img src="images/profile logo.png" alt="profile image">
+                </div>
+                <div class="rate">
+                    5
+                </div>
+                <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                </div>
+            </div>
+                
+            <div class="feedbox">
+                <div class="pImg">
+                    <img src="images/profile logo.png" alt="profile image">
+                </div>
+                <div class="rate">
+                    5
+                </div>
+                <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                </div>
+
+            </div>
+
+            <div class="feedbox">
+                <div class="pImg">
+                    <img src="images/profile logo.png" alt="profile image">
+                </div>
+                <div class="rate">
+                    5
+                </div>
+                <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                </div>
+
+            </div>
 
         </div>
 

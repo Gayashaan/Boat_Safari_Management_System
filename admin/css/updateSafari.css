@@ -1,0 +1,34 @@
+
+.upper_panel{
+    margin-bottom: 50px;
+}
+.middle_panel{
+    display: flex;
+    height: 100vh;
+   
+}
+
+.middle_panel > .left_box{
+    width: 75%;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 50px;
+    
+
+    
+}
+
+.middle_panel > .right_box{
+    width: 45%;
+    height: 500px;
+    background-color: rgb(148, 141, 141);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
