@@ -20,9 +20,17 @@
 
         <div class="wrap">
             
-            <h1>This is the galler page</h1>
-            <br>
-            <h1>paset your code to this section</h1>
+        <div class="container">
+        <h1>Image Gallery</h1>
+        <div class="gallery">
+            <img src="Images/userview/3d_600x400.jpg">
+            <img src="Images/userview/4d_600x400.jpg">
+            <img src="Images/userview/boat-g50ee0137d_1280_600x400.jpg">
+            <img src="Images/userview/6d 600.jpg">
+            <img src="Images/userview/yacht-rental-singapore-seek-sophie-yacht-water-play.jpg" width="600px" height="400px">
+            <img src="Images/userview/Experience-Boat-Safari-Kaziranga-Range-Assam-7-1160x650.jpg" width="600px" height="400px">
+        </div>
+        </div>
                 
             
         </div>

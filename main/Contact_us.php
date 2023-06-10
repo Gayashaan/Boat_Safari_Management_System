@@ -19,11 +19,11 @@
 		<div class="container">
 		<div class="wrap">
 			<?php
-				include "config.php";
+				include "../admin/config.php";
 
 				if(isset($_POST['Submit']))
 				{
-					$name = $_POST['Name'];
+					$name = $_POST['fname'];
 					$Email = $_POST['Email'];
 					$msg = $_POST['Message'];
 				}
@@ -36,7 +36,7 @@
 					}
 					else
 					{
-						echo "Error:" . $sql . "<br>" . $conn->error; 
+						//echo "Error <br>" . $conn->connect_error; 
 					}
 
 					$conn->close()
