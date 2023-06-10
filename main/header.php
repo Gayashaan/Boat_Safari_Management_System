@@ -13,7 +13,7 @@
         <a href="index.php" >Home</a>
         <a href="AboutUs.php">About Us </a>
         <a href="Contact_us.php">Contact</a>
-        <a href="#">Gallery</a>
+        <a href="gallery.php">Gallery</a>
         <a href="tours.php">Tours</a>
 
         <?php

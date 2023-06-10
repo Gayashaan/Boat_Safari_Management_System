@@ -3,6 +3,7 @@
     height: 100%;
     background-color: #cac5c5;
     font-family: Arial, Helvetica, sans-serif;
+    overflow:scroll;
 }
 
 .wrap{
@@ -10,7 +11,3 @@
     position: relative;
     top: 20%;
 }
-/* .tourwrap
-{
-    overflow:scroll;
-} */

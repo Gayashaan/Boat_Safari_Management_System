@@ -23,13 +23,96 @@
             <div class="playPause_btn" onclick="playPause()">
                 <img id="playpause" src="images/icons/pause.png" alt="play_pause">
             </div>
+            
+        </div>
+        
+
+        <div class ="services">
+        
+            <div class="description">
+
+                <div class="topic">
+                    <h3>Topic 1</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eaque. Laboriosam reprehenderit, soluta esse molestias alias saepe consequatur ipsa quaerat! Illo, distinctio! Tempora nulla nisi, voluptatum maxime ad maiores optio.</p>
+                </div>
+                <div class="topic">
+                    <h3>Topic 2</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eaque. Laboriosam reprehenderit, soluta esse molestias alias saepe consequatur ipsa quaerat! Illo, distinctio! Tempora nulla nisi, voluptatum maxime ad maiores optio.</p>
+                </div>
+                <div class="topic">
+                    <h3>Topic 2</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eaque. Laboriosam reprehenderit, soluta esse molestias alias saepe consequatur ipsa quaerat! Illo, distinctio! Tempora nulla nisi, voluptatum maxime ad maiores optio.</p>
+                </div>
+
+            </div>
+
+            <div class="vl"></div>
+
+            <div class="imgBox">
+
+                <img class="img1" src="images/boat1.jpg" alt="">
+                <img class="img2" src="images/boat1.jpg" alt="">
+                <img class="img3" src="images/boat1.jpg" alt="">
+                <img class="img4" src="images/boat1.jpg" alt="">
+
+            </div>
+ 
+            
         </div>
 
-        <div class ="upcoming-tours">
+        <div class="feedContainer">
 
+            <div class="feedbox">
+                <div class="pImg">
+                    <img src="images/profile logo.png" alt="profile image">
+                    <!-- images/profile logo.png -->
+                </div>
+                <div class="rate">
+                    5
+                </div>
+                <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                </div>
+            </div>
 
-            <h1>upcoming tours</h1>
-            <br>
+            <div class="feedbox">
+                <div class="pImg">
+                    <img src="images/profile logo.png" alt="profile image">
+                </div>
+                <div class="rate">
+                    5
+                </div>
+                <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                </div>
+            </div>
+                
+            <div class="feedbox">
+                <div class="pImg">
+                    <img src="images/profile logo.png" alt="profile image">
+                </div>
+                <div class="rate">
+                    5
+                </div>
+                <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                </div>
+
+            </div>
+
+            <div class="feedbox">
+                <div class="pImg">
+                    <img src="images/profile logo.png" alt="profile image">
+                </div>
+                <div class="rate">
+                    5
+                </div>
+                <div class="review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                </div>
+
+            </div>
+
         </div>
 
 

@@ -53,7 +53,7 @@
             </div>
 
             <div class="middle_panel">
-        
+                <h1>Hi this is the mdidle panel</h1>
             </div>
         </div>
         
