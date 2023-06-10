@@ -143,60 +143,65 @@
                     <div class="left_box">
                         
                         <h6>Recent Bookings</h6>
-                        <table>
-                            <tr>
-                                <th>Booking ID</th>
-                                <th>Date</th>
-                                <th>Customer</th>
-                                <th>Trip</th>
 
-                            </tr>
+                        <div class="grid">
 
                         
-                            <?php
+                            <table>
+                                <tr>
+                                    <th>Booking ID</th>
+                                    <th>Date</th>
+                                    <th>Customer</th>
+                                    <th>Trip</th>
 
-                                $sql = "SELECT * FROM booking";
-                                                            
-                                $result = $conn->query($sql);
+                                </tr>
+
+                            
+                                <?php
+
+                                    $sql = "SELECT * FROM booking";
+                                                                
+                                    $result = $conn->query($sql);
 
 
-                                if($result->num_rows>0){
-                                    while($row = $result->fetch_assoc()){
-                                        $bID = $row["bookingID"];
-                                        $date = $row["date"];
-                                        $userID = $row["userID"];
-                                        $Sid = $row["Sid"];
+                                    if($result->num_rows>0){
+                                        while($row = $result->fetch_assoc()){
+                                            $bID = $row["bookingID"];
+                                            $date = $row["date"];
+                                            $userID = $row["userID"];
+                                            $Sid = $row["Sid"];
 
-                                        $getUser = "SELECT fname FROM user WHERE userID = '$userID'";
-                                        $resultUser = $conn->query($getUser);
-                                        $rowUser = $resultUser->fetch_assoc();
-                                        $userName = $rowUser["fname"];
+                                            $getUser = "SELECT fname FROM user WHERE userID = '$userID'";
+                                            $resultUser = $conn->query($getUser);
+                                            $rowUser = $resultUser->fetch_assoc();
+                                            $userName = $rowUser["fname"];
 
-                                        $getSafari = "SELECT Sname FROM msafari WHERE Sid = '$Sid'";
-                                        $resultSafari = $conn->query($getSafari);
-                                        $rowSafari = $resultSafari->fetch_assoc();
-                                        $safariName = $rowSafari["Sname"];
-                                        
-
-                                        echo '
-                                        
-                                                <tr>
-                                                    <td>' . $bID. '</td>
-                                                    <td>' . $date. '</td>
-                                                    <td>' . $userName. '</td>
-                                                    <td>' . $safariName. '</td>
-                                                    
-                                                </tr>';
+                                            $getSafari = "SELECT Sname FROM msafari WHERE Sid = '$Sid'";
+                                            $resultSafari = $conn->query($getSafari);
+                                            $rowSafari = $resultSafari->fetch_assoc();
+                                            $safariName = $rowSafari["Sname"];
                                             
+
+                                            echo '
+                                            
+                                                    <tr>
+                                                        <td>' . $bID. '</td>
+                                                        <td>' . $date. '</td>
+                                                        <td>' . $userName. '</td>
+                                                        <td>' . $safariName. '</td>
+                                                        
+                                                    </tr>';
+                                                
+                                        }
+                                    }else{
+                                        echo "<td>Empty rows!!</td>";
                                     }
-                                }else{
-                                    echo "<td>Empty rows!!</td>";
-                                }
 
 
-                            ?>
+                                ?>
 
-                        </table>
+                            </table>
+                        </div>
 
                         
                         

@@ -17,10 +17,51 @@
         
     }
 
-    $id = $_GET['id'];
-    $sql = "SELECT * FROM msafari WHERE Sid = '$id'";
+    $sid = $_GET['id'];
+    $sql = "SELECT * FROM msafari WHERE Sid = '$sid'";
     $result = $conn->query($sql);
     $row = $result -> fetch_assoc();
+
+    if(isset($_POST['submit'])){
+        $adults = $_POST['adults'];
+        $childrens = $_POST['childrens'];
+        $date = $_POST['checkIn'];
+        $breakfast = $_POST['breakfast'];
+        $lunch = $_POST['lunch'];
+        $email = $_POST['email'];
+        $cnumber = $_POST['cnumber'];
+
+
+        $prefix = "BK";//ADMIN USER ID PREFIX
+        $last_db_id = "SELECT bookingID FROM booking ORDER BY bookingID DESC LIMIT 1";//check thee last id in the database
+        $result3 = $conn->query($last_db_id);
+
+        if($result3->num_rows > 0){
+            $row = $result3->fetch_assoc();
+            $lastID = $row['bookingID'];//save last id in the database to a variable A001(EXAMPLE)
+            $incNumber = intval(substr($lastID, 2));//First remove the A(prefix) from the last id and then convert it into a intereger 1 MEAN A001 WILL BECOME 001 IF WE USE 2 IT WILL BECOME 01
+            $incNumber = $incNumber + 1;//inTval will convert string to int and substr will cut the string
+        }else{
+            $incNumber = 1;
+        }
+
+        $bookingID = $prefix . sprintf("%03d", $incNumber);
+       
+        
+
+        $sql = "INSERT INTO booking (bookingID, userID, noOfAdults, noOfChild, date, breakfast, lunch, cnumber, Email, Sid) VALUES ('$bookingID','$userID','$adults', '$childrens', '$date', '$breakfast', '$lunch', '$email', '$cnumber','$sid')";
+        $result = $conn->query($sql);
+
+        if($result == TRUE){
+            echo "<script> alert('Reservation Successfull');</script>";
+            header("Refresh: 0; URL = ../main/reservation.php?id=$sid");
+        }else{
+            echo "<script> alert('Reservation Failed');</script>";
+            header("Refresh: 0; URL = ../main/tours.php");
+        }
+    }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,7 +117,7 @@
 
                 </div>
                 
-                    <form action="" method="post">
+                    <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
                         <fieldset>
                             <!-- <legend>Form</legend> -->
                             <div class="horizontalWrap1" id="horizontalWrap">
@@ -100,11 +141,11 @@
                             <div class="horizontalWrap2" id="horizontalWrap">
                                 <div class="section">
                                     <label for="breakfast">Add breakfast</label><br>
-                                    <input type="text" name="breakfast" id="breakfast">
+                                    <input type="text" name="breakfast" id="breakfast" placeholder="No of packets">
                                 </div>
                                 <div class="section">
                                     <label for="lunch">Add Lunch</label><br>
-                                    <input type="text" name="lunch" id="lunch">
+                                    <input type="text" name="lunch" id="lunch" placeholder="No of packets">
                                 </div>
 
                             </div>
@@ -128,7 +169,7 @@
 
                             </div>
 
-                            <button type="submit">Book Now</button>
+                            <button type="submit" name="submit">Book Now</button>
                         </fieldset>
                     </form>
                 

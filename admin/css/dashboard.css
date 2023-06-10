@@ -104,13 +104,18 @@
 .middle_panel > .lower_boxes > .left_box{
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-    width: 600px;
+    width: 55%;
     height: 450px;
     border-radius: 10px;
     padding: 5px;
     margin-left: auto;
     margin-right: auto;
 
+}
+.middle_panel > .lower_boxes > .left_box > .grid{
+    
+    overflow: auto;
+    height: 400px;
 }
 
 .middle_panel > .lower_boxes > .right_box{
@@ -125,6 +130,7 @@
     
 
 }
+
 
  .middle_panel > .lower_boxes > .left_box > h6 , .middle_panel > .lower_boxes > .right_box > h6{
     margin: 0;
@@ -179,7 +185,7 @@ table {
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 8px;
+    padding: 18px;
     
   }
   
