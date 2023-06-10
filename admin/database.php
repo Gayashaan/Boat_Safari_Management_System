@@ -1,12 +1,12 @@
 <?php
     include_once("config.php");
- /*   //create data base if not exists
-    $createDB = "CREATE DATABASE IF NOT EXISTS bstms";
-    //run the query to create database if database does not exists
-    $conn->query($createDB);//database creation
-*/
+    // //create data base if not exists
+    // $createDB = "CREATE DATABASE IF NOT EXISTS bstms";
+    // //run the query to create database if database does not exists
+    // $conn->query($createDB);//database creation
+
     //query for table creation if not exists
-    // $deletetable = "DROP TABLE IF EXISTS admin";
+   // $deletetable = "DROP TABLE IF EXISTS admin";
     // $conn->query($deletetable);
 
     // $deletetable = "DROP TABLE IF EXISTS user";

@@ -24,60 +24,41 @@
 
 	<div class="container">
 		<div class="wrap">
+			<Center>
+			<div class="Container_2">
+				<form id="form" action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
+				<h1 class="subheading">Contact Us</h1>
+				<p>Welcome to our Boat Safari Management System! We are delighted to assist you. If you have any questions, feedback, or inquiries, please don't hesitate to reach out to our dedicated team. Your satisfaction is our top priority, and we are here to ensure your boat safari experience is unforgettable. Contact us today!</p>
+				<h2>We value Your Feedbacks</h2>
+				<label for="fname">Name:</label>
+				<input type="text" id="fname" name="fname">
+				<br>
+				<br>
+				<label for="Email">Email:</label>
+				<input type="text" id="Email" name="Email">
+				<br>
+				<br>
+				<p><center>Message:</center></p>
+				<textarea name="message" id="Message" name="Message" rows="10" cols="30" placeholder="Type here"></textarea>
+				<br>
+				<br>
+				<input type="button" class="button" value="Submit">
+				<nav>
+					<div class="container_img">
+					<img src ="Images/Facebook.ico" height="40" width="40">
+					<img src ="Images/whatsapp.ico" height="40" width="40">
+					<img src ="Images/Insta.ico" height="40" width="40">
+					<img src ="Images/twitter.ico" height="40" width="40">
+					</div>
+				</nav>
+			</form>
+			</div>
+			</Center>
 	
-			<div class="heading">
-				<h1>Contact us</h1>
-				<p>Welcome to Boat Safari App, your ticket to explore the world's waterways and embark on unforgettable aquatic adventures. Get ready to set sail, encounter exotic wildlife, and create cherished memories with our user-friendly app. Let's sail together and unlock the wonders of the aquatic world with Boat Safari App!</p>
-			</div>	
-		<div class="Contact">
-		<section>
-			<img src = "images/" width="30px" height="30px" ></img>
-			<h2>Address</h2>
-			<p>160/7E,<br>
-			   New Kandy Road,<br>
-			   Malabe.<br>
-			</p>
-		</section>
-		<section>
-			<img src = " C:\Users\HP\Desktop\Boat Safari Managemnet System\Images\Contact.png" width="30px" height="30px" ></img>
-			<h2>Contact</h2>
-			<p>+94912567894</p>
-		</section>
-		<section>
-			<img src = " C:\Users\HP\Desktop\Boat Safari Managemnet System\Images\envelope.png" width="30px" height="30px"></img>
-			<h2>E-mail</h2>
-			<p>boatsafari@hr.boat.lk</p>
-		</section>
-		</div>
-	
-	<form>
-		<div class="contact-form">
-			<input placeholder="Full Name" required>
 			
 		</div>
-		<div class="contact-form">
-			<input placeholder="E-mail ID " required>
-			
-		</div>
-		<div class="contact-form">
-			<input placeholder="Type your message.....">
-			
-		</div>
-		<div class="contact-form">
-			<input type="SUBMIT" name="SUBMIT">
-		</div>
-	</form>
-		<div class="nav">
-		<div class="media">
-			<img src = " C:\Users\HP\Desktop\Boat Safari Managemnet System\Images\facebook.png" width="30px" height="30px" ></img>
-			<img src = " C:\Users\HP\Desktop\Boat Safari Managemnet System\Images\instagram.png" width="30px" height="30px" ></img>
-			<img src = " C:\Users\HP\Desktop\Boat Safari Managemnet System\Images\twitter.png" width="30px" height="30px" ></img>
-			<img src = " C:\Users\HP\Desktop\Boat Safari Managemnet System\Images\whatsapp.png" width="30px" height="30px" ></img>
-		</div>
-	</div>
-	</div>
 
-</div>
+	</div>
 
 	<?php include("footer.php"); ?>
 </body>
