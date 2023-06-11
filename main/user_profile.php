@@ -86,7 +86,7 @@
                     <button type="submit" value="submit"><a href="update.php">Update</a></button>
                 </div>
                 <div class="deletebtn">
-                    <button type="submit" value="submit"><a href="delete.php">Delete Account</a></button>
+                    <button type="submit" value="submit"><a href="delete.php?deleteid='.$userID.'">Delete Account</a></button>
                 </div>
                 </div>
 
