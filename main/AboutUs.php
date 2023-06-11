@@ -29,7 +29,7 @@
           <h5>One Ride Million Memories</h5>
                 <p >Our main goal is to implant everlasting memories to people who ride with us. Our rides are full of joy and unforgetable moments. Join with our next ride to explore the beuty of nature</p>
           <div class="data">
-                <a href="signup.html" class="hire">Sign up</a>
+                <a href="signup.php" class="hire">Sign up</a>
           </div>
         </div>
       </div>

@@ -21,25 +21,42 @@
 			<?php
 				include ("../admin/config.php");
 
-				if(isset($_POST['Submit']))
+				if(isset($_POST['submit']))
 				{
 					$Name = $_POST['Name'];
 					$Email = $_POST['Email'];
-					$Msg = $_POST['Message'];
-				}
+					$Msg = $_POST['message'];
 
-				$sql = "INSERT INTO `inquiry_tb` (`Name`, `Email`, `Message`) VALUES ('$Name', '$Email', '$Msg')";
-				$result = $conn->query($sql);
+					$prefix = "IN";//ADMIN USER ID PREFIX
+					$last_db_id = "SELECT inquiryId FROM inquiry_tb ORDER BY inquiryId DESC LIMIT 1";//check thee last id in the database
+					$result3 = $conn->query($last_db_id);
+
+					if($result3->num_rows > 0){
+						$row = $result3->fetch_assoc();
+						$lastID = $row['inquiryId'];//save last id in the database to a variable A001(EXAMPLE)
+						$incNumber = intval(substr($lastID, 2));//First remove the A(prefix) from the last id and then convert it into a intereger 1 MEAN A001 WILL BECOME 001 IF WE USE 2 IT WILL BECOME 01
+						$incNumber = $incNumber + 1;//inTval will convert string to int and substr will cut the string
+					}else{
+						$incNumber = 1;
+					}
+
+					$inquiryId = $prefix . sprintf("%03d", $incNumber);
+
+					$sql = "INSERT INTO inquiry_tb (inquiryId, Name, Email, Message) VALUES ('$inquiryId','$Name', '$Email', '$Msg')";
+					$result = $conn->query($sql);
 					if($result == true)
 					{
-						echo "New Record Added Successfully";
+						echo "<script>alert('Your Inquiry has been sent successfully!');</script>";
 					}
 					else
 					{
-						//echo "Error <br>" . $conn->connect_error; 
+						echo "<script>alert('Your Inquiry has not been sent!');</script>";
 					}
 
-					$conn->close()
+					$conn->close();
+				}
+
+				
 			
 			?>
 			<Center>
@@ -58,10 +75,10 @@
 				<br>
 				<br>
 				<p><center>Message:</center></p>
-				<textarea name="message" id="Message" name="Message" rows="10" cols="30" placeholder="Type here"></textarea>
+				<textarea name="message" id="Message" rows="10" cols="30" placeholder="Type here"></textarea>
 				<br>
 				<br>
-				<input type="button" name="bttn" class="button" value="Submit">
+				<input type="submit" name="submit" class="button" value="Submit">
 				<nav>
 					<div class="container_img">
 					<img src ="Images/Facebook.ico" height="40" width="40">
@@ -81,8 +98,7 @@
 
 	</div>
 
-	<?php include("footer.php");
-	?>
+	
 	
 </body>
 </html>

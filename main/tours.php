@@ -30,15 +30,7 @@
                 if ($result->num_rows > 0) {
                     while($row = $result -> fetch_assoc()) {
                         echo '<div class="tour1">';
-                        if($row['Simage'] != null){
-                                    
-                            echo "<img src='uploads/tourImg/".$row['Simage']."' alt='profile'>";
-                            
-                        }else{
-                            echo '<img src="images/tour1.jpg" width="700px" height="350px">';
-
-                        }
-                        
+                        echo '<img src="images/tour1.jpg" width="700px" height="350px">';
                         echo '<h2>'.$row['Sname'].'</h2>';
                         echo '<p>'.$row['Sdescription'].'</p>';
                         echo '<a href="tourView.php?safari_id='.$row['Sid'].'"> <button type="submit" value="Submit" >View </button></a>';
