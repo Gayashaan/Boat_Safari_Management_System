@@ -2,7 +2,7 @@
     include_once("config.php");
     // //create data base if not exists
     // $createDB = "CREATE DATABASE IF NOT EXISTS bstms";
-    // //run the query to create database if database does not exists
+    // // //run the query to create database if database does not exists
     // $conn->query($createDB);//database creation
 
     //query for table creation if not exists
@@ -60,7 +60,7 @@
     ('A002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'Admin@123', 0771234569, 'img2.jpg', 'Activated'),
     ('A003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'Admin@123', 0774587963, 'img3.jpg', 'Activated'),
     ('A004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'Admin@123', 0771458963, 'img4.jpg', 'Activated'),
-    ('A005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'Admin@123', 0774589632, 'img5.jpg', 'Activated')";
+    ('A005', 'Oshada', 'Dhahanayaka', 'oshadha.dahanayaka2002@gmail.com', 'Admin@123', 0774589632, 'img5.jpg', 'Activated')";
 
     
 
@@ -96,7 +96,7 @@
     ('U002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'user', 0771234569,'5/89 ja ela road wattala','male'),
     ('U003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'user', 0774587963,'4/35 kaduwela road gampaha','male'),
     ('U004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'user', 0771458963,'7/90 station road avissawella','male'),
-    ('U005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'user', 0774589632,'12 galle road alpitiya','male')";
+    ('U005', 'Oshada', 'Dhahanayaka', 'oshadha.dahanayaka2002@gmail.com', 'user', 0774589632,'12 galle road alpitiya','male')";
 
 
     // check the records in the table
@@ -246,7 +246,7 @@
     ('IN001', 'Gayashaan Krishnamoorthy', 'gayashaan49@gmail.com', 'My account has be deactivated'),
     ('IN002', 'Gayashaan Krishnamoorthy', 'gayashaan49@gmail.com', 'I want to cancel my booking'),
     ('IN003', 'Gayashaan Krishnamoorthy', 'gayashaan49@gmail.com', 'Site is not working properly'),
-    ('IN004', 'Oshada Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'I want to cancel my booking'),
+    ('IN004', 'Oshada Dhahanayaka', 'oshadha.dahanayaka2002@gmail.com', 'I want to cancel my booking'),
     ('IN005', 'Oshada Dhahanayaka', 'dinuviasithma@gmail.com', 'Site is not working properly')";
 
     
