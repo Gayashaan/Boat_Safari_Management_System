@@ -5,6 +5,7 @@
       
 
      $userID = $_GET['updateid'];
+    
      $fname=$_POST['fname']; 
       $lname=$_POST['lname']; 
       $email=$_POST['email'];
@@ -24,5 +25,6 @@
      else{
         die(mysqli_error($conn));
      }
+    
     
 ?>
