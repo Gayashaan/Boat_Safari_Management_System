@@ -14,6 +14,7 @@
     $conn->query($dropconstraint);
     
 
+
     $deletetable = "DROP TABLE IF EXISTS admin";
     $conn->query($deletetable);
 
