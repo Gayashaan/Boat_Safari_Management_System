@@ -264,8 +264,8 @@
         feedbackId VARCHAR(10) PRIMARY KEY,
         userID VARCHAR(10) NOT NULL,
         rate INT(5) NOT NULL,
-        description VARCHAR(1000) NOT NULL,
-        CONSTRAINT user_fk FOREIGN KEY (userID) REFERENCES user (userID)
+        description VARCHAR(1000) NOT NULL
+        -- CONSTRAINT user_fk FOREIGN KEY (userID) REFERENCES user (userID)
         
     )";
     //run the query to create tbale if table does not exists
