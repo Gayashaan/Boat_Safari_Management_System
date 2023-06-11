@@ -15,7 +15,7 @@
             <div class="quick_wrap">
                 <h5 class="wrap_heading">Quick Links</h5>
                 <ul class="footer_links">
-                    <li><a href="index.html"> Home</a></li>
+                    <li><a href="index.php"> Home</a></li>
                     <li><a href="Contact_us.php">Contact Us</a></li>
                     <li><a href="AboutUs.php">About Us</a></li>
                     <li><a href="loging_selector_page.php">Logging</a></li>
