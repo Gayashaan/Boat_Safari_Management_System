@@ -16,7 +16,6 @@
         $ucnumber = $_SESSION['cnumber'];
         
     }
-
 ?>
 
 
@@ -78,23 +77,44 @@
                 </div>
                 <div class="buttons">
                 <div class="updatebtn">
-                    <button type="submit" value="submit"><a href="update.php? updateid = '.$userID.'">Update</a></button>
+                    <button type="submit" value="submit"><a href="update.php? updateid='.$userID.'">Update</a></button>
                 </div>
                 <div class="deletebtn">
                     <button type="submit" value="submit"><a href='delete.php?deleteid=<?php echo "$userID"?>'>Delete Account</a></button>
                 </div>
+               </div>
+                <div class="Feedback">
+                    <h2> Give us your Feedback</h2>
+                   <input type="textarea" name="feedback" placeholder="Give us your feedback"><br><br>
+                   <input type ="text" name="rate" placeholder="rate"><br><br>
+                   <button type="submit" value="submit"> Submit Feedback</button>
                 </div>
+             </div>
 
         </div>
-        <div class="Feedback">
-            <h2> Give us your Feedback</h2>
-            <input type="textarea" name="feedback">
-            <button type="submit" value="submit"> Submit Feedback</button>
-        </div>
+        
     </div>
     
     
     
 </body>
 </html>
+
+<?php
+   
+   $rate=$_post['rate'];
+   $feedback=$_post['feedback'];
+
+   $sql =" INSERT INTO feedback(rate,description)
+   VALUES('$rate','$feedback')";
+
+   if($conn->query($sql)){
+       echo"Inserted successfully";
+    }
+   else{
+      echo"Error:".$conn->error;
+    }
+   $conn->close();
+
+?>
 
