@@ -55,22 +55,22 @@
                    $row = mysqli_fetch_assoc($result);
                    ?>
                     <label for ="fname"> First Name </label>
-                    <input type="text" value="<?php echo $row['fname'];?>"><br><br>
+                    <input type="text" name="fname" value="<?php echo $row['fname'];?>"><br><br>
 
                     <label for="lname"> Last Name </label>
-                    <input type="text" value="<?php echo $row['lname'];?>"><br><br>
+                    <input type="text" name="lname" value="<?php echo $row['lname'];?>"><br><br>
 
                     <label for="add">Address</label>
-                    <input type="text" value="<?php echo $row['Address'];?>"><br><br>
+                    <input type="text" name="Address" value="<?php echo $row['Address'];?>"><br><br>
 
                     <label for="number"> Phone Number</label>
-                    <input type="text" value="<?php echo $row['cnumber'];?>"><br><br> 
+                    <input type="text" name="cnumber" value="<?php echo $row['cnumber'];?>"><br><br> 
 
                     <label for="email">Email</label>
-                    <input type="text" value="<?php echo $row['email'];?>"><br><br>
+                    <input type="text" name="email" value="<?php echo $row['email'];?>"><br><br>
 
                      <label for="cpsw"> Current Password</label>
-                    <input type="password" value="<?php echo $row['pwd'];?>"><br><br> 
+                    <input type="password" name="pwd" value="<?php echo $row['pwd'];?>"><br><br> 
 
                    
                     </form>
