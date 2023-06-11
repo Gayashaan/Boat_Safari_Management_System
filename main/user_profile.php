@@ -15,6 +15,37 @@
         $uemail = $_SESSION['email'];
         $ucnumber = $_SESSION['cnumber'];
         
+    };
+
+    if(isset($_POST['submitfeed'])){
+
+        $prefix = "F";
+        $last_db_id = "SELECT feedbackId FROM feedback ORDER BY feedbackId DESC LIMIT 1";
+        $result3 = $conn->query($last_db_id);
+
+        if($result3->num_rows > 0){
+            $row = $result3->fetch_assoc();
+            $lastID = $row['feedbackId'];
+            $incNumber = intval(substr($lastID, 1));
+            $incNumber = $incNumber + 1;
+        }else{
+            $incNumber = 1;
+        }
+
+        $feedbackId = $prefix . sprintf("%03d", $incNumber);
+
+
+        $rate=$_POST['rate'];
+        $feedback=$_POST['feedback'];
+        $sql =" INSERT INTO feedback(feedbackId,userID,rate,description)
+        VALUES('$feedbackId','$userID','$rate','$feedback')";
+        if($conn->query($sql)){
+            echo "<script>alert('Feedback submitted successfully');</script>";
+        }
+        else{
+            echo"Error:".$conn->error;
+        }
+        
     }
 ?>
 
@@ -85,9 +116,11 @@
                </div>
                 <div class="Feedback">
                     <h2> Give us your Feedback</h2>
-                   <input type="textarea" name="feedback" placeholder="Give us your feedback"><br><br>
-                   <input type ="text" name="rate" placeholder="rate"><br><br>
-                   <button type="submit" value="submit"> Submit Feedback</button>
+                    <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
+                    <input type="textarea" name="feedback" placeholder="Give us your feedback"><br><br>
+                    <input type ="number" name="rate" placeholder="rate"><br><br>
+                    <input type="submit" value="submit Feedback" name="submitfeed">
+                   </form>
                 </div>
              </div>
 
@@ -100,21 +133,4 @@
 </body>
 </html>
 
-<?php
-   
-   $rate=$_post['rate'];
-   $feedback=$_post['feedback'];
-
-   $sql =" INSERT INTO feedback(rate,description)
-   VALUES('$rate','$feedback')";
-
-   if($conn->query($sql)){
-       echo"Inserted successfully";
-    }
-   else{
-      echo"Error:".$conn->error;
-    }
-   $conn->close();
-
-?>
 
