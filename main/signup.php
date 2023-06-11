@@ -53,11 +53,11 @@
               
             </div>
           
-         <p>By clicking the submit button you agree to our <a href="#" >Terms & Conditions</a></p><br>
+       
          <button type="submit" value="Submit">Submit</button><br>
          
          <hr>
-         <p>Already have an account? <a href="#">Login here</a></p>
+         <p>Already have an account? <a href="login.php">Login here</a></p>
        </form> 
       </div>
    </div>
