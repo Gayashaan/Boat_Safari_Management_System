@@ -44,5 +44,5 @@
     </div>
 
     <hr>
-    <p>Createrd By Umbata Mokatada [All Right Reserved 2023]</p>
+    <p>Createrd By GD3S [All Right Reserved 2023]</p>
 </footer>
