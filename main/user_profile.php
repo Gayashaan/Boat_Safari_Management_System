@@ -17,6 +17,10 @@
         
     }
 ?>
+
+
+    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,41 +48,73 @@
                 <img src="images\userprofilepic.jpg">
                 </div>
                 <div class="form">
-                    <label> First Name </label>
-                    <input type="text" value="firstname"><br><br>
-                    <label> Last Name </label>
-                    <input type="text" value="lastname"><br><br>
-                    <label>Address</label>
-                    <input type="text" value="address"><br><br>
-                    <label> Phone Number</label>
-                    <input type="text" value="Number"><br><br> 
-                    <label>Email</label>
-                    <input type="text" value="Email"><br><br>
-                     <label> Current Password</label>
-                    <input type="password" value=" Current password"><br><br> 
-                    <label>New password</label>
-                    <input type="password" value="New password"><br><br>
-                    <label> Confirm Password<label>
-                    <input type="password" value="Confirm password"><br><br>
+                 <form  action="" method="post">
+                 <?php
+                   $query= "select * from user where userID =  '$userID'";
+                   $result = mysqli_query($conn,$query);
+                   $row = mysqli_fetch_assoc($result);
+                   ?>
+                    <label for ="fname"> First Name </label>
+                    <input type="text" value="<?php echo $row['fname'];?>"><br><br>
+
+                    <label for="lname"> Last Name </label>
+                    <input type="text" value="<?php echo $row['lname'];?>"><br><br>
+
+                    <label for="add">Address</label>
+                    <input type="text" value="<?php echo $row['Address'];?>"><br><br>
+
+                    <label for="number"> Phone Number</label>
+                    <input type="text" value="<?php echo $row['cnumber'];?>"><br><br> 
+
+                    <label for="email">Email</label>
+                    <input type="text" value="<?php echo $row['email'];?>"><br><br>
+
+                     <label for="cpsw"> Current Password</label>
+                    <input type="password" value="<?php echo $row['pwd'];?>"><br><br> 
+
+                   
+                    </form>
                 </div>
                 <div class="buttons">
                 <div class="updatebtn">
-                    <button type="submit" value="submit"><a href="update.php">Update</a></button>
+                    <button type="submit" value="submit"><a href="update.php? updateid='.$userID.'">Update</a></button>
                 </div>
                 <div class="deletebtn">
-                    <button type="submit" value="submit"><a href="delete.php">Delete Account</a></button>
+                    <button type="submit" value="submit"><a href='delete.php?deleteid=<?php echo "$userID"?>'>Delete Account</a></button>
                 </div>
+               </div>
+                <div class="Feedback">
+                    <h2> Give us your Feedback</h2>
+                   <input type="textarea" name="feedback" placeholder="Give us your feedback"><br><br>
+                   <input type ="text" name="rate" placeholder="rate"><br><br>
+                   <button type="submit" value="submit"> Submit Feedback</button>
                 </div>
+             </div>
 
         </div>
-        <div class="Feedback">
-            <h2> Give us your Feedback</h2>
-            <input type="textarea" name="feedback">
-            <button type="submit" value="submit"> Submit Feedback</button>
-        </div>
+        
     </div>
     
     
     
 </body>
 </html>
+
+<?php
+   
+   $rate=$_post['rate'];
+   $feedback=$_post['feedback'];
+
+   $sql =" INSERT INTO feedback(rate,description)
+   VALUES('$rate','$feedback')";
+
+   if($conn->query($sql)){
+       echo"Inserted successfully";
+    }
+   else{
+      echo"Error:".$conn->error;
+    }
+   $conn->close();
+
+?>
+

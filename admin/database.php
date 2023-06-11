@@ -6,28 +6,37 @@
     // $conn->query($createDB);//database creation
 
     //query for table creation if not exists
+    // $dropconstraint = "ALTER TABLE feedback DROP FOREIGN KEY user_fk";
+    // $conn->query($dropconstraint);
+    
+    // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY user_id_fk";
+    // $conn->query($dropconstraint);
+   
+    // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
+    // $conn->query($dropconstraint);
+   
+
     // $deletetable = "DROP TABLE IF EXISTS admin";
     // $conn->query($deletetable);
-
+    
     // $deletetable = "DROP TABLE IF EXISTS user";
     // $conn->query($deletetable);
-
+   
     // $deletetable = "DROP TABLE IF EXISTS boat";
     // $conn->query($deletetable);
-
+   
     // $deletetable = "DROP TABLE IF EXISTS msafari";
     // $conn->query($deletetable);
-
-    // // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
-    // // $conn->query($dropconstraint);
-    // // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY user_id_fk";
-    // // $conn->query($dropconstraint);
+   
     // $deletetable = "DROP TABLE IF EXISTS booking";
     // $conn->query($deletetable);
-    
-
+   
     // $deletetable = "DROP TABLE IF EXISTS inquiry_tb";
     // $conn->query($deletetable);
+    
+    // $deletetable = "DROP TABLE IF EXISTS feedback";
+    // $conn->query($deletetable);
+   
 
     
     $createTableAdmin = "CREATE TABLE IF NOT EXISTS admin(
@@ -83,11 +92,11 @@
 
     $insertDataUser = "
     INSERT INTO user(userID, fname, lname, email, pwd, cnumber,Address,gender) VALUES
-    ('U001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'user', 0771234569,'adbc','female'),
-    ('U002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'user', 0771234569,'dsds','male'),
-    ('U003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'user', 0774587963,'dsdf','male'),
-    ('U004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'user', 0771458963,'dfssd','male'),
-    ('U005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'user', 0774589632,'dfkkd','male')";
+    ('U001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'user', 0771234569,'123 moratuwa road panadura','female'),
+    ('U002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'user', 0771234569,'5/89 ja ela road wattala','male'),
+    ('U003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'user', 0774587963,'4/35 kaduwela road gampaha','male'),
+    ('U004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'user', 0771458963,'7/90 station road avissawella','male'),
+    ('U005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'user', 0774589632,'12 galle road alpitiya','male')";
 
 
     // check the records in the table
@@ -158,20 +167,12 @@
     INSERT INTO msafari 
     VALUES
 
-    ('S001', 'Beauty Of Bentota River', 'Bentota', 'LKR15000', '2023-06-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img1.jpg'),
-    ('S002', 'Famous Trincomalee Boat ride', 'Trincomalee', 'LKR18000', '2023-07-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img2.jpg'),
-    ('S003', 'River Of Mirissa', 'Mirissa', 'LKR19000', '2023-08-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img3.jpg'),
-    ('S004', 'Koggala Calm lake', 'Koggala', 'LKR20000', '2023-06-15', 'Experiance a magical boat ride in the picturesqure water of place', 'img4.jpeg'),
-    ('S005', 'Lake of Galle', 'Galle', 'LKR15000', '2023-09-10', 'Experiance a magical boat ride in the picturesqure water of place', 'img5.jpg')";
+    ('S001', 'Beauty Of Bentota River', 'Bentota', 'LKR15000', '2023-06-05', 'Experiance a magical boat ride in the picturesqure water of place'),
+    ('S002', 'Famous Trincomalee Boat ride', 'Trincomalee', 'LKR18000', '2023-07-05', 'Experiance a magical boat ride in the picturesqure water of place'),
+    ('S003', 'River Of Mirissa', 'Mirissa', 'LKR19000', '2023-08-05', 'Experiance a magical boat ride in the picturesqure water of place'),
+    ('S004', 'Koggala Calm lake', 'Koggala', 'LKR20000', '2023-06-15', 'Experiance a magical boat ride in the picturesqure water of place'),
+    ('S005', 'Lake of Galle', 'Galle', 'LKR15000', '2023-09-10', 'Experiance a magical boat ride in the picturesqure water of place')";
 
-    ('S001', 'Safari 1', 'Bentota', 'LKR15000', '2023-06-05', 'Experiance a magical boat ride in the picturesqure water of place'),
-    ('S002', 'Safari 2', 'Trincomalee', 'LKR18000', '2023-07-05', 'Experiance a magical boat ride in the picturesqure water of place'),
-    ('S003', 'Safari 3', 'Mirissa', 'LKR19000', '2023-08-05', 'Experiance a magical boat ride in the picturesqure water of place'),
-    ('S004', 'Safari 4', 'Koggala', 'LKR20000', '2023-06-15', 'Experiance a magical boat ride in the picturesqure water of place'),
-    ('S005', 'Safari 5', 'Galle', 'LKR15000', '2023-09-10', 'Experiance a magical boat ride in the picturesqure water of place')";
-
-
-    
 
     
     // check the records in the table
@@ -197,8 +198,8 @@
         Email VARCHAR(50) NOT NULL,
         Sid VARCHAR(20) NOT NULL,
         
-        CONSTRAINT safari_id_fk FOREIGN KEY (Sid) REFERENCES msafari (Sid),
-        CONSTRAINT user_id_fk FOREIGN KEY (userID) REFERENCES user (userID)
+        CONSTRAINT safari_id_fk FOREIGN KEY (Sid) REFERENCES msafari (Sid) ON DELETE CASCADE,
+        CONSTRAINT user_id_fk FOREIGN KEY (userID) REFERENCES user (userID) ON DELETE CASCADE
         
     )";
     //run the query to create tbale if table does not exists
@@ -258,6 +259,41 @@
     //if table is empty insert data to the table
     if($resultInquiry->num_rows == 0){
         $conn->query($insertDataInquiry);
+    }
+
+
+    $createTableFeedback = "CREATE TABLE IF NOT EXISTS feedback(
+        feedbackId VARCHAR(10) PRIMARY KEY,
+        userID VARCHAR(10) NOT NULL,
+        rate INT(5) NOT NULL,
+        description VARCHAR(1000) NOT NULL,
+        CONSTRAINT user_fk FOREIGN KEY (userID) REFERENCES user (userID) ON DELETE CASCADE
+        
+    )";
+    //run the query to create tbale if table does not exists
+    $conn->query($createTableFeedback);//table creation
+
+    //query for insert data if table is empty
+    $insertDataFeedback = "
+    INSERT INTO feedback 
+    VALUES
+    ('F001', 'U001', '5', 'Highly recommended'),
+    ('F002', 'U002', '4', 'Superb service'),
+    ('F003', 'U002', '3', 'Good service'),
+    ('F004', 'U005', '5', 'Unforgettable experiance'),
+    ('F005', 'U004', '4', 'Need some improvemnets but overall good'),
+    ('F006', 'U003', '4', 'Need some improvemnets. pages are not responsive. soo bad. Who are the developers?')";
+
+    
+
+    
+    // check the records in the table
+    $readTableFeedback = "SELECT * FROM feedback";
+    $resultFeedback = $conn->query($readTableFeedback);
+
+    //if table is empty insert data to the table
+    if($resultFeedback->num_rows == 0){
+        $conn->query($insertDataFeedback);
     }
 
 

@@ -1,19 +1,7 @@
 <?php
     include_once("config.php");
     include_once("sessionAdmin.php");
-    // session_start();
-    // if($_SESSION['adminID'] == ""){
-    //     header("LOCATION: ../main/deniedpage.php");
-    //     echo "<script> alert('Please Login');</script>";
-    //     // header("location: ../main/adminloging.php");
-    //     die();
-        
-    // }else{
-    //     $adminID = $_SESSION['adminID'];
-    //     $ufname = $_SESSION['fname'];
-    //     $ulname = $_SESSION['lname'];
-    //     $userName = $ufname . " " . $ulname;
-    // }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,11 +41,60 @@
             </div>
 
             <div class="middle_panel">
-                <h1>Hi this is the mdidle panel</h1>
-            </div>
-        </div>
-        
-    </div>
+                <div class="left_box">
+                        <h6>Manage Inquries</h6>
+                                    
+                        <div class="grid">
+                            <table>
+                                <tr>
+                                    <th>InquiryID</th>
+                                    <th>Name</th>
+                                    <th>Email </th>
+                                    <th>Message</th>
+                                    
+                                </tr>
+                                <?php
+                        
+                                    $sql = "SELECT * FROM inquiry_tb";
+                            
+                                    $result = $conn->query($sql);
+                        
+                        
+                                    if($result->num_rows>0){
+                                        while($row = $result->fetch_assoc()){
+                                            $inquiryId = $row["inquiryId"];
+                                            $Name = $row["Name"];
+                                            $Email = $row["Email"];
+                                            $Msg = $row["Message"];
+                                            
+                                            
+                                    
+                                            echo '
+                                            
+                                                    <tr>
+                                                        <td>' . $inquiryId. '</td>
+                                                        <td>' . $Name. '</td>
+                                                        <td>' . $Email. '</td>
+                                                        <td>' . $Msg. '</td>                                    
+                                                        
+                                                    </tr>';
+                                                
+                                        }
+                                    }else{
+                                        echo "<td>Empty rows!!</td>";
+                                    }
+
+
+                                ?>
+
+                            </table>
+
+                        </div>
+                        
+                       
+                        
+                                                    
+                    </div>
 
 
    

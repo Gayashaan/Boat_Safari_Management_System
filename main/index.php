@@ -1,3 +1,6 @@
+<?php
+include_once("../admin/database.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,132 +65,46 @@
         </div>
 
         <div class="feedContainer">
+            <?php
 
-            <div class="feedbox">
-                <div class="pImg">
-                    <img src="images/profile logo.png" alt="profile image">
-                    <!-- images/profile logo.png -->
-                </div>
-                <div class="rate">
-                    5
-                </div>
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-            </div>
+                $sqlFeed = "SELECT * FROM feedback";
+                $resultFeed = $conn->query($sqlFeed);
+                while($rowFeed = $resultFeed->fetch_assoc()){
+                    $feed = $rowFeed["description"];
+                    $rate = $rowFeed["rate"];
+                    $feedUser = $rowFeed["userID"];
+                    $getUser = "SELECT fname FROM user WHERE userID = '$feedUser'";
+                    $resultUser = $conn->query($getUser);
+                    $rowUser = $resultUser->fetch_assoc();
+                    $userName = $rowUser["fname"];
 
-            <div class="feedbox">
-                <div class="pImg">
-                    <img src="images/profile logo.png" alt="profile image">
-                </div>
-                <div class="rate">
-                    5
-                </div>
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-            </div>
-                
-            <div class="feedbox">
-                <div class="pImg">
-                    <img src="images/profile logo.png" alt="profile image">
-                </div>
-                <div class="rate">
-                    5
-                </div>
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
+                    
+                    echo "<div class='feedbox'>
+                            <div class='pImg'>
+                                <img src='images/profile logo.png' alt='profile image'>
+                            </div>
+                            <div class='name'>
+                                <p>$userName</p>
+                            </div>
+                            <div class='star'>";
 
-            </div>
+                            for($i=0; $i<$rate; $i++){
+                                echo"<img src='images/icons/star.png' alt='star'>";             
+                                      
+                            }
 
-            <div class="feedbox">
-                <div class="pImg">
-                    <img src="images/profile logo.png" alt="profile image">
-                </div>
-                <div class="rate">
-                    5
-                </div>
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
+                    echo"
+                            </div>
+                            <div class='review'>
+                                <p>$feed</p>
+                            </div>
+                            
+                        </div>";
+                }
+            
 
-            </div>
-
-            <div class="feedbox">
-                <div class="pImg">
-                    <img src="images/profile logo.png" alt="profile image">
-                </div>
-                <div class="rate">
-                    5
-                </div>
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-
-            </div>
-
-            <div class="feedbox">
-                <div class="pImg">
-                    <img src="images/profile logo.png" alt="profile image">
-                </div>
-                <div class="rate">
-                    5
-                </div>
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-
-            </div>
-
-            <div class="feedbox">
-                <div class="pImg">
-                    <img src="images/profile logo.png" alt="profile image">
-                </div>
-                <div class="rate">
-                    5
-                </div>
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-
-            </div>
-            <div class="feedbox">
-                <div class="pImg">
-                    <img src="images/profile logo.png" alt="profile image">
-                </div>
-                <div class="rate">
-                    5
-                </div>
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-
-            </div>
-            <div class="feedbox">
-                <div class="pImg">
-                    <img src="images/profile logo.png" alt="profile image">
-                </div>
-                <div class="rate">
-                    5
-                </div>
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-
-            </div>
-            <div class="feedbox">
-                <div class="pImg">
-                    <img src="images/profile logo.png" alt="profile image">
-                </div>
-                <div class="rate">
-                    5
-                </div>
-                <div class="review">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-
-            </div>
+            ?>
+   
 
         </div>
 

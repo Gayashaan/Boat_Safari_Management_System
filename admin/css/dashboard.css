@@ -104,7 +104,7 @@
 .middle_panel > .lower_boxes > .left_box{
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-    width: 55%;
+    width: 60%;
     height: 450px;
     border-radius: 10px;
     padding: 5px;
@@ -155,7 +155,7 @@
 .middle_panel > .lower_boxes > .right_box > .feedBox >.feed{
     background-color: #1074d3;
     width: 260px;
-    height: 95px;
+    
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -164,6 +164,24 @@
     margin-top: 10px;
     padding: 10px;
     transition: 0.4s;
+}
+.middle_panel > .lower_boxes > .right_box > .feedBox >.feed > h3{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.middle_panel > .lower_boxes > .right_box > .feedBox >.feed > p{
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    font-size: 1.2em;
+    color: #000000;
 }
 
 .feed:hover{

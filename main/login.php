@@ -1,6 +1,6 @@
 <?php
 
-    include_once("../admin/database.php");
+    
     include_once("../admin/config.php");
      
      session_start();
