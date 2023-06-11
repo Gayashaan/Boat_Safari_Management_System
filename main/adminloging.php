@@ -1,5 +1,5 @@
 <?php
-    include_once("../admin/database.php");
+    
     include_once("../admin/config.php");
      
     session_start();
@@ -96,7 +96,6 @@
         
                         <div class="inputs">
                             <input type="submit" name="submit" value="Log In">
-                            <a href="../admin/dashboard.php">Forget password?(click here to see admin dashboard)</a>
                         </div>
                     </div>
                     

@@ -1,3 +1,6 @@
+<?php
+include_once("../admin/database.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
