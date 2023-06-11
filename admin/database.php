@@ -15,35 +15,25 @@
     // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
     // $conn->query($dropconstraint);
    
-    
-
 
     // $deletetable = "DROP TABLE IF EXISTS admin";
     // $conn->query($deletetable);
     
-
     // $deletetable = "DROP TABLE IF EXISTS user";
     // $conn->query($deletetable);
    
-
     // $deletetable = "DROP TABLE IF EXISTS boat";
     // $conn->query($deletetable);
    
-
     // $deletetable = "DROP TABLE IF EXISTS msafari";
     // $conn->query($deletetable);
    
-
-    
     // $deletetable = "DROP TABLE IF EXISTS booking";
     // $conn->query($deletetable);
    
-    
-
     // $deletetable = "DROP TABLE IF EXISTS inquiry_tb";
     // $conn->query($deletetable);
     
-
     // $deletetable = "DROP TABLE IF EXISTS feedback";
     // $conn->query($deletetable);
    
