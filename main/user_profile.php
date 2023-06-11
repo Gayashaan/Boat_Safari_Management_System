@@ -97,17 +97,17 @@
                    $result = mysqli_query($conn,$query);
                    while ($row = mysqli_fetch_assoc($result)){
                    
-                    <label for="fname">First Name</label>
+                    <label for="fname">First Name</label><br><br>
                     <input type="text" value="echo $row['fname'];">
-                    <label for="lname">Last Name</label>
+                    <label for="lname">Last Name</label><br><br>
                     <input type="text" value="echo $row['lname'];"> 
-                    <label for="add">Address</label>
+                    <label for="add">Address</label><br><br>
                     <input type="text" value="echo $row['Address'];"> 
-                    <label for="number">Phone Number</label>
+                    <label for="number">Phone Number</label><br><br>
                     <input type="text" value="echo $row['cnumber'];"> 
-                    <label for="email">Email</label>
+                    <label for="email">Email</label><br><br>
                     <input type="text" value="echo $row['email'];">
-                    <label for=" psw">Current Password</label>
+                    <label for=" psw">Current Password</label><br><br>
                     <input type="password" value="echo $row['pwd'];">
 
                    }
