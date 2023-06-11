@@ -50,7 +50,7 @@ input{
 #sbt{
     width: 150px;
     height: 30px;
-    margin-left: 20%;
+    margin-left: 25%;
     transition: 0.5s;
     background-color: rgb(47, 255, 57);
 }
