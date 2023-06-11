@@ -237,3 +237,14 @@ html,body{
   margin-top: 5px;
   font-size: 1.2rem;
 }
+.star{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+.star > img{
+  height: 20px;
+  width: 20px;
+}
