@@ -73,17 +73,12 @@
                      <label for="cpsw"> Current Password</label>
                     <input type="password" value="<?php echo $row['pwd'];?>"><br><br> 
 
-                    <label for="npsw">Newpassword</label>
-                    <input type="password" placeholder="Enter new password"><br><br>
-
-                    <label for="conpsw"> Confirm Password<label>
-                    <input type="password" placeholder="Confirm new password"><br><br>
                    
                     </form>
                 </div>
                 <div class="buttons">
                 <div class="updatebtn">
-                    <button type="submit" value="submit"><a href="update.php">Update</a></button>
+                    <button type="submit" value="submit"><a href="update.php? updateid = '.$userID.'">Update</a></button>
                 </div>
                 <div class="deletebtn">
                     <button type="submit" value="submit"><a href="delete.php?deleteid='.$userID.'">Delete Account</a></button>

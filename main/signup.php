@@ -39,10 +39,10 @@
                  <label for="address">Address</label>
                  <input type="text" placeholder="Enter Address" id="address" name="Address" required><br><br>
                
-                 <input type="radio" name ="gender" id="male" name="Gender" value="m">
+                 <input type="radio"  id="male" name="Gender" value="male">
                  <span id="male">Male</span>
                  
-                 <input type="radio" name ="gender" id="female" name="Gender" value="f">
+                 <input type="radio" id="female" name="Gender" value="female">
                   <span id="female">Female</span><br><br>
 
                  <label for="password">Password</label>
