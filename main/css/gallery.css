@@ -1,3 +1,9 @@
+html, body{
+
+    background-image: url(https://media.istockphoto.com/id/518356812/photo/tropical-sea-and-rocks.jpg?s=612x612&w=0&k=20&c=bRAfkVsQ-d5wQjYiRWupDBThGr1Zn7aEP98VWFaxBy8=);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .container{
     position: relative;
     height: 100%;
