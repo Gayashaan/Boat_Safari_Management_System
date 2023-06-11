@@ -32,16 +32,16 @@
             <div class="description">
 
                 <div class="topic">
-                    <h3>Topic 1</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eaque. Laboriosam reprehenderit, soluta esse molestias alias saepe consequatur ipsa quaerat! Illo, distinctio! Tempora nulla nisi, voluptatum maxime ad maiores optio.</p>
+                    <h3>High Maintained Boats</h3>
+                    <p>All baots ensure optimal performance for smooth rides through the ocean</p>
                 </div>
                 <div class="topic">
-                    <h3>Topic 2</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eaque. Laboriosam reprehenderit, soluta esse molestias alias saepe consequatur ipsa quaerat! Illo, distinctio! Tempora nulla nisi, voluptatum maxime ad maiores optio.</p>
+                    <h3>Professional Life Guards</h3>
+                    <p>Our life guards are well trained to ensure safety of the passengers </p>
                 </div>
                 <div class="topic">
-                    <h3>Topic 2</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eaque. Laboriosam reprehenderit, soluta esse molestias alias saepe consequatur ipsa quaerat! Illo, distinctio! Tempora nulla nisi, voluptatum maxime ad maiores optio.</p>
+                    <h3>Best Routes</h3>
+                    <p>Our routes are well organized so passengers will experiance the best.</p>
                 </div>
 
             </div>
@@ -50,10 +50,11 @@
 
             <div class="imgBox">
 
-                <img class="img1" src="images/boat1.jpg" alt="">
-                <img class="img2" src="images/boat1.jpg" alt="">
-                <img class="img3" src="images/boat1.jpg" alt="">
-                <img class="img4" src="images/boat1.jpg" alt="">
+                <img class="img1" src="images/boatpic4.jpg" alt="">
+                <img class="img2" src="images/boat6.jpg" alt="">
+                <img class="img3" src="images/boatpic2.jpg" alt="">
+                <img class="img4" src="images/boatpic3.jpg" alt="">
+                
 
             </div>
  

@@ -157,11 +157,19 @@
     $insertDateSafari = "
     INSERT INTO msafari 
     VALUES
+
+    ('S001', 'Beauty Of Bentota River', 'Bentota', 'LKR15000', '2023-06-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img1.jpg'),
+    ('S002', 'Famous Trincomalee Boat ride', 'Trincomalee', 'LKR18000', '2023-07-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img2.jpg'),
+    ('S003', 'River Of Mirissa', 'Mirissa', 'LKR19000', '2023-08-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img3.jpg'),
+    ('S004', 'Koggala Calm lake', 'Koggala', 'LKR20000', '2023-06-15', 'Experiance a magical boat ride in the picturesqure water of place', 'img4.jpeg'),
+    ('S005', 'Lake of Galle', 'Galle', 'LKR15000', '2023-09-10', 'Experiance a magical boat ride in the picturesqure water of place', 'img5.jpg')";
+
     ('S001', 'Safari 1', 'Bentota', 'LKR15000', '2023-06-05', 'Experiance a magical boat ride in the picturesqure water of place'),
     ('S002', 'Safari 2', 'Trincomalee', 'LKR18000', '2023-07-05', 'Experiance a magical boat ride in the picturesqure water of place'),
     ('S003', 'Safari 3', 'Mirissa', 'LKR19000', '2023-08-05', 'Experiance a magical boat ride in the picturesqure water of place'),
     ('S004', 'Safari 4', 'Koggala', 'LKR20000', '2023-06-15', 'Experiance a magical boat ride in the picturesqure water of place'),
     ('S005', 'Safari 5', 'Galle', 'LKR15000', '2023-09-10', 'Experiance a magical boat ride in the picturesqure water of place')";
+
 
     
 
