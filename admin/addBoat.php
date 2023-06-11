@@ -34,19 +34,29 @@ if(isset($_POST['submit']))
 
   $bID = $prefix . sprintf("%03d", $incNumber);
 
-  $sql = "INSERT INTO boat(b_id, b_license_no,b_name,b_model,b_capacity,b_length,b_weight) 
+  if(empty($b_license_no) || empty($b_name) || empty($b_model) || empty($b_capacity) || empty($b_length) || empty($b_weight))
+  {
+    echo "<script>alert('Please fill all the fields')</script>";
+    header("Refresh: 0; URL = manageBoat.php");
+  }else
+  {
+    $sql = "INSERT INTO boat(b_id, b_license_no,b_name,b_model,b_capacity,b_length,b_weight) 
           VALUES('$bID','$b_license_no','$b_name','$b_model','$b_capacity','$b_length','$b_weight')";
 
-  if($conn->query($sql))
-  {
-    echo "<script>alert('Boat added successfully')</script>";
-    header("Refresh: 0; URL = manageBoat.php");
-  }
-  else{
-    echo "Error: ".$conn->error;
+    if($conn->query($sql))
+    {
+      echo "<script>alert('Boat added successfully')</script>";
+      header("Refresh: 0; URL = manageBoat.php");
+    }
+    else{
+      echo "Error: ".$conn->error;
+    }
+
   }
 
-  if(isset($_FILES['b_image']))
+  
+
+  if(!empty($image_name))
   {
     if($_img_extension == "jpg" || $_img_extension == "png" || $_img_extension == "jpeg")
     {

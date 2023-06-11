@@ -91,7 +91,7 @@ html,body{
   
 }
 .services{
-  background-image: url('../images/boatpic.jpg;');
+  background-image: url('../images/boatpic.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -178,7 +178,7 @@ html,body{
 
 
 .feedContainer{
-  background-image: url('../images/login back1.jpg;');
+  background-image: url('../images/login back1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
