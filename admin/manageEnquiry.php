@@ -53,62 +53,98 @@
             </div>
 
             <div class="middle_panel">
-            <h2>Inquiries</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Inquiry_ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Message</th>
-            <th>Date</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        
-        foreach ($inquiryId as $inquiry) {
-            $inquiryId = $inquiry['inquiryId'];
-            $name = $inquiry['Name'];
-            $email = $inquiry['Email'];
-            $message = $inquiry['message'];
-            $date = $inquiry['date'];
-
-            echo '<tr>';
-            echo '<td>' . $inquiryId . '</td>';
-            echo '<td>' . $name . '</td>';
-            echo '<td>' . $email . '</td>';
-            echo '<td>' . $message . '</td>';
-            echo '<td>' . $date . '</td>';
-            echo '<td><button onclick="deleteInquiry(' . $inquiryId . ')">Delete</button></td>';
-            echo '</tr>';
-        }
-        ?>
-
-        <script>
-            function deleteInquiry(inquiryId) {
-                
-                $.ajax({
-                    url: 'delete_inquiry.php',
-                    type: 'POST',
-                    data: { id: inquiryId },
-                    success: function(response) {
-                      
-                    },
-                    error: function(xhr, status, error) {
+                <div class="left_box">
+                        <h6>All System Users</h6>
+                                    
+                        <div class="grid">
+                            <table>
+                                <tr>
+                                    <th>InquiryID</th>
+                                    <th>Name</th>
+                                    <th>Email </th>
+                                    <th>Message</th>
+                                    <th>Operation</th>
+                                </tr>
+                                <?php
                         
-                    }
-                });
-            }
-        </script>
-    </tbody>
-</table>
+                                    $sql = "SELECT * FROM inquiry_tb";
+                            
+                                    $result = $conn->query($sql);
+                        
+                        
+                                    if($result->num_rows>0){
+                                        while($row = $result->fetch_assoc()){
+                                            $inquiryId = $row["inquiryId"];
+                                            $Name = $row["Name"];
+                                            $Email = $row["Email"];
+                                            $Msg = $row["Message"];
+                                            
+                                            
+                                    
+                                            echo '
+                                            
+                                                    <tr>
+                                                        <td>' . $inquiryId. '</td>
+                                                        <td>' . $Name. '</td>
+                                                        <td>' . $Email. '</td>
+                                                        <td>' . $Msg. '</td>
+                                                        <td> 
+                                                            <div class="opBtns">
+                                                                <button id="vwBtn"><a href="updateUsers.php?updateid='.$inquiryId.'">View</a></button>
+                                                                <button id="dlBtn" onclick="return confirmDelete()"><a href="deleteAdmin.php?deleteid='.$inquiryId.'">Delete</a></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>';
+                                                
+                                        }
+                                    }else{
+                                        echo "<td>Empty rows!!</td>";
+                                    }
 
-            </div>
-        </div>
-        
-    </div>
+                                    $sql2 = "SELECT * FROM inquiry_tb";
+                            
+                                    $result2 = $conn->query($sql2);
+                        
+                        
+                                    if($result2->num_rows>0){
+                                        while($row2 = $result2->fetch_assoc()){
+                                            $inquiryId = $row2["inquiryID"];
+                                            $Name = $row2["Name"];
+                                            $Email = $row2["Email"];
+                                            $Msg = $row2["Message"];
+                                          
+                                            
+                                    
+                                            echo '
+                                            
+                                                    <tr>
+                                                        <td>' . $inquiryId. '</td>
+                                                        <td>' .  $Name. '</td>
+                                                        <td>' .  $Email. '</td>
+                                                        <td>' . $Msg. '</td>
+                                                        <td> 
+                                                            <div class="opBtns">
+                                                                <button id="vwBtn"><a href="updateUsers.php?updateid='.$inquiryId.'">View</a></button>
+                                                                <button id="dlBtn" onclick="return confirmDelete()"><a href="deleteAdmin.php?deleteid='.$inquiryId.'">Delete</a></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>';
+                                                
+                                        }
+                                    }else{
+                                        echo "<td>Empty rows!!</td>";
+                                    }
+
+                                ?>
+
+                            </table>
+
+                        </div>
+                        
+                       
+                        
+                                                    
+                    </div>
 
 
    
