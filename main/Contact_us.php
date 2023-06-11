@@ -81,10 +81,10 @@
 				<input type="submit" name="submit" class="button" value="Submit">
 				<nav>
 					<div class="container_img">
-					<img src ="Images/Facebook.ico" height="40" width="40">
-					<img src ="Images/whatsapp.ico" height="40" width="40">
-					<img src ="Images/Insta.ico" height="40" width="40">
-					<img src ="Images/twitter.ico" height="40" width="40">
+					<img src ="images/icons/Facebook.ico" height="40" width="40">
+					<img src ="images/icons/whatsapp.ico" height="40" width="40">
+					<img src ="images/icons/Insta.ico" height="40" width="40">
+					<img src ="images/icons/twitter.ico" height="40" width="40">
 				
 					</div>
 				</nav>
