@@ -13,6 +13,7 @@
     $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY user_id_fk";
     $conn->query($dropconstraint);
     
+    
 
     $deletetable = "DROP TABLE IF EXISTS admin";
     $conn->query($deletetable);
