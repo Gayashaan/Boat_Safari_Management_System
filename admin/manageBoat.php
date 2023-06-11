@@ -1,20 +1,7 @@
 <?php
     include_once("config.php");
     include_once("sessionAdmin.php");
-    // session_start();
-    // if($_SESSION['adminID'] == ""){
-    //     header("LOCATION: ../main/deniedpage.php");
-    //     echo "<script> alert('Please Login');</script>";
-    //     // header("location: ../main/adminloging.php");
-    //     die();
-        
-    // }else{
-    //     $adminID = $_SESSION['adminID'];
-    //     $ufname = $_SESSION['fname'];
-    //     $ulname = $_SESSION['lname'];
-    //     $userName = $ufname . " " . $ulname;
-    // }
-
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -134,10 +121,10 @@
                                 <input type="text" name="b_capacity" id="b_capacity"><br>
 
                                 <label for="b_length">Length</label><br>
-                                <input type="text" name="b_length" id="b_length"><br>
+                                <input type="text" name="b_length" id="b_length" placeholder="20m"><br>
 
                                 <label for="b_weight">Weight</label><br>
-                                <input type="text" name="b_weight" id="b_weight"><br>
+                                <input type="text" name="b_weight" id="b_weight" placeholder="20Kg"><br>
 
                                 <label for="b_image" id="b_image">Upload Image</label>
                                 <input type="file" name="b_image" id="b_image">
@@ -154,6 +141,8 @@
         </div>
         
     </div>
+
+    <script src="adminindex.js"></script>
 
    
 </body>

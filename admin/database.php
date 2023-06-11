@@ -6,7 +6,7 @@
     // $conn->query($createDB);//database creation
 
     //query for table creation if not exists
-   // $deletetable = "DROP TABLE IF EXISTS admin";
+    // $deletetable = "DROP TABLE IF EXISTS admin";
     // $conn->query($deletetable);
 
     // $deletetable = "DROP TABLE IF EXISTS user";
@@ -16,6 +16,17 @@
     // $conn->query($deletetable);
 
     // $deletetable = "DROP TABLE IF EXISTS msafari";
+    // $conn->query($deletetable);
+
+    // // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
+    // // $conn->query($dropconstraint);
+    // // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY user_id_fk";
+    // // $conn->query($dropconstraint);
+    // $deletetable = "DROP TABLE IF EXISTS booking";
+    // $conn->query($deletetable);
+    
+
+    // $deletetable = "DROP TABLE IF EXISTS inquiry_tb";
     // $conn->query($deletetable);
 
     
@@ -36,11 +47,11 @@
     $insertDataAdmin = "
     INSERT INTO admin 
     VALUES
-    ('A001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'admin', 0771234569, 'img1.jpg', 'Activated'),
-    ('A002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'admin', 0771234569, 'img2.jpg', 'Activated'),
-    ('A003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'admin', 0774587963, 'img3.jpg', 'Activated'),
-    ('A004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'admin', 0771458963, 'img4.jpg', 'Activated'),
-    ('A005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'admin', 0774589632, 'img5.jpg', 'Activated')";
+    ('A001', 'Dinuvi', 'Asithma', 'dinuviasithma@gmail.com', 'Admin@123', 0771234569, 'img1.jpg', 'Activated'),
+    ('A002', 'Gayashaan', 'Krishnamoorthy', 'gayashaan49@gmail.com', 'Admin@123', 0771234569, 'img2.jpg', 'Activated'),
+    ('A003', 'Shenal', 'Somaweera', 'shenalsomaweera@gmail.com', 'Admin@123', 0774587963, 'img3.jpg', 'Activated'),
+    ('A004', 'Sasiru', 'Gunathilaka', 'gunathilakasasiya@gmail.com', 'Admin@123', 0771458963, 'img4.jpg', 'Activated'),
+    ('A005', 'Oshada', 'Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'Admin@123', 0774589632, 'img5.jpg', 'Activated')";
 
     
 
@@ -137,8 +148,7 @@
         Slocation VARCHAR(50) NOT NULL,
         Sprice VARCHAR(50) NOT NULL,
         Sdate DATE NOT NULL,
-        Sdescription VARCHAR(1000) NOT NULL,
-        Simage VARCHAR(30) NOT NULL
+        Sdescription VARCHAR(1000) NOT NULL
     )";
     //run the query to create tbale if table does not exists
     $conn->query($createTableSafari);//table creation
@@ -147,11 +157,19 @@
     $insertDateSafari = "
     INSERT INTO msafari 
     VALUES
+
     ('S001', 'Beauty Of Bentota River', 'Bentota', 'LKR15000', '2023-06-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img1.jpg'),
     ('S002', 'Famous Trincomalee Boat ride', 'Trincomalee', 'LKR18000', '2023-07-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img2.jpg'),
     ('S003', 'River Of Mirissa', 'Mirissa', 'LKR19000', '2023-08-05', 'Experiance a magical boat ride in the picturesqure water of place', 'img3.jpg'),
     ('S004', 'Koggala Calm lake', 'Koggala', 'LKR20000', '2023-06-15', 'Experiance a magical boat ride in the picturesqure water of place', 'img4.jpeg'),
     ('S005', 'Lake of Galle', 'Galle', 'LKR15000', '2023-09-10', 'Experiance a magical boat ride in the picturesqure water of place', 'img5.jpg')";
+
+    ('S001', 'Safari 1', 'Bentota', 'LKR15000', '2023-06-05', 'Experiance a magical boat ride in the picturesqure water of place'),
+    ('S002', 'Safari 2', 'Trincomalee', 'LKR18000', '2023-07-05', 'Experiance a magical boat ride in the picturesqure water of place'),
+    ('S003', 'Safari 3', 'Mirissa', 'LKR19000', '2023-08-05', 'Experiance a magical boat ride in the picturesqure water of place'),
+    ('S004', 'Safari 4', 'Koggala', 'LKR20000', '2023-06-15', 'Experiance a magical boat ride in the picturesqure water of place'),
+    ('S005', 'Safari 5', 'Galle', 'LKR15000', '2023-09-10', 'Experiance a magical boat ride in the picturesqure water of place')";
+
 
     
 
@@ -163,6 +181,83 @@
     //if table is empty insert data to the table
     if($resultSafari->num_rows == 0){
         $conn->query($insertDateSafari);
+    }
+
+
+
+    $createTableBooking = "CREATE TABLE IF NOT EXISTS booking(
+        bookingID VARCHAR(10) PRIMARY KEY,
+        userID VARCHAR(10) NOT NULL,
+        noOfAdults INT(11) NOT NULL,
+        noOfChild INT(11) NOT NULL,
+        date date NOT NULL,
+        breakfast INT(11) NOT NULL,
+        lunch INT(100) NOT NULL,
+        cnumber INT(11) NOT NULL,
+        Email VARCHAR(50) NOT NULL,
+        Sid VARCHAR(20) NOT NULL,
+        
+        CONSTRAINT safari_id_fk FOREIGN KEY (Sid) REFERENCES msafari (Sid),
+        CONSTRAINT user_id_fk FOREIGN KEY (userID) REFERENCES user (userID)
+        
+    )";
+    //run the query to create tbale if table does not exists
+    $conn->query($createTableBooking);//table creation
+
+    //query for insert data if table is empty
+    $insertDataBooking = "
+    INSERT INTO booking 
+    VALUES
+    ('BK001', 'U002', 5, 5, '2023-06-01', 10, 10, 771234569, 'gayashaan49@gmail.com', 'S003'),
+    ('BK002', 'U002', 2, 2, '2023-06-16', 4, 4, 771234569, 'gayashaan49@gmail.com', 'S003'),
+    ('BK003', 'U002', 5, 2, '2023-06-09', 7, 7, 771234569, 'gayashaan49@gmail.com', 'S003'),
+    ('BK004', 'U002', 2, 2, '2023-06-16', 4, 4, 771234569, 'gayashaan49@gmail.com', 'S004'),
+    ('BK005', 'U002', 2, 2, '2023-06-16', 4, 4, 771234569, 'gayashaan49@gmail.com', 'S004'),
+    ('BK006', 'U001', 1, 1, '2023-06-17', 2, 2, 771234569, 'dinuviasithma@gmail.com', 'S001'),
+    ('BK007', 'U001', 4, 4, '2023-06-14', 8, 8, 771234569, 'dinuviasithma@gmail.com', 'S003')";
+
+    
+
+    
+    // check the records in the table
+    $readTableBooking = "SELECT * FROM booking";
+    $resultBooking = $conn->query($readTableBooking);
+
+    //if table is empty insert data to the table
+    if($resultBooking->num_rows == 0){
+        $conn->query($insertDataBooking);
+    }
+
+    $createTableInquiry = "CREATE TABLE IF NOT EXISTS inquiry_tb(
+        inquiryId VARCHAR(10) PRIMARY KEY,
+        Name VARCHAR(50) NOT NULL,
+        Email VARCHAR(50) NOT NULL,
+        Message VARCHAR(1000) NOT NULL
+        
+    )";
+    //run the query to create tbale if table does not exists
+    $conn->query($createTableInquiry);//table creation
+
+    //query for insert data if table is empty
+    $insertDataInquiry = "
+    INSERT INTO inquiry_tb 
+    VALUES
+    ('IN001', 'Gayashaan Krishnamoorthy', 'gayashaan49@gmail.com', 'My account has be deactivated'),
+    ('IN002', 'Gayashaan Krishnamoorthy', 'gayashaan49@gmail.com', 'I want to cancel my booking'),
+    ('IN003', 'Gayashaan Krishnamoorthy', 'gayashaan49@gmail.com', 'Site is not working properly'),
+    ('IN004', 'Oshada Dhahanayaka', 'oshadadhahanayaka2002@gmail.com', 'I want to cancel my booking'),
+    ('IN005', 'Oshada Dhahanayaka', 'dinuviasithma@gmail.com', 'Site is not working properly')";
+
+    
+
+    
+    // check the records in the table
+    $readTableInquiry = "SELECT * FROM inquiry_tb";
+    $resultInquiry = $conn->query($readTableInquiry);
+
+    //if table is empty insert data to the table
+    if($resultInquiry->num_rows == 0){
+        $conn->query($insertDataInquiry);
     }
 
 
