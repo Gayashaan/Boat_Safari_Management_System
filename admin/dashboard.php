@@ -123,7 +123,7 @@
                     
                     <div class="left_box">
                         
-                        <h6>Recent Bookings</h6>
+                        <h6>Safari Bookings</h6>
 
                         <div class="grid">
 
