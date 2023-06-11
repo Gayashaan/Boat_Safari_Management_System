@@ -53,7 +53,58 @@
             </div>
 
             <div class="middle_panel">
-                <h1>Hi this is the mdidle panel</h1>
+            <h2>Inquiries</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Inquiry_ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        
+        foreach ($inquiryId as $inquiry) {
+            $inquiryId = $inquiry['inquiryId'];
+            $name = $inquiry['Name'];
+            $email = $inquiry['Email'];
+            $message = $inquiry['message'];
+            $date = $inquiry['date'];
+
+            echo '<tr>';
+            echo '<td>' . $inquiryId . '</td>';
+            echo '<td>' . $name . '</td>';
+            echo '<td>' . $email . '</td>';
+            echo '<td>' . $message . '</td>';
+            echo '<td>' . $date . '</td>';
+            echo '<td><button onclick="deleteInquiry(' . $inquiryId . ')">Delete</button></td>';
+            echo '</tr>';
+        }
+        ?>
+
+        <script>
+            function deleteInquiry(inquiryId) {
+                
+                $.ajax({
+                    url: 'delete_inquiry.php',
+                    type: 'POST',
+                    data: { id: inquiryId },
+                    success: function(response) {
+                      
+                    },
+                    error: function(xhr, status, error) {
+                        
+                    }
+                });
+            }
+        </script>
+    </tbody>
+</table>
+
             </div>
         </div>
         
