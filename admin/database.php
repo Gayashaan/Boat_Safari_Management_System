@@ -6,35 +6,36 @@
     // $conn->query($createDB);//database creation
 
     //query for table creation if not exists
-    // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
-    // $conn->query($dropconstraint);
-    // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY user_id_fk";
-    // $conn->query($dropconstraint);
-    // $dropconstraint = "ALTER TABLE feedback DROP FOREIGN KEY user_fk";
-    // $conn->query($dropconstraint);
-
-    // $deletetable = "DROP TABLE IF EXISTS admin";
-    // $conn->query($deletetable);
-
-    // $deletetable = "DROP TABLE IF EXISTS user";
-    // $conn->query($deletetable);
-
-    // $deletetable = "DROP TABLE IF EXISTS boat";
-    // $conn->query($deletetable);
-
-    // $deletetable = "DROP TABLE IF EXISTS msafari";
-    // $conn->query($deletetable);
-
-    
-    // $deletetable = "DROP TABLE IF EXISTS booking";
-    // $conn->query($deletetable);
+    $dropconstraint = "ALTER TABLE feedback DROP FOREIGN KEY user_fk";
+    $conn->query($dropconstraint);
+    $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
+    $conn->query($dropconstraint);
+    $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY user_id_fk";
+    $conn->query($dropconstraint);
     
 
-    // $deletetable = "DROP TABLE IF EXISTS inquiry_tb";
-    // $conn->query($deletetable);
+    $deletetable = "DROP TABLE IF EXISTS admin";
+    $conn->query($deletetable);
 
-    // $deletetable = "DROP TABLE IF EXISTS feedback";
-    // $conn->query($deletetable);
+    $deletetable = "DROP TABLE IF EXISTS user";
+    $conn->query($deletetable);
+
+    $deletetable = "DROP TABLE IF EXISTS boat";
+    $conn->query($deletetable);
+
+    $deletetable = "DROP TABLE IF EXISTS msafari";
+    $conn->query($deletetable);
+
+    
+    $deletetable = "DROP TABLE IF EXISTS booking";
+    $conn->query($deletetable);
+    
+
+    $deletetable = "DROP TABLE IF EXISTS inquiry_tb";
+    $conn->query($deletetable);
+
+    $deletetable = "DROP TABLE IF EXISTS feedback";
+    $conn->query($deletetable);
 
     
     $createTableAdmin = "CREATE TABLE IF NOT EXISTS admin(
@@ -264,8 +265,8 @@
         feedbackId VARCHAR(10) PRIMARY KEY,
         userID VARCHAR(10) NOT NULL,
         rate INT(5) NOT NULL,
-        description VARCHAR(1000) NOT NULL
-        -- CONSTRAINT user_fk FOREIGN KEY (userID) REFERENCES user (userID)
+        description VARCHAR(1000) NOT NULL,
+        CONSTRAINT user_fk FOREIGN KEY (userID) REFERENCES user (userID)
         
     )";
     //run the query to create tbale if table does not exists
@@ -273,13 +274,13 @@
 
     //query for insert data if table is empty
     $insertDataFeedback = "
-    INSERT INTO Feedback 
+    INSERT INTO feedback 
     VALUES
-    ('F001', 'S001', '5', 'Highly recommended'),
-    ('F002', 'S002', '4', 'Superb service'),
-    ('F003', 'S002', '3', 'Good service'),
-    ('F004', 'S005', '5', 'Unforgettable experiance'),
-    ('F005', 'S004', '4', 'Need some improvemnets but overall good')";
+    ('F001', 'U001', '5', 'Highly recommended'),
+    ('F002', 'U002', '4', 'Superb service'),
+    ('F003', 'U002', '3', 'Good service'),
+    ('F004', 'U005', '5', 'Unforgettable experiance'),
+    ('F005', 'U004', '4', 'Need some improvemnets but overall good')";
 
     
 
