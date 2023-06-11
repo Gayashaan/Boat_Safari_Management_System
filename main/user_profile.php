@@ -49,22 +49,37 @@
                 <img src="images\userprofilepic.jpg">
                 </div>
                 <div class="form">
+                 <form  action="" method="post">
+                 <?php
+                   $query= "select * from 'user'";
+                   $result = mysqli_query($conn,$query);
+                   while ($row = mysqli_fetch_assoc($result)){
+                   
                     <label for ="fname"> First Name </label>
-                    <input type="text" value="firstname"><br><br>
+                    <input type="text" value="echo $row['fname'];"><br><br>
+
                     <label for="lname"> Last Name </label>
-                    <input type="text" value="lastname"><br><br>
+                    <input type="text" value="echo $row['lname'];"><br><br>
+
                     <label for="add">Address</label>
-                    <input type="text" value="address"><br><br>
+                    <input type="text" value="echo $row['Address'];"><br><br>
+
                     <label for="number"> Phone Number</label>
-                    <input type="text" value="Number"><br><br> 
+                    <input type="text" value="echo $row['cnumber'];"><br><br> 
+
                     <label for="email">Email</label>
-                    <input type="text" value="Email"><br><br>
+                    <input type="text" value="echo $row['email'];"><br><br>
+
                      <label for="cpsw"> Current Password</label>
-                    <input type="password" value=" Current password"><br><br> 
-                    <label for="npsw">New password</label>
-                    <input type="password" value="New password"><br><br>
+                    <input type="password" value=" echo $row['pwd'];"><br><br> 
+
+                    <label for="npsw">Newpassword</label>
+                    <input type="password" placeholder="Enter new password"><br><br>
+
                     <label for="conpsw"> Confirm Password<label>
-                    <input type="password" value="Confirm password"><br><br>
+                    <input type="password" placeholder="Confirm new password"><br><br>
+                   }?>
+                    </form>
                 </div>
                 <div class="buttons">
                 <div class="updatebtn">
@@ -88,29 +103,3 @@
 </body>
 </html>
 
-<html>
-        <head><title>Display user data</title></head>
-        <body>
-            <form action="" method="post">
-                <?php
-                   $query= "select * from 'user'";
-                   $result = mysqli_query($conn,$query);
-                   while ($row = mysqli_fetch_assoc($result)){
-                   
-                    <label for="fname">First Name</label><br><br>
-                    <input type="text" value="echo $row['fname'];">
-                    <label for="lname">Last Name</label><br><br>
-                    <input type="text" value="echo $row['lname'];"> 
-                    <label for="add">Address</label><br><br>
-                    <input type="text" value="echo $row['Address'];"> 
-                    <label for="number">Phone Number</label><br><br>
-                    <input type="text" value="echo $row['cnumber'];"> 
-                    <label for="email">Email</label><br><br>
-                    <input type="text" value="echo $row['email'];">
-                    <label for=" psw">Current Password</label><br><br>
-                    <input type="password" value="echo $row['pwd'];">
-
-                   }
-                ?>
-        </body>
-    </html> 
