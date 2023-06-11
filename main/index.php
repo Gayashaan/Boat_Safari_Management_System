@@ -86,8 +86,14 @@ include_once("../admin/database.php");
                             <div class='name'>
                                 <p>$userName</p>
                             </div>
-                            <div class='rate'>
-                                <p>$rate</p>
+                            <div class='star'>";
+
+                            for($i=0; $i<$rate; $i++){
+                                echo"<img src='images/icons/star.png' alt='star'>";             
+                                      
+                            }
+
+                    echo"
                             </div>
                             <div class='review'>
                                 <p>$feed</p>
