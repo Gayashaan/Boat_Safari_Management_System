@@ -13,15 +13,15 @@
 
         
 
-        $prefix = "S";//ADMIN USER ID PREFIX
-        $last_db_id = "SELECT Sid FROM msafari ORDER BY Sid DESC LIMIT 1";//check thee last id in the database
+        $prefix = "S";
+        $last_db_id = "SELECT Sid FROM msafari ORDER BY Sid DESC LIMIT 1";
         $result3 = $conn->query($last_db_id);
 
         if($result3->num_rows > 0){
             $row = $result3->fetch_assoc();
-            $lastID = $row['Sid'];//save last id in the database to a variable A001(EXAMPLE)
-            $incNumber = intval(substr($lastID, 1));//First remove the A(prefix) from the last id and then convert it into a intereger 1 MEAN A001 WILL BECOME 001 IF WE USE 2 IT WILL BECOME 01
-            $incNumber = $incNumber + 1;//inTval will convert string to int and substr will cut the string
+            $lastID = $row['Sid'];
+            $incNumber = intval(substr($lastID, 1));
+            $incNumber = $incNumber + 1;
         }else{
             $incNumber = 1;
         }
@@ -29,8 +29,8 @@
         $Sid = $prefix . sprintf("%03d", $incNumber);
 
         $sql = "INSERT INTO msafari(Sid,Sname,Slocation,Sprice,Sdate,Sdescription) VALUES ('$Sid','$Sname', '$Slocation', '$Sprice', '$Sdate','$Sdescription')";
-            //$result = mysqli_query($conn, $sql); //procedual method
-        $result = $conn->query($sql); //oop method
+            
+        $result = $conn->query($sql); 
 
         if($result){
             echo "<script> alert('Safari added successfully');</script>";

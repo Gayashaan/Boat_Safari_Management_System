@@ -17,15 +17,15 @@ if(isset($_POST['submit']))
   $_img_folder = "../Uploads/boats_img/".basename($b_image);
   $_img_extension = strtolower(pathinfo($_img_folder,PATHINFO_EXTENSION));
 
-  $prefix = "B";//ADMIN USER ID PREFIX
-  $last_db_id = "SELECT b_id FROM boat ORDER BY b_id DESC LIMIT 1";//check thee last id in the database
+  $prefix = "B";
+  $last_db_id = "SELECT b_id FROM boat ORDER BY b_id DESC LIMIT 1";
   $result3 = $conn->query($last_db_id);
 
   if($result3->num_rows > 0){
     $row = $result3->fetch_assoc();
-    $lastID = $row['b_id'];//save last id in the database to a variable A001(EXAMPLE)
-    $incNumber = intval(substr($lastID, 1));//First remove the A(prefix) from the last id and then convert it into a intereger 1 MEAN A001 WILL BECOME 001 IF WE USE 2 IT WILL BECOME 01
-    $incNumber = $incNumber + 1;//inTval will convert string to int and substr will cut the string
+    $lastID = $row['b_id'];
+    $incNumber = intval(substr($lastID, 1));
+    $incNumber = $incNumber + 1;
   }
   else
   {

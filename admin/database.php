@@ -291,7 +291,8 @@
     ('F002', 'U002', '4', 'Superb service'),
     ('F003', 'U002', '3', 'Good service'),
     ('F004', 'U005', '5', 'Unforgettable experiance'),
-    ('F005', 'U004', '4', 'Need some improvemnets but overall good')";
+    ('F005', 'U004', '4', 'Need some improvemnets but overall good'),
+    ('F006', 'U003', '4', 'Need some improvemnets. not page is not responsive. soo bad. Who are the developers')";
 
     
 
