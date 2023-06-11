@@ -58,7 +58,7 @@
 
             <div class="upper_panel">
                 <div class="upper_panel_left">
-                    <h6>Manage Safari</h6>
+                    <h6>Update Safari Details</h6>
                 </div>
 
                 <?php include_once("upperPanelRight.php"); ?>
@@ -80,7 +80,7 @@
                         
                         
                         $Name = $row['Sname'];
-                        echo "<h6>".$Name."'s profile </h6>";
+                        echo "<h6>".$Name."</h6>";
                     ?>
 
                     <div class="profile">
@@ -124,7 +124,7 @@
 
                 <div class="right_box">
                 
-                    <p>Add new Safari</p>
+                    <p>Update Safari Details</p>
                     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
                        
                         <label for="Sname">Safari Name:</label><br>
@@ -138,7 +138,7 @@
                         <label for="Sdescription">Description::</label><br>
                         <input type="text" id="Sdescription" name="Sdescription"  value="<?php echo $row['Sdescription']?>"><br>
 
-                        <input type="submit" value="SUbmit" id="sbt" name="submit"><br>
+                        <input type="submit" value="Submit" id="sbt" name="submit"><br>
 
                     </form>
 
