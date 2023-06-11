@@ -54,7 +54,7 @@
 
             <div class="middle_panel">
                 <div class="left_box">
-                        <h6>All System Users</h6>
+                        <h6>Manage Inquries</h6>
                                     
                         <div class="grid">
                             <table>
