@@ -91,7 +91,7 @@ html,body{
   
 }
 .services{
-  background-image: url(https://a-z-animals.com/media/2022/01/shutterstock_1670759287-1024x625.jpg);
+  background-image: url('../images/boatpic.jpg;');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -178,7 +178,7 @@ html,body{
 
 
 .feedContainer{
-  background-image: url(https://rare-gallery.com/uploads/posts/129198-tropical-beach-boats-island-coconut-trees-4k.jpg);
+  background-image: url('../images/login back1.jpg;');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
