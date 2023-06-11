@@ -124,7 +124,7 @@
                         <label for="Sdescription">Description::</label><br>
                         <input type="text" id="Sdescription" name="Sdescription"><br>
 
-                        <input type="submit" value="Create" id="sbt" name="submit"><br>
+                        <input type="submit" value="Create" id="submit" name="submit"><br>
 
                     </form>
 
