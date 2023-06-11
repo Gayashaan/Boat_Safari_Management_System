@@ -154,24 +154,24 @@
                         <div class="namewrap">
                             <div class="fwrap">
                                 <label for="fname">First name</label><br>
-                                <input type="text" name="fname" id="fname" placeholder="First Name"><br>
+                                <input type="text" name="fname" id="fname" placeholder="First Name" required><br>
                             </div>
                             <div class="lwrap">
                                 <label for="lname">Last name</label><br>
-                                <input type="text" name="lname" id="lname" placeholder="Last Name">
+                                <input type="text" name="lname" id="lname" placeholder="Last Name" required>
                             </div>
                         </div>
                         <div class="otherwrap">
                             <label for="email">Email</label><br>
-                            <input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email"><br>
+                            <input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" required><br>
                             <label for="cNo">Contact No</label><br>
                             <input type="number" name="cNo" id="cNo" placeholder="Contact Number"><br>
                             <label for="pwd">Password</label><br>
                             <input type="password" name="pwd" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
                             <label for="cpwd">Confirm Password</label><br>
                             <input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
                             <span id="err">Password does not matched</span>
                             <input type="checkbox" id="checkbox"><span class="pwdtxt">Show Password</span>
                             
