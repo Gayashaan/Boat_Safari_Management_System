@@ -51,7 +51,7 @@
                 <div class="form">
                  <form  action="" method="post">
                  <?php
-                   $query= "select * from user";
+                   $query= "select * from user where userID =  '$userID'";
                    $result = mysqli_query($conn,$query);
                    $row = mysqli_fetch_assoc($result);
                    ?>
