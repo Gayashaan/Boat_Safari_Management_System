@@ -12,38 +12,28 @@
     // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY user_id_fk";
     // $conn->query($dropconstraint);
    
-    //$dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
-    //$conn->query($dropconstraint);
+    // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
+    // $conn->query($dropconstraint);
    
-    
-
 
     // $deletetable = "DROP TABLE IF EXISTS admin";
     // $conn->query($deletetable);
     
-
     // $deletetable = "DROP TABLE IF EXISTS user";
     // $conn->query($deletetable);
    
-
     // $deletetable = "DROP TABLE IF EXISTS boat";
     // $conn->query($deletetable);
    
-
     // $deletetable = "DROP TABLE IF EXISTS msafari";
     // $conn->query($deletetable);
    
-
-    
     // $deletetable = "DROP TABLE IF EXISTS booking";
     // $conn->query($deletetable);
    
-    
-
     // $deletetable = "DROP TABLE IF EXISTS inquiry_tb";
     // $conn->query($deletetable);
     
-
     // $deletetable = "DROP TABLE IF EXISTS feedback";
     // $conn->query($deletetable);
    
@@ -208,8 +198,8 @@
         Email VARCHAR(50) NOT NULL,
         Sid VARCHAR(20) NOT NULL,
         
-        CONSTRAINT safari_id_fk FOREIGN KEY (Sid) REFERENCES msafari (Sid),
-        CONSTRAINT user_id_fk FOREIGN KEY (userID) REFERENCES user (userID)
+        CONSTRAINT safari_id_fk FOREIGN KEY (Sid) REFERENCES msafari (Sid) ON DELETE CASCADE,
+        CONSTRAINT user_id_fk FOREIGN KEY (userID) REFERENCES user (userID) ON DELETE CASCADE
         
     )";
     //run the query to create tbale if table does not exists
@@ -277,7 +267,7 @@
         userID VARCHAR(10) NOT NULL,
         rate INT(5) NOT NULL,
         description VARCHAR(1000) NOT NULL,
-        CONSTRAINT user_fk FOREIGN KEY (userID) REFERENCES user (userID)
+        CONSTRAINT user_fk FOREIGN KEY (userID) REFERENCES user (userID) ON DELETE CASCADE
         
     )";
     //run the query to create tbale if table does not exists
