@@ -1,19 +1,7 @@
 <?php
     include_once("config.php");
     include_once("sessionAdmin.php");
-    // session_start();
-    // if($_SESSION['adminID'] == ""){
-    //     header("LOCATION: ../main/deniedpage.php");
-    //     echo "<script> alert('Please Login');</script>";
-    //     // header("location: ../main/adminloging.php");
-    //     die();
-        
-    // }else{
-    //     $adminID = $_SESSION['adminID'];
-    //     $ufname = $_SESSION['fname'];
-    //     $ulname = $_SESSION['lname'];
-    //     $userName = $ufname . " " . $ulname;
-    // }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +51,7 @@
                                     <th>Name</th>
                                     <th>Email </th>
                                     <th>Message</th>
-                                    <th>Operation</th>
+                                    
                                 </tr>
                                 <?php
                         
@@ -87,13 +75,8 @@
                                                         <td>' . $inquiryId. '</td>
                                                         <td>' . $Name. '</td>
                                                         <td>' . $Email. '</td>
-                                                        <td>' . $Msg. '</td>
-                                                        <td> 
-                                                            <div class="opBtns">
-                                                                <button id="vwBtn"><a href="updateUsers.php?updateid='.$inquiryId.'">View</a></button>
-                                                                <button id="dlBtn" onclick="return confirmDelete()"><a href="deleteAdmin.php?deleteid='.$inquiryId.'">Delete</a></button>
-                                                            </div>
-                                                        </td>
+                                                        <td>' . $Msg. '</td>                                    
+                                                        
                                                     </tr>';
                                                 
                                         }
@@ -101,39 +84,6 @@
                                         echo "<td>Empty rows!!</td>";
                                     }
 
-                                    $sql2 = "SELECT * FROM inquiry_tb";
-                            
-                                    $result2 = $conn->query($sql2);
-                        
-                        
-                                    if($result2->num_rows>0){
-                                        while($row2 = $result2->fetch_assoc()){
-                                            $inquiryId = $row2["inquiryID"];
-                                            $Name = $row2["Name"];
-                                            $Email = $row2["Email"];
-                                            $Msg = $row2["Message"];
-                                          
-                                            
-                                    
-                                            echo '
-                                            
-                                                    <tr>
-                                                        <td>' . $inquiryId. '</td>
-                                                        <td>' .  $Name. '</td>
-                                                        <td>' .  $Email. '</td>
-                                                        <td>' . $Msg. '</td>
-                                                        <td> 
-                                                            <div class="opBtns">
-                                                                <button id="vwBtn"><a href="updateUsers.php?updateid='.$inquiryId.'">View</a></button>
-                                                                <button id="dlBtn" onclick="return confirmDelete()"><a href="deleteAdmin.php?deleteid='.$inquiryId.'">Delete</a></button>
-                                                            </div>
-                                                        </td>
-                                                    </tr>';
-                                                
-                                        }
-                                    }else{
-                                        echo "<td>Empty rows!!</td>";
-                                    }
 
                                 ?>
 

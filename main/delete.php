@@ -5,9 +5,10 @@
 
     $userID = $_GET['deleteid'];
 
-    $sql = "delete from 'user' where userID = $userID";
+    $sql = "delete from user where userID = '$userID'";
     $result = mysqli_query($conn,$sql);
     if($result){
+        header("Location: loging_selector_page");
         echo"Data deleted successfully ";
     }
     else{
