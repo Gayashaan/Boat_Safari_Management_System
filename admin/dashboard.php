@@ -1,21 +1,6 @@
 <?php
     include_once("config.php");
     include_once("sessionAdmin.php");
-    // session_start();
-    // if($_SESSION['adminID'] == ""){
-    //     header("LOCATION: ../main/deniedpage.php");
-    //     echo "<script> alert('Please Login');</script>";
-    //     // header("location: ../main/adminloging.php");
-    //     die();
-        
-    // }else{
-    //     $adminID = $_SESSION['adminID'];
-    //     $ufname = $_SESSION['fname'];
-    //     $ulname = $_SESSION['lname'];
-    //     $userName = $ufname . " " . $ulname;
-    // }
-    
-
 
 ?>
 <!DOCTYPE html>
@@ -64,11 +49,7 @@
                     <?php
                         $date = date("Y-m-d");
 
-                        // $sqlUser = "SELECT sum(countUser) AS 'Total user Count'FROM(
-                        //                                                     SELECT count(*) AS 'countUser' FROM admin
-                        //                                                     UNION ALL
-                        //                                                     SELECT count(*) AS 'countUser' FROM user
-                        //                                                     )countUser";
+                        
 
                         function totalUser($connection){// i have pass the connection variable to the function else $conn cannot be used insed the function
                             $sqlUser = "SELECT count(*) AS 'Total user Count' FROM user";
@@ -214,11 +195,24 @@
                         
                          <div class="feedBox">
                             <?php
-                                for($i=0;$i<10;$i++){
+
+                                $sqlFeed = "SELECT * FROM feedback";
+                                $resultFeed = $conn->query($sqlFeed);
+                                while($rowFeed = $resultFeed->fetch_assoc()){
+                                    $feed = $rowFeed["description"];
+                                    $feedUser = $rowFeed["userID"];
+                                    $getUser = "SELECT fname FROM user WHERE userID = '$feedUser'";
+                                    $resultUser = $conn->query($getUser);
+                                    $rowUser = $resultUser->fetch_assoc();
+                                    $userName = $rowUser["fname"];
+
+                                    
                                     echo "<div class='feed'>
-                                            <p>Feedback 1</p>
+                                            <h3>$userName</h3>
+                                            <p>$feed</p>
                                         </div>";
                                 }
+
                             
                             ?>
                             

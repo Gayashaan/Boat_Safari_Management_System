@@ -8,55 +8,45 @@
     //query for table creation if not exists
     // $dropconstraint = "ALTER TABLE feedback DROP FOREIGN KEY user_fk";
     // $conn->query($dropconstraint);
-    // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
-    // $conn->query($dropconstraint);
+    
     // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY user_id_fk";
     // $conn->query($dropconstraint);
-   // $dropconstraint = "ALTER TABLE feedback DROP FOREIGN KEY user_fk";
-    //$conn->query($dropconstraint);
+   
     //$dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY safari_id_fk";
     //$conn->query($dropconstraint);
-   // $dropconstraint = "ALTER TABLE booking DROP FOREIGN KEY user_id_fk";
-    //$conn->query($dropconstraint);
+   
     
 
 
     // $deletetable = "DROP TABLE IF EXISTS admin";
     // $conn->query($deletetable);
-    //$deletetable = "DROP TABLE IF EXISTS admin";
-   // $conn->query($deletetable);
+    
 
     // $deletetable = "DROP TABLE IF EXISTS user";
     // $conn->query($deletetable);
-   // $deletetable = "DROP TABLE IF EXISTS user";
-   // $conn->query($deletetable);
+   
 
     // $deletetable = "DROP TABLE IF EXISTS boat";
     // $conn->query($deletetable);
-   // $deletetable = "DROP TABLE IF EXISTS boat";
-    //$conn->query($deletetable);
+   
 
     // $deletetable = "DROP TABLE IF EXISTS msafari";
     // $conn->query($deletetable);
-   // $deletetable = "DROP TABLE IF EXISTS msafari";
-   // $conn->query($deletetable);
+   
 
     
     // $deletetable = "DROP TABLE IF EXISTS booking";
     // $conn->query($deletetable);
-    //$deletetable = "DROP TABLE IF EXISTS booking";
-    //$conn->query($deletetable);
+   
     
 
     // $deletetable = "DROP TABLE IF EXISTS inquiry_tb";
     // $conn->query($deletetable);
-    //$deletetable = "DROP TABLE IF EXISTS inquiry_tb";
-    //$conn->query($deletetable);
+    
 
     // $deletetable = "DROP TABLE IF EXISTS feedback";
     // $conn->query($deletetable);
-    //$deletetable = "DROP TABLE IF EXISTS feedback";
-    //$conn->query($deletetable);
+   
 
     
     $createTableAdmin = "CREATE TABLE IF NOT EXISTS admin(
@@ -301,7 +291,8 @@
     ('F002', 'U002', '4', 'Superb service'),
     ('F003', 'U002', '3', 'Good service'),
     ('F004', 'U005', '5', 'Unforgettable experiance'),
-    ('F005', 'U004', '4', 'Need some improvemnets but overall good')";
+    ('F005', 'U004', '4', 'Need some improvemnets but overall good'),
+    ('F006', 'U003', '4', 'Need some improvemnets. not page is not responsive. soo bad. Who are the developers')";
 
     
 
