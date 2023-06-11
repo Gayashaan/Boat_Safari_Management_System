@@ -51,34 +51,34 @@
                 <div class="form">
                  <form  action="" method="post">
                  <?php
-                   $query= "select * from 'user'";
+                   $query= "select * from user";
                    $result = mysqli_query($conn,$query);
-                   while ($row = mysqli_fetch_assoc($result)){
-                   
+                   $row = mysqli_fetch_assoc($result);
+                   ?>
                     <label for ="fname"> First Name </label>
-                    <input type="text" value="echo $row['fname'];"><br><br>
+                    <input type="text" value="<?php echo $row['fname'];?>"><br><br>
 
                     <label for="lname"> Last Name </label>
-                    <input type="text" value="echo $row['lname'];"><br><br>
+                    <input type="text" value="<?php echo $row['lname'];?>"><br><br>
 
                     <label for="add">Address</label>
-                    <input type="text" value="echo $row['Address'];"><br><br>
+                    <input type="text" value="<?php echo $row['Address'];?>"><br><br>
 
                     <label for="number"> Phone Number</label>
-                    <input type="text" value="echo $row['cnumber'];"><br><br> 
+                    <input type="text" value="<?php echo $row['cnumber'];?>"><br><br> 
 
                     <label for="email">Email</label>
-                    <input type="text" value="echo $row['email'];"><br><br>
+                    <input type="text" value="<?php echo $row['email'];?>"><br><br>
 
                      <label for="cpsw"> Current Password</label>
-                    <input type="password" value=" echo $row['pwd'];"><br><br> 
+                    <input type="password" value="<?php echo $row['pwd'];?>"><br><br> 
 
                     <label for="npsw">Newpassword</label>
                     <input type="password" placeholder="Enter new password"><br><br>
 
                     <label for="conpsw"> Confirm Password<label>
                     <input type="password" placeholder="Confirm new password"><br><br>
-                   }?>
+                   
                     </form>
                 </div>
                 <div class="buttons">
