@@ -56,7 +56,7 @@ if(isset($_POST['submit']))
 
   
 
-  if(!empty($image_name))
+  if(!empty($b_image))
   {
     if($_img_extension == "jpg" || $_img_extension == "png" || $_img_extension == "jpeg")
     {
@@ -82,7 +82,7 @@ if(isset($_POST['submit']))
       }
       else
       {
-        echo "<script>alert('Image size must be less than 1MB')</script>";
+        echo "<script>alert('Image size must be less than 5MB')</script>";
       }
     }
     else
