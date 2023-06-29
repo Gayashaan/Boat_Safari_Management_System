@@ -18,9 +18,9 @@
 
     <!-- This are icon for dash board -->
 
-    <!-- scroll reveal effect -->
+    <!-- scroll reveal effect from scroll reveal js-->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- scroll reveal effect -->
+    <!-- scroll reveal effect from scroll reveal js-->
     <title>Admin</title>
 </head>
 <body>
@@ -227,19 +227,20 @@
         </div>
         
     </div>
-   
+   <!-- scroll reveal effect from scroll reveal js-->
     <script>
         ScrollReveal({
-            reset: true,
-            distance: '60px',
-            duration: 2500,
-            delay: 400
+            reset: true,//each and every time the page is refreshed the animation will be be triggered, by reseting true, it will go to its original position when it leave the viewpport
+            distance: '60px',//how far the elements moved when the reveal animation is triggered
+            duration: 2500,//time taken to complete the reveal animation
+            delay: 400//delay before the animation start
         });
 
-        ScrollReveal().reveal('.left_box', {delay: 200, origin: 'left'});
+        ScrollReveal().reveal('.left_box', {delay: 200, origin: 'left'});// ScrollReveal() is function 
         ScrollReveal().reveal('.right_box', {delay: 200, origin: 'right'});
         ScrollReveal().reveal('.upper_box', {delay: 200, origin: 'top'});
         
     </script>
+    <!-- scroll reveal effect from scroll reveal js-->
 </body>
 </html>
