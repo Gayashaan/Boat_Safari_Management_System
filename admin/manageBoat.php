@@ -91,12 +91,6 @@
                                     echo "<td>Empty rows!!</td>";
                                 }
 
-                            }
-                            else
-                            {
-                                echo "<td>Empty rows!!</td>";
-                            }
-
                             ?>
 
 
