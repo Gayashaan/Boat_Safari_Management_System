@@ -30,14 +30,12 @@
         <?php include_once("leftPanel.php"); ?>
 
         <div class="right_panel">
-
             <div class="upper_panel">
                 <div class="upper_panel_left">
                     <h6>Manage Boats</h6>
                 </div>
 
                 <?php include_once("upperPanelRight.php"); ?>
-
             </div>
 
             <div class="middle_panel">
@@ -92,7 +90,15 @@
                                 }else{
                                     echo "<td>Empty rows!!</td>";
                                 }
+
+                            }
+                            else
+                            {
+                                echo "<td>Empty rows!!</td>";
+                            }
+
                             ?>
+
 
 
                         </table> 
@@ -137,17 +143,13 @@
                             </div>
                         </form>
                     </div>        
-                </div>
-                
-                                       
-                 
+                </div>    
             </div>
         </div>
         
     </div>
 
     <script src="adminindex.js"></script>
-
-   
+  
 </body>
 </html>
