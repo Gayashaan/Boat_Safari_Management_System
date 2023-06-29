@@ -14,7 +14,7 @@
 
 
        
-       $sql="UPDATE user set userID='$userID',fname=' $fname',lname=' $lname',email='$email',pwd='$pwd',cnumber=' $cnumber',Address='$Address'
+       $sql="UPDATE user set userID='$userID',fname= '$fname',lname=' $lname',email='$email',pwd='$pwd',cnumber=' $cnumber',Address='$Address'
        WHERE userID = '$userID'";
 
        if($conn->query($sql)===TRUE){
