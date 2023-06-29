@@ -70,7 +70,8 @@
         
                         <div class="inputs">
                             <input type="submit" name="submit" value="Log In">
-                            <a href="">Forget password?</a>
+                            <p>Don't have an account?</p>
+                            <a href="signup.php">Create Account</a>
                         </div>
                     </div>
                     
