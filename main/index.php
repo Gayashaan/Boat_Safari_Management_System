@@ -138,7 +138,7 @@ include_once("../admin/database.php");
         /*This function will play pause the video when we click the video area*/
         function playPause() {
             if (video.paused) {
-                document.getElementById("playpause").src = "images/icons/pause.png";
+                document.querySelector("#playpause").src = "images/icons/pause.png";
                 video.play();
             } else {
                 document.getElementById("playpause").src = "images/icons/play.png";
