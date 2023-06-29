@@ -4,7 +4,7 @@
     include_once("sessionAdmin.php");
 
         $id = $_GET['updateid'];
-        $prefix = str_split($id);
+        // $prefix = str_split($id);
     
     if(isset($_POST['submit'])){
         $blic = $_POST['blic'];
@@ -21,10 +21,7 @@
         $image_tmp_name = $_FILES['b_image']['tmp_name'];//return the temp name of the image or file
         $image_folder = '../uploads/Boats_img/'.basename($image_name);//image destination
         $image_extension = strtolower(pathinfo($image_folder, PATHINFO_EXTENSION));//return the extension of the file or image strtolower
-        //basename($_FILES['b_image']['name'], suffix) or basename($image_name) return the name of the image or file with extention when the variable inside bracket have specified with the path
-        //suffix can be used to remove the file extension of the file name when we know the file extension of that particular file
-        // $h = "../uploads/adminImg/image1.jpg";
-        //echo '<script> console.log("'.$image_extension.'");</script>';
+
         $sql = "UPDATE boat SET b_license_no='$blic', b_name='$bname', b_model='$bmodel', b_capacity='$bcapacity', b_length='$blength', b_weight='$bweight' WHERE b_id='$id'";
         $result = $conn->query($sql);
 
@@ -145,7 +142,7 @@
                             <div class="detBox">
                                 <p>License No:<?php echo " " .$row['b_license_no'] ?></p>
                             </div>
-
+                            
                             <div class="detBox">
                                 <p>Boat Name:<?php echo " " .$row['b_name'] ?></p>
                             </div>

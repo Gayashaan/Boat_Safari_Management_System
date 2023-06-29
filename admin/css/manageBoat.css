@@ -2,6 +2,7 @@
 .upper_panel{
     margin-bottom: 50px;
 }
+
 .middle_panel{
     display: flex;
     height: 100vh;
@@ -17,7 +18,6 @@
     margin-left: 50px;   
 }
 
-
 .middle_panel > .left_box > h6{
     margin: 0;
     padding: 0;
@@ -28,13 +28,19 @@
     font-weight: 500;
     color: #000000;
 } 
+.middle_panel > .left_box >.tableContainer{
+  padding-right: 12px;
+    /* background-color: #8fc9ff; */
+    display: flex;
+    overflow: auto;
+    height: 430px;
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
     height: 400px;
   }
-  
   
   td, th {
     border: 1px solid #dddddd;
@@ -47,18 +53,18 @@ table {
     background-color: #dddddd;
   }
   
-  
-  .opBtns{
+  .opBtns {
       display: flex;
   }
-  .opBtns > button > a{
+
+  .opBtns > button > a {
       text-decoration: none;
       color: white;
       font-weight: 500;
       padding: 2px;
       margin: 2px;
   }
-  #vwBtn{
+  #vwBtn {
       background-color: #5cec3f;
       margin-right: 5px;
       border-radius: 5px;
@@ -69,17 +75,16 @@ table {
       transition: 0.5s;
   }
   
-  #dlBtn{
+  #dlBtn {
       background-color: #ff0000;
       border-radius: 5px;
       border: none;
       height: 30px;
       width:65px;
-      transition: 0.5s;
-      
+      transition: 0.5s;   
   }
   
-  #vwBtn:hover, #dlBtn:hover{
+  #vwBtn:hover, #dlBtn:hover {
       -ms-transform: scale(1.1); /* IE 9 */
       -webkit-transform: scale(1.1); /* Safari 3-8 */
       transform: scale(1.1);
@@ -87,7 +92,7 @@ table {
       cursor: pointer;
   }
   
-  .middle_panel > .right_box{
+  .middle_panel > .right_box {
     width: 45%;
     height: 500px;
     background-color: rgb(148, 141, 141);
@@ -95,12 +100,11 @@ table {
     padding: 10px;
     border-radius: 10px;
     margin-left: 30px;
-    margin-right: 50px;
-    
+    margin-right: 50px;   
 }
 
-  /*add boat heading*/
-.right_box > p{
+/*add boat heading*/
+.right_box > p {
   margin-left: 20px;
   margin-top: 6px;
   margin-bottom: 10px;
@@ -109,7 +113,7 @@ table {
   /*background-color: #2c84f7;*/
 }
 
-input{
+input {
   width: 200px;
   height: 20px;
   border-radius: 5px;
@@ -118,12 +122,11 @@ input{
   margin-top: 10px;
   margin-bottom: 10px;
   outline: none;
-  /*background-color: rgb(150, 97, 27);*/
-  
+  /*background-color: rgb(150, 97, 27);*/ 
 }
 
 /*choose file to upload*/
-input > #b_image{
+input > #b_image {
   width: 190px;
   height: 20px;
   padding: 5px;
@@ -136,7 +139,7 @@ input > #b_image{
 }
 
 /*update button*/
-#submit{
+#submit {
   width: 150px;
   height: 30px;
   margin-left: 20%;
@@ -145,19 +148,19 @@ input > #b_image{
   margin-top: 10px;
 }
 
-#submit:hover{
+#submit:hover {
   background-color: #00ff62;
   color: white;
   cursor: pointer;
 }
 
-.topwrap{
+.topwrap {
   display: flex;
   justify-content: space-around;
   /* background-color: #00ff62;
   height: fit-content; */
-
 }
+
 #b_license_no, #b_name{
     width: 122px;
     height: 20px;
@@ -167,27 +170,7 @@ input > #b_image{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .otherwrap{
   margin-left: 11%;
 }
-  /*
-  .right_box > .fieldsWrap{
-    margin-left: 10px;
-    margin-right: 30px;
-    padding: 10px;
-  }
-
-  .topwrap{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-  }
-
-  input{
-    width: 50%;
-    height: 20px;
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
-    margin-bottom: 5px;
-  }*/
