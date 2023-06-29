@@ -42,8 +42,9 @@
 
             <div class="middle_panel">
                 <div class="left_box">
-                        <h6>All Boats</h6>
+                    <h6>All Boats</h6>
 
+                    <div class="tableContainer">
                         <table>
                             <tr>
                                 <th>Boat ID</th>
@@ -52,26 +53,28 @@
                                 <th>Capacity</th>
                                 <th></th>
                             </tr>
+                            
+
                         
-                        <?php
-                            $sql = "SELECT * FROM boat";
-                            
-                            $result = $conn->query($sql);
-                
-                
-                            if($result->num_rows>0){
-                                while($row = $result->fetch_assoc()){
-                                    $b_license_no = $row['b_license_no'];
-                                    $b_name = $row['b_name'];
-                                    $b_model = $row['b_model'];
-                                    $b_capacity = $row['b_capacity'];
-                                    $b_length = $row['b_length'];
-                                    $b_weight = $row['b_weight'];
-                                    $b_id = $row['b_id'];
+                            <?php
+                                $sql = "SELECT * FROM boat";
                                     
-                            
-                                    echo "
+                                $result = $conn->query($sql);
+                        
+                        
+                                if($result->num_rows>0){
+                                    while($row = $result->fetch_assoc()){
+                                        $b_license_no = $row['b_license_no'];
+                                        $b_name = $row['b_name'];
+                                        $b_model = $row['b_model'];
+                                        $b_capacity = $row['b_capacity'];
+                                        $b_length = $row['b_length'];
+                                        $b_weight = $row['b_weight'];
+                                        $b_id = $row['b_id'];
+                                            
                                     
+                                        echo "
+                                            
                                             <tr>
                                                 <td>$b_id</td>
                                                 <td>$b_license_no</td>
@@ -84,15 +87,16 @@
                                                     </div>
                                                 </td>
                                             </tr>";
-                                        
+                                                
+                                    }
+                                }else{
+                                    echo "<td>Empty rows!!</td>";
                                 }
-                            }else{
-                                echo "<td>Empty rows!!</td>";
-                            }
+                            ?>
 
 
-                         ?> 
-                         </table>                          
+                        </table> 
+                    </div>                         
                 </div>
 
                 <div class="right_box">

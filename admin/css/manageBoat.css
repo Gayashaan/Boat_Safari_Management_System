@@ -28,6 +28,13 @@
     font-weight: 500;
     color: #000000;
 } 
+.middle_panel > .left_box >.tableContainer{
+  padding-right: 12px;
+    /* background-color: #8fc9ff; */
+    display: flex;
+    overflow: auto;
+    height: 430px;
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
