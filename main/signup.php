@@ -43,7 +43,7 @@
                  <span id="male">Male</span>
                  
                  <input type="radio" id="female" name="Gender" value="female">
-                  <span id="female">Female</span><br><br>]
+                  <span id="female">Female</span><br><br>
 
                  <label for="password">Password</label>
                  <input type="password" placeholder="Enter Password" id="psw" name="pwd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}$" required><br><br>
