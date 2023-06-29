@@ -1,10 +1,10 @@
 .upper_panel{
   margin-bottom: 50px;
 }
+
 .middle_panel{
   display: flex;
   height: 100vh;
- 
 }
 
 .middle_panel > .left_box{
@@ -15,9 +15,6 @@
   padding: 10px;
   border-radius: 10px;
   margin-left: 50px;
-  
-
-  
 }
 
 .middle_panel > .left_box > #left-top{
@@ -25,18 +22,6 @@
   font-size: 23px;
   
 }
-/*
-.middle_panel > .left_box > h6{
-  margin: 0;
-  padding: 0;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 20px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #000000;
-  background-color: #00ff62;
-} */
 
 .profile{
   display: flex;
@@ -78,8 +63,6 @@
   width: 360px;
   height: 350px;
   /* background-color: #c02828; */
-  
-  
 }
 
 /*display details*/
@@ -90,17 +73,13 @@
   /*background-color: aqua;*/
 }
 
-
-
 .detBox{
   width: 350px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10%;
-  border: 2px solid #dddddd;
-  
+  border: 2px solid #dddddd; 
 }
-
 
 .middle_panel > .right_box{
   width: 45%;
@@ -111,7 +90,6 @@
   border-radius: 10px;
   margin-left: 30px;
   margin-right: 50px;
-  
 }
 
 /*update boat heading*/
@@ -133,8 +111,7 @@ input{
   margin-top: 10px;
   margin-bottom: 10px;
   outline: none;
-  /*background-color: rgb(150, 97, 27);*/
-  
+  /*background-color: rgb(150, 97, 27);*/ 
 }
 
 /*choose file to upload*/
@@ -159,6 +136,7 @@ input > #b_image{
   background-color: rgb(47, 255, 57);
   margin-top: 10px;
 }
+
 #sbt:hover{
   background-color: #00ff62;
   color: white;
@@ -181,29 +159,7 @@ input > #b_image{
 .otherwrap{
   margin-left: 11%;
 }
-/*
-#upload{
-  margin-left: 10%;
-  height: 80px;
-  padding: 8px;
-  border-radius: 5px;
-  background-color: #e0e0e0;
-  color: #000000;
-  cursor: pointer;
-  transition: 0.5s;
-  
-}*/
-/*
-.btnwrap{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}*/
-/*
-#upload:hover{
-  background-color: #2c84f7;
-  color: white;
-}*/
+
 
 
 

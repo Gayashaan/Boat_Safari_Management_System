@@ -12,5 +12,4 @@
         echo "<script> alert('Connection UnnSuccessfull');</script>";
     }
     
-
 ?>
