@@ -4,7 +4,7 @@
     include_once("sessionAdmin.php");
 
         $id = $_GET['updateid'];
-        $prefix = str_split($id);
+        // $prefix = str_split($id);
     
     if(isset($_POST['submit'])){
         $blic = $_POST['blic'];
@@ -145,7 +145,7 @@
                             <div class="detBox">
                                 <p>License No:<?php echo " " .$row['b_license_no'] ?></p>
                             </div>
-
+                            
                             <div class="detBox">
                                 <p>Boat Name:<?php echo " " .$row['b_name'] ?></p>
                             </div>

@@ -32,7 +32,7 @@
         $cnumber = $_POST['cnumber'];
 
 
-        $prefix = "BK";//ADMIN USER ID PREFIX
+        $prefix = "BK";//booking  ID PREFIX
         $last_db_id = "SELECT bookingID FROM booking ORDER BY bookingID DESC LIMIT 1";//check thee last id in the database
         $result3 = $conn->query($last_db_id);
 

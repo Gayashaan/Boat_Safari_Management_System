@@ -140,7 +140,9 @@
                             
                                 <?php
 
-                                    $sql = "SELECT * FROM booking";
+                                    $sql = "SELECT  b.bookingID, b.date, u.fname, sf.Sname
+                                    FROM booking b, user u, msafari sf
+                                    WHERE b.userID = u.UserID AND b.Sid = sf.Sid";
                                                                 
                                     $result = $conn->query($sql);
 
@@ -149,18 +151,8 @@
                                         while($row = $result->fetch_assoc()){
                                             $bID = $row["bookingID"];
                                             $date = $row["date"];
-                                            $userID = $row["userID"];
-                                            $Sid = $row["Sid"];
-
-                                            $getUser = "SELECT fname FROM user WHERE userID = '$userID'";
-                                            $resultUser = $conn->query($getUser);
-                                            $rowUser = $resultUser->fetch_assoc();
-                                            $userName = $rowUser["fname"];
-
-                                            $getSafari = "SELECT Sname FROM msafari WHERE Sid = '$Sid'";
-                                            $resultSafari = $conn->query($getSafari);
-                                            $rowSafari = $resultSafari->fetch_assoc();
-                                            $safariName = $rowSafari["Sname"];
+                                            $userName = $row["fname"];
+                                            $safariName = $row["Sname"];
                                             
 
                                             echo '
