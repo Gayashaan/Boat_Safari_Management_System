@@ -64,7 +64,7 @@
                             echo "<script> alert('Image Extension is not valid');</script>";
                             header("Refresh: 0; URL = updateUsers.php?updateid=$id");
                         }else{
-                            if($image_size > 50000000){//check if the image size is too large
+                            if($image_size > 5000000){//check if the image size is too large
                                 echo "<script> alert('Image size is too large');</script>";
                                 header("Refresh: 0; URL = updateUsers.php?updateid=$id");
                                 
