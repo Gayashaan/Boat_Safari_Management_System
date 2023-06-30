@@ -3,6 +3,19 @@
     include_once("../admin/config.php");
      
     session_start();
+    if(isset($_SESSION['userID'])){
+        //header("LOCATION: ../main/deniedpage.php");
+        echo "<script> alert('Your have already Logged as a user');</script>";
+        header("Refresh: 0; URL = ../main/index.php");
+        die();
+        
+        
+    }else if(isset($_SESSION['adminID'])){
+        echo "<script> alert('Your have already Logged as a admin');</script>";
+        header("Refresh: 0; URL = ../admin/dashboard.php");
+        die();
+    }
+    
     if (!isset($_SESSION['adminLoginAttempts'])) {
         // Initialize the login attempts session variable to 0
         $_SESSION['adminLoginAttempts'] = 0;
