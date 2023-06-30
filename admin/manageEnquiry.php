@@ -22,7 +22,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- scroll reveal effect -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Enquiry Management</title>
+    <title>Inquiry Management</title>
 </head>
 <body>
     <div class="container">
@@ -33,7 +33,7 @@
 
             <div class="upper_panel">
                 <div class="upper_panel_left">
-                    <h6>Manage Enquiry</h6>
+                    <h6>Manage Inquiry</h6>
                 </div>
 
                 <?php include_once("upperPanelRight.php"); ?>
@@ -42,7 +42,7 @@
 
             <div class="middle_panel">
                 <div class="left_box">
-                        <h6>Manage Inquries</h6>
+                        <h4>Manage Inquries</h4>
                                     
                         <div class="grid">
                             <table>
