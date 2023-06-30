@@ -76,8 +76,8 @@
             <div class="tourwrap">
                 <h2>Account Details </h2>
                 <div class="profilepic">
-                <img src="images\userprofilepic.jpg">
-                </div>
+                    <img src="images\userprofilepic.jpg">
+               </div>
                 <div class="form">
                  <form  action="" method="post">
                  <?php
@@ -108,16 +108,17 @@
                 </div>
                 <div class="buttons">
                 <div class="updatebtn">
-                    <button type="submit" value="submit"><a href="update.php? updateid='.$userID.'">Update</a></button>
+                    <button type="submit" value="submit" name="update"><a href='update.php?updateid=<?php echo "$userID"?>'>Update</a></button>
                 </div>
                 <div class="deletebtn">
-                    <button type="submit" value="submit"><a href='delete.php?deleteid=<?php echo "$userID"?>'>Delete Account</a></button>
+                    <button type="submit" value="submit"><a href='delete.php?deleteid=<?php echo "$userID"?>' >Delete Account</a></button>
                 </div>
                </div>
+
                 <div class="Feedback">
                     <h2> Give us your Feedback</h2>
                     <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
-                    <input type="textarea" name="feedback" placeholder="Give us your feedback"><br><br>
+                    <input type="textarea"  name="feedback" placeholder="Give us your feedback"><br><br>
                     <input type ="number" name="rate" placeholder="rate"><br><br>
                     <input type="submit" value="submit Feedback" name="submitfeed">
                    </form>

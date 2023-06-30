@@ -15,6 +15,8 @@
         die (mysqli_error($conn));
     }
 
+}
 
-    
- }
+$conn->close();
+
+?>
