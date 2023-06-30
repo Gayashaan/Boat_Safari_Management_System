@@ -142,7 +142,8 @@
 
                                     $sql = "SELECT  b.bookingID, b.date, u.fname, sf.Sname
                                     FROM booking b, user u, msafari sf
-                                    WHERE b.userID = u.UserID AND b.Sid = sf.Sid";
+                                    WHERE b.userID = u.UserID AND b.Sid = sf.Sid
+                                    order by b.bookingID";
                                                                 
                                     $result = $conn->query($sql);
 
